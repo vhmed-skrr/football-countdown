@@ -870,8 +870,43 @@ async function submitPlay(playerQuery, timerExpired = false, selectedPlayer = nu
   }
 }
 
+async function submitManualPlay(playerName, goalsScored) {
+  if (state.isSubmittingPlay || !state.sessionState) return;
+
+  state.isSubmittingPlay = true;
+  stopTimer();
+
+  const payload = {
+    sessionState: state.sessionState,
+    manualEntry: true,
+    playerName,
+    goalsScored
+  };
+
+  try {
+    const resp = await fetch('/api/game/play', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await resp.json();
+
+    if (data.sessionState) {
+      state.sessionState = data.sessionState;
+    }
+
+    handleTurnResult(data, playerName);
+  } catch (err) {
+    console.error('Error submitting manual player:', err);
+    showToast(i18n.getLang() === 'en' ? 'Network error submitting manual player' : 'خطأ في الاتصال أثناء إضافة اللاعب');
+  } finally {
+    state.isSubmittingPlay = false;
+  }
+}
+
 // ============================================================
-// Handle 7 Turn Result Modal Cases
+// Handle 8 Turn Result Modal Cases
 // ============================================================
 
 function handleTurnResult(response, querySubmitted) {
@@ -927,6 +962,23 @@ function handleTurnResult(response, querySubmitted) {
       openModal('modal-result-not-associated');
       const nameEl = document.getElementById('not-assoc-player-name');
       if (nameEl) nameEl.textContent = querySubmitted || (response.player && response.player.name) || '';
+      break;
+    }
+
+    case 'UNKNOWN_PLAYER': {
+      openModal('modal-result-unknown');
+      const nameInput = document.getElementById('unknown-player-name');
+      if (nameInput) nameInput.value = response.playerName || querySubmitted || '';
+
+      const goalsInput = document.getElementById('unknown-goals-input');
+      if (goalsInput) {
+        goalsInput.value = '';
+        goalsInput.style.borderColor = '';
+      }
+
+      const errMsg = document.getElementById('unknown-error-msg');
+      if (errMsg) errMsg.style.display = 'none';
+
       break;
     }
 
@@ -1032,6 +1084,46 @@ function setupModalActions() {
   if (notAssocRetryBtn) {
     notAssocRetryBtn.addEventListener('click', () => {
       closeModal('modal-result-not-associated');
+      if (state.timerEnabled) startTimer();
+      const input = document.getElementById('arena-search-input');
+      if (input) input.focus();
+    });
+  }
+
+  // UNKNOWN_PLAYER -> Add and Submit
+  const unknownSubmitBtn = document.getElementById('btn-unknown-submit');
+  if (unknownSubmitBtn) {
+    unknownSubmitBtn.addEventListener('click', () => {
+      const nameInput = document.getElementById('unknown-player-name');
+      const goalsInput = document.getElementById('unknown-goals-input');
+      const errMsg = document.getElementById('unknown-error-msg');
+
+      const playerName = nameInput ? nameInput.value.trim() : '';
+      const rawGoals = goalsInput ? goalsInput.value.trim() : '';
+
+      if (!rawGoals || !/^\d+$/.test(rawGoals)) {
+        if (goalsInput) goalsInput.style.borderColor = 'var(--accent-danger)';
+        if (errMsg) {
+          errMsg.textContent = i18n.t('result_unknown_error_goals');
+          errMsg.style.display = 'block';
+        }
+        return;
+      }
+
+      const goalsScored = parseInt(rawGoals, 10);
+      if (goalsInput) goalsInput.style.borderColor = '';
+      if (errMsg) errMsg.style.display = 'none';
+
+      closeModal('modal-result-unknown');
+      submitManualPlay(playerName, goalsScored);
+    });
+  }
+
+  // UNKNOWN_PLAYER -> Cancel / Try Another Name
+  const unknownCancelBtn = document.getElementById('btn-unknown-cancel');
+  if (unknownCancelBtn) {
+    unknownCancelBtn.addEventListener('click', () => {
+      closeModal('modal-result-unknown');
       if (state.timerEnabled) startTimer();
       const input = document.getElementById('arena-search-input');
       if (input) input.focus();

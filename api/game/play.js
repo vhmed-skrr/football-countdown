@@ -20,7 +20,7 @@
 
 const { resolvePlayer } = require('../../lib/playerResolver');
 const { fetchPlayerStats } = require('../../lib/scraper');
-const { evaluateTurn, isPlayerBurned } = require('../../lib/gameEngine');
+const { evaluateTurn, isPlayerBurned, submitManualPlayer } = require('../../lib/gameEngine');
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -36,7 +36,23 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ error: 'Missing or invalid sessionState in request body' });
     }
 
-    // Step A: Timer expired check
+    // Step A: Manual player addition submission (UNKNOWN_PLAYER flow)
+    if (body.manualEntry === true) {
+      const playerName = body.playerName || body.playerQuery || '';
+      const goalsScored = body.goalsScored;
+
+      const manualResult = submitManualPlayer(sessionState, playerName, goalsScored);
+
+      return res.status(200).json({
+        resultCase: manualResult.resultCase,
+        sessionState: manualResult.newState,
+        statDeducted: manualResult.statDeducted,
+        message: manualResult.message,
+        player: manualResult.player
+      });
+    }
+
+    // Step B: Timer expired check
     if (body.timerExpired === true) {
       const result = evaluateTurn(sessionState, { timerExpired: true });
       return res.status(200).json({
@@ -56,7 +72,7 @@ module.exports = async function handler(req, res) {
 
     let targetPlayer = null;
 
-    // Step B & C: Determine target player (resubmitted selectedPlayer vs raw query resolution)
+    // Step C & D: Determine target player (resubmitted selectedPlayer vs raw query resolution)
     if (body.selectedPlayer && typeof body.selectedPlayer === 'object' && body.selectedPlayer.name) {
       // Direct resubmission from disambiguation selection — skip resolver to prevent loop
       targetPlayer = body.selectedPlayer;
@@ -71,13 +87,12 @@ module.exports = async function handler(req, res) {
 
       if (resolveResult.type === 'UNKNOWN_PLAYER') {
         // No match found in the static dataset for this club.
-        // Return NOT_ASSOCIATED (turn retained, balance unchanged) with a clear message.
-        // NOTE: Future prompt will implement a manual-addition flow for this case.
+        // Return UNKNOWN_PLAYER with the originally typed player name so frontend can prompt manual addition.
         return res.status(200).json({
-          resultCase: 'NOT_ASSOCIATED',
+          resultCase: 'UNKNOWN_PLAYER',
+          playerName: query,
           sessionState,
-          message: `No player matching "${query}" found in the ${club} dataset. ` +
-                   `Check the spelling or try a different name.`
+          message: `No player matching "${query}" found in the static dataset for ${club}.`
         });
       }
 

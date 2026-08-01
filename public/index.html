@@ -813,6 +813,75 @@
   </div>
 </div>
 
+<!-- ── RESULT MODAL 8: UNKNOWN PLAYER (MANUAL ADDITION) ──────── -->
+<div
+  id="modal-result-unknown"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-unknown-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--info">
+    <div class="modal__header">
+      <span class="badge badge--orange">UNKNOWN</span>
+      <h2 id="modal-unknown-title" class="modal__title" data-i18n="result_unknown_title">
+        اللاعب غير مدرج في قاعدة البيانات
+      </h2>
+    </div>
+    <div class="modal__body">
+      <p class="text-muted" data-i18n="result_unknown_body">
+        هذا اللاعب غير موجود في قاعدة بياناتنا لهذا النادي. يمكنك إضافته يدوياً لهذه الجلسة.
+      </p>
+
+      <div class="mt-4">
+        <label for="unknown-player-name" class="setup-section__label" data-i18n="result_unknown_player_label">
+          اسم اللاعب
+        </label>
+        <input
+          id="unknown-player-name"
+          type="text"
+          class="input mt-2"
+          readonly
+        />
+      </div>
+
+      <div class="mt-4">
+        <label for="unknown-goals-input" class="setup-section__label" data-i18n="result_unknown_goals_label">
+          عدد الأهداف
+        </label>
+        <input
+          id="unknown-goals-input"
+          type="number"
+          min="0"
+          step="1"
+          class="input mt-2"
+          data-i18n-attr="placeholder"
+          data-i18n="result_unknown_goals_placeholder"
+          placeholder="أدخل عدد الأهداف..."
+        />
+        <p id="unknown-error-msg" class="text-danger fs-xs mt-2" style="display:none;"></p>
+      </div>
+
+      <p class="fs-xs text-muted mt-4" data-i18n="result_unknown_session_note">
+        تنبيه: الإضافة اليدوية تسري على هذه الجلسة فقط ولن تُحفظ نهائياً.
+      </p>
+    </div>
+    <div class="modal__footer flex flex-col flex-gap-2">
+      <button
+        id="btn-unknown-submit"
+        class="btn btn-primary w-full"
+        data-i18n="btn_add_and_submit"
+      >إضافة وتأكيد</button>
+      <button
+        id="btn-unknown-cancel"
+        class="btn btn-ghost w-full"
+        data-i18n="btn_cancel_try_another"
+      >إلغاء / جرب اسماً آخر</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── RESULT MODAL 6: WIN ───────────────────────────────────── -->
 <div
   id="modal-result-win"

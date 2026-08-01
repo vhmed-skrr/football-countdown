@@ -126,3 +126,29 @@ End-to-End local verification completed (`dev-server.js` & `test-e2e-game.js`). 
 - `lib/gameEngine.js` — unchanged.
 - All 7 result cases (`SUCCESS`, `BUST`, `ALREADY_BURNED`, `TIME_UP`, `WIN`, `NOT_ASSOCIATED`, `NEEDS_DISAMBIGUATION`) — preserved with the same semantics.
 
+---
+
+### Manual Player Addition — UNKNOWN_PLAYER Flow (2026-08-01)
+
+**Status**: Complete ✅
+
+**Rationale**: The static player datasets are intentionally curated (~200 players per club) and not comprehensive. Unlisted squad or youth players will legitimately be missing. To address this uncertainty without penalizing players, the 8th result case (`UNKNOWN_PLAYER`) allows users to manually specify unlisted players and their goal counts for the active game session.
+
+**Changes Applied**:
+1. **Added `UNKNOWN_PLAYER` Case & `submitManualPlayer`**:
+   - Added `submitManualPlayer(sessionState, playerName, goalsScored)` to `lib/gameEngine.js`.
+   - Validates `goalsScored` as a non-negative integer.
+   - Evaluates standard scoring logic (`SUCCESS`, `BUST`, `WIN`) and adds the manually typed player to the active player's burned list for the current session.
+2. **Updated API Wiring in `api/game/play.js`**:
+   - When resolver returns `UNKNOWN_PLAYER`, returns `{ resultCase: 'UNKNOWN_PLAYER', playerName: query, sessionState, message }` without scoring.
+   - Added support for `{ manualEntry: true, playerName, goalsScored }` payload routing to `submitManualPlayer`.
+3. **Frontend UI & Modals (`public/index.html` + `public/scripts/app.js`)**:
+   - Implemented `#modal-result-unknown` with player name pre-filling, goals input, validation error display, and explicit session-only scope note.
+   - Added "Add and Submit" (`#btn-unknown-submit`) and "Cancel / Try Another Name" (`#btn-unknown-cancel`) actions.
+4. **Translations (`public/locales/en.json` & `public/locales/ar.json`)**:
+   - Added all UI strings for `UNKNOWN_PLAYER` modal and manual submission error messages.
+5. **Documentation (`ARCHITECTURE.md`)**:
+   - Documented `UNKNOWN_PLAYER` as Case 8 in Core Game Rules, highlighting distinction from `NOT_ASSOCIATED`.
+   - Documented in-memory session-only lifetime under Caching Strategy.
+
+

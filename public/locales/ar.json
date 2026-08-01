@@ -79,6 +79,16 @@
   "result_not_associated_title": "اللاعب غير موجود في قاعدة البيانات",
   "result_not_associated_body": "هذا اللاعب لم يلعب للنادي المختار في هذا الدوري.",
 
+  "result_unknown_title": "اللاعب غير مدرج في قاعدة البيانات",
+  "result_unknown_body": "هذا اللاعب غير موجود في قاعدة بياناتنا لهذا النادي. يمكنك إضافته يدوياً لهذه الجلسة.",
+  "result_unknown_session_note": "تنبيه: الإضافة اليدوية تسري على هذه الجلسة فقط ولن تُحفظ نهائياً.",
+  "result_unknown_player_label": "اسم اللاعب",
+  "result_unknown_goals_label": "عدد الأهداف",
+  "result_unknown_goals_placeholder": "أدخل عدد الأهداف...",
+  "result_unknown_error_goals": "يرجى إدخال عدد صحيح غير سالب للأهداف.",
+  "btn_add_and_submit": "إضافة وتأكيد",
+  "btn_cancel_try_another": "إلغاء / جرب اسماً آخر",
+
   "result_win_title": "صفر بالمللي! 🏆",
   "result_win_body": "لقد فزت!",
   "result_win_player": "الفائز",

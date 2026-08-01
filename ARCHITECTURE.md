@@ -123,9 +123,9 @@ User types player name
 
 - **Players**: 2–4, local pass-and-play (single device is passed between players).
 - **Setup**: players choose a league + club at game start (fixed for the whole game), a challenge category (Goals / Assists / Clubs / Nations), and a starting balance (default **700**).
-- **Turn flow**: the active player receives the device, types a football player's name, presses Search. The backend resolves it and returns one of the seven result cases below.
+- **Turn flow**: the active player receives the device, types a football player's name, presses Search. The backend resolves it and returns one of the eight result cases below.
 
-### The Seven Result Cases (must be distinguished in code — never merged)
+### The Eight Result Cases (must be distinguished in code — never merged)
 
 | # | Case | Condition | Effect |
 |---|---|---|---|
@@ -134,8 +134,9 @@ User types player name
 | 3 | **ALREADY_BURNED** | Player (by resolved identity, not raw string) already used this game | Reject before any data fetch |
 | 4 | **TIME_UP** | Timer reached 0 before submission | Turn lost; balance unchanged |
 | 5 | **WIN** | Balance reaches exactly 0 | Game ends; current player wins |
-| 6 | **NOT_ASSOCIATED** | Player has zero rows for that specific club | Reject with clear message; does **not** count as a turn; does **not** affect balance. Distinct from a 0-goals SUCCESS row |
+| 6 | **NOT_ASSOCIATED** | Player is in dataset but has zero recorded appearances/goals for that club | Reject with clear message; does **not** count as a turn; does **not** affect balance. Distinct from `UNKNOWN_PLAYER` |
 | 7 | **NEEDS_DISAMBIGUATION** | Partial/ambiguous name → multiple candidates | Return candidate list (name + photo, no stats); wait for user selection; resubmit |
+| 8 | **UNKNOWN_PLAYER** | Searched name does not match any entry in static dataset for club | Prompt user to manually enter player & goals count for current session; distinct from `NOT_ASSOCIATED` (uncertainty vs certainty) |
 
 ### Balance Aggregation
 
@@ -151,6 +152,7 @@ Goals (or the chosen stat) are **summed across all seasons** the player played f
 - **Per-game-session tracking** is handled purely on the **frontend**: the JavaScript client holds the full session state object (balance, both burned-player lists, current turn indicator, league/club/category selection) and sends the complete relevant state with every API request.
 - The backend is **stateless**: it receives a request, computes a result, returns it, and forgets everything.
 - Burned-player deduplication uses the **resolved player identity** (a canonical ID or normalised full name returned by `playerResolver`), not the raw typed string, so "Salah", "Mohamed Salah", and "محمد صلاح" all map to the same burned entry.
+- Manually-added players (via the `UNKNOWN_PLAYER` flow) exist only in the current session's in-memory state and are never persisted to the static dataset files.
 
 ---
 
