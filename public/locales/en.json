@@ -1,0 +1,91 @@
+{
+  "app_title": "Football Countdown",
+  "app_tagline": "Challenge your friend — race the balance to zero!",
+
+  "nav_lang_toggle": "عربي",
+  "nav_theme_toggle_dark": "Dark Mode",
+  "nav_theme_toggle_light": "Light Mode",
+  "nav_mute": "Mute",
+  "nav_unmute": "Unmute",
+
+  "btn_play": "Play Now",
+  "btn_start_game": "Start Game",
+  "btn_ready": "I'm Ready",
+  "btn_next_turn": "Next Turn",
+  "btn_play_again": "Play Again",
+  "btn_quit": "Quit",
+  "btn_search": "Search",
+  "btn_confirm": "Confirm",
+  "btn_cancel": "Cancel",
+
+  "footer_credit": "Made by Ahmed Medhat",
+
+  "setup_title": "Game Setup",
+  "setup_league_label": "Select League",
+  "setup_club_label": "Select Club",
+  "setup_club_disabled": "Select a league first",
+  "setup_category_label": "Challenge Type",
+  "setup_category_goals": "Goals",
+  "setup_category_assists": "Assists",
+  "setup_category_clubs": "Clubs",
+  "setup_category_nations": "Nations",
+
+  "setup_players_btn": "Player Setup",
+  "setup_players_modal_title": "Players",
+  "setup_players_count_label": "Number of Players",
+  "setup_player_name_label": "Player {{n}} Name",
+
+  "setup_settings_btn": "Game Settings",
+  "setup_settings_modal_title": "Game Settings",
+  "setup_settings_timer_label": "Enable Timer",
+  "setup_settings_timer_duration": "Timer Duration",
+  "setup_settings_balance_label": "Starting Balance",
+  "setup_settings_balance_placeholder": "700",
+
+  "pass_title": "Pass the device to {{name}}",
+  "pass_subtitle": "Don't look! Wait until the player has the device.",
+
+  "arena_timer_label": "Time",
+  "arena_balance_label": "Balance",
+  "arena_turn_label": "Turn",
+  "arena_search_placeholder": "Type a player name...",
+  "arena_burned_list_title": "Burned Players",
+  "arena_burned_empty": "None yet",
+  "arena_suggest_loading": "Searching...",
+
+  "arena_nav_leaderboard": "Leaderboard",
+  "arena_nav_arena": "Arena",
+  "arena_nav_stats": "Stats",
+  "arena_nav_settings": "Settings",
+
+  "modal_settings_mute": "Mute Sound",
+  "modal_settings_quit": "Quit Game",
+  "modal_settings_change_category": "Change Category",
+
+  "result_success_title": "Great pick! 🎉",
+  "result_success_goals": "Goals",
+  "result_success_assists": "Assists",
+  "result_success_new_balance": "New Balance",
+
+  "result_bust_title": "Bust! 💥",
+  "result_bust_body": "Balance couldn't cover that — turn lost, no deduction.",
+
+  "result_burned_title": "Already Burned! 🔥",
+  "result_burned_body": "This player was already used in this game.",
+
+  "result_timeup_title": "Time's Up! ⏰",
+  "result_timeup_body": "The clock ran out before you answered — turn lost.",
+
+  "result_not_associated_title": "Player Not Found",
+  "result_not_associated_body": "This player has no record for the selected club in this league.",
+
+  "result_win_title": "Exactly Zero! 🏆",
+  "result_win_body": "You win!",
+  "result_win_player": "Winner",
+
+  "result_disambiguation_title": "Who did you mean?",
+  "result_disambiguation_body": "We found multiple players — pick the right one:",
+
+  "leaderboard_title": "Leaderboard",
+  "stats_title": "Statistics"
+}

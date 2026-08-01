@@ -1,0 +1,55 @@
+/* =========================================================
+   theme-light.css — Light Mode CSS custom-property tokens
+   PRIMARY theme: active by default (no data-theme attribute needed)
+   ========================================================= */
+
+:root[data-theme="light"],
+:root {
+  /* Surfaces */
+  --bg-primary:       #FFFFFF;
+  --bg-secondary:     #F8F9FA;
+
+  /* Typography */
+  --text-primary:     #212529;
+  --text-secondary:   #495057;
+
+  /* Accents */
+  --accent-primary:   #0066FF;   /* electric blue */
+  --accent-secondary: #FF6B00;   /* vibrant orange */
+  --accent-success:   #16A766;   /* sport green */
+  --accent-danger:    #E63946;
+
+  /* Glassmorphism */
+  --glass-bg:         rgba(255, 255, 255, 0.65);
+  --glass-border:     rgba(255, 255, 255, 0.9);
+  --glass-blur:       12px;
+
+  /* Shadows */
+  --shadow-soft:      0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Additional surface variants derived from above tokens */
+  --card-bg:          rgba(255, 255, 255, 0.72);
+  --card-border:      rgba(0, 102, 255, 0.10);
+  --nav-bg:           rgba(255, 255, 255, 0.80);
+  --modal-overlay:    rgba(0, 0, 0, 0.35);
+  --input-bg:         #FFFFFF;
+  --input-border:     rgba(33, 37, 41, 0.18);
+  --input-focus-border: var(--accent-primary);
+  --divider:          rgba(33, 37, 41, 0.10);
+
+  /* Gradients */
+  --gradient-hero:    linear-gradient(135deg, #e8f0ff 0%, #fdf0e8 100%);
+  --gradient-accent:  linear-gradient(135deg, var(--accent-primary), #0044bb);
+  --gradient-orange:  linear-gradient(135deg, var(--accent-secondary), #cc4400);
+  --gradient-success: linear-gradient(135deg, var(--accent-success), #0e7a4a);
+  --gradient-danger:  linear-gradient(135deg, var(--accent-danger),  #b02030);
+  --gradient-gold:    linear-gradient(135deg, #FFD700, #FF8C00);
+
+  /* Timer states */
+  --timer-ok:         var(--accent-success);
+  --timer-warning:    var(--accent-secondary);
+  --timer-danger:     var(--accent-danger);
+
+  /* HUD glow for active player */
+  --active-glow:      0 0 0 3px rgba(22, 167, 102, 0.35);
+}

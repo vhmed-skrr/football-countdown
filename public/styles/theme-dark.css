@@ -1,0 +1,54 @@
+/* =========================================================
+   theme-dark.css — Dark Mode CSS custom-property tokens
+   SECONDARY theme: applied when <html data-theme="dark">
+   ========================================================= */
+
+:root[data-theme="dark"] {
+  /* Surfaces */
+  --bg-primary:       #0D1117;
+  --bg-secondary:     #161B22;
+
+  /* Typography */
+  --text-primary:     #E6EDF3;
+  --text-secondary:   #8B949E;
+
+  /* Accents (lightened for dark background contrast) */
+  --accent-primary:   #4A9EFF;   /* electric blue */
+  --accent-secondary: #FF8A3D;   /* vibrant orange */
+  --accent-success:   #3DD68C;
+  --accent-danger:    #FF6B6B;
+
+  /* Glassmorphism */
+  --glass-bg:         rgba(22, 27, 34, 0.65);
+  --glass-border:     rgba(255, 255, 255, 0.08);
+  --glass-blur:       12px;
+
+  /* Shadows */
+  --shadow-soft:      0 8px 24px rgba(0, 0, 0, 0.40);
+
+  /* Additional surface variants derived from above tokens */
+  --card-bg:          rgba(22, 27, 34, 0.72);
+  --card-border:      rgba(74, 158, 255, 0.12);
+  --nav-bg:           rgba(13, 17, 23, 0.90);
+  --modal-overlay:    rgba(0, 0, 0, 0.65);
+  --input-bg:         #161B22;
+  --input-border:     rgba(230, 237, 243, 0.12);
+  --input-focus-border: var(--accent-primary);
+  --divider:          rgba(255, 255, 255, 0.07);
+
+  /* Gradients */
+  --gradient-hero:    linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  --gradient-accent:  linear-gradient(135deg, var(--accent-primary), #1a6fcc);
+  --gradient-orange:  linear-gradient(135deg, var(--accent-secondary), #cc5500);
+  --gradient-success: linear-gradient(135deg, var(--accent-success), #1a9960);
+  --gradient-danger:  linear-gradient(135deg, var(--accent-danger),  #cc3333);
+  --gradient-gold:    linear-gradient(135deg, #FFD700, #cc8800);
+
+  /* Timer states */
+  --timer-ok:         var(--accent-success);
+  --timer-warning:    var(--accent-secondary);
+  --timer-danger:     var(--accent-danger);
+
+  /* HUD glow for active player */
+  --active-glow:      0 0 0 3px rgba(61, 214, 140, 0.35);
+}

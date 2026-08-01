@@ -1,0 +1,91 @@
+{
+  "app_title": "كاونت داون كرة القدم",
+  "app_tagline": "تحدى صاحبك — أوصّل الرصيد لصفر!",
+
+  "nav_lang_toggle": "English",
+  "nav_theme_toggle_dark": "الوضع الداكن",
+  "nav_theme_toggle_light": "الوضع الفاتح",
+  "nav_mute": "كتم الصوت",
+  "nav_unmute": "تشغيل الصوت",
+
+  "btn_play": "العب الآن",
+  "btn_start_game": "ابدأ اللعبة",
+  "btn_ready": "أنا جاهز",
+  "btn_next_turn": "الدور التالي",
+  "btn_play_again": "العب مرة تانية",
+  "btn_quit": "خروج",
+  "btn_search": "بحث",
+  "btn_confirm": "تأكيد",
+  "btn_cancel": "إلغاء",
+
+  "footer_credit": "صنع بواسطة أحمد مدحت",
+
+  "setup_title": "إعداد اللعبة",
+  "setup_league_label": "اختر الدوري",
+  "setup_club_label": "اختر النادي",
+  "setup_club_disabled": "اختر دوري أولاً",
+  "setup_category_label": "نوع التحدي",
+  "setup_category_goals": "أهداف",
+  "setup_category_assists": "تمريرات",
+  "setup_category_clubs": "أندية",
+  "setup_category_nations": "دول",
+
+  "setup_players_btn": "إعداد اللاعبين",
+  "setup_players_modal_title": "اللاعبون",
+  "setup_players_count_label": "عدد اللاعبين",
+  "setup_player_name_label": "اسم اللاعب {{n}}",
+
+  "setup_settings_btn": "إعدادات اللعبة",
+  "setup_settings_modal_title": "إعدادات اللعبة",
+  "setup_settings_timer_label": "تفعيل العداد",
+  "setup_settings_timer_duration": "مدة العداد",
+  "setup_settings_balance_label": "الرصيد الابتدائي",
+  "setup_settings_balance_placeholder": "700",
+
+  "pass_title": "مرر الجهاز لـ {{name}}",
+  "pass_subtitle": "لا تنظر! انتظر حتى يستلم اللاعب الجهاز",
+
+  "arena_timer_label": "الوقت",
+  "arena_balance_label": "الرصيد",
+  "arena_turn_label": "دور",
+  "arena_search_placeholder": "اكتب اسم اللاعب...",
+  "arena_burned_list_title": "اللاعبون المحروقون",
+  "arena_burned_empty": "لا أحد بعد",
+  "arena_suggest_loading": "جاري البحث...",
+
+  "arena_nav_leaderboard": "الترتيب",
+  "arena_nav_arena": "الملعب",
+  "arena_nav_stats": "إحصائيات",
+  "arena_nav_settings": "إعدادات",
+
+  "modal_settings_mute": "كتم الصوت",
+  "modal_settings_quit": "إنهاء اللعبة",
+  "modal_settings_change_category": "تغيير التحدي",
+
+  "result_success_title": "أهلاً وسهلاً! 🎉",
+  "result_success_goals": "الأهداف",
+  "result_success_assists": "التمريرات",
+  "result_success_new_balance": "الرصيد الجديد",
+
+  "result_bust_title": "تخطيت الحد! 💥",
+  "result_bust_body": "الرصيد لم يكفي — الدور انتهى بدون خصم.",
+
+  "result_burned_title": "اللاعب ده اتحرق! 🔥",
+  "result_burned_body": "هذا اللاعب استُخدم بالفعل في هذه اللعبة.",
+
+  "result_timeup_title": "الوقت خلص! ⏰",
+  "result_timeup_body": "انتهى الوقت قبل الإجابة — الدور ضاع.",
+
+  "result_not_associated_title": "اللاعب غير موجود في قاعدة البيانات",
+  "result_not_associated_body": "هذا اللاعب لم يلعب للنادي المختار في هذا الدوري.",
+
+  "result_win_title": "صفر بالمللي! 🏆",
+  "result_win_body": "لقد فزت!",
+  "result_win_player": "الفائز",
+
+  "result_disambiguation_title": "قصدك مين؟",
+  "result_disambiguation_body": "وجدنا أكثر من لاعب — اختر الصحيح:",
+
+  "leaderboard_title": "الترتيب",
+  "stats_title": "إحصائيات"
+}

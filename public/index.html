@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<!--
+  football-countdown — index.html
+  All five screens and six result modal variants live in this single file.
+  The active screen is toggled via JS (screen--hidden class).
+  Default state: Arabic / RTL / Light Mode (no extra class or attribute needed).
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0066FF" />
+
+  <!-- SEO -->
+  <title>كاونت داون كرة القدم — تحدى صاحبك!</title>
+  <meta name="description"
+        content="لعبة كرة قدم تنافسية لشخصين محلياً — سمّ لاعبين سجّلوا لنادٍ محدد وأوصّل الرصيد لصفر بالضبط!" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="كاونت داون كرة القدم" />
+  <meta property="og:description" content="تحدّ صاحبك — أوصّل الرصيد لصفر!" />
+  <meta property="og:type"        content="website" />
+
+  <!-- CSS: tokens first, then shared styles -->
+  <link rel="stylesheet" href="/styles/theme-light.css" />
+  <link rel="stylesheet" href="/styles/theme-dark.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+<!-- ═══════════════════════════════════════════════════════════
+     SHARED NAVBAR (visible on Screen 1 and Screen 2)
+     ════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="main-navbar" role="navigation" aria-label="شريط التنقل الرئيسي">
+  <span class="navbar__brand" aria-label="اسم التطبيق">⚽ FC</span>
+
+  <div class="navbar__actions">
+    <!-- Language toggle -->
+    <button
+      id="btn-lang-toggle"
+      class="btn btn-ghost"
+      aria-label="تغيير اللغة"
+      data-i18n="nav_lang_toggle"
+    >English</button>
+
+    <!-- Theme toggle -->
+    <button
+      id="btn-theme-toggle"
+      class="btn btn-icon"
+      aria-label="تبديل الوضع الداكن"
+      aria-pressed="false"
+      data-i18n="nav_theme_toggle_dark"
+      title="تبديل الوضع الداكن"
+    >🌙</button>
+
+    <!-- Sound toggle -->
+    <button
+      id="btn-mute-toggle"
+      class="btn btn-icon"
+      aria-label="كتم الصوت"
+      aria-pressed="false"
+      data-i18n="nav_mute"
+      title="كتم الصوت"
+    >🔊</button>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 1 — MAIN MENU
+     ════════════════════════════════════════════════════════ -->
+<main
+  id="screen-menu"
+  class="screen main-menu"
+  role="main"
+  aria-label="القائمة الرئيسية"
+>
+  <section class="main-menu__hero anim-slide-up" aria-labelledby="hero-title">
+    <!-- Game Title -->
+    <h1 id="hero-title" class="main-menu__title" data-i18n="app_title">
+      كاونت داون كرة القدم
+    </h1>
+
+    <!-- Tagline -->
+    <p class="main-menu__tagline" data-i18n="app_tagline">
+      تحدى صاحبك — أوصّل الرصيد لصفر!
+    </p>
+
+    <!-- CTA -->
+    <div class="main-menu__actions">
+      <button
+        id="btn-main-play"
+        class="btn btn-primary btn-lg"
+        aria-label="ابدأ اللعب"
+        data-i18n="btn_play"
+      >العب الآن</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-menu__footer" aria-label="معلومات النسخة">
+    <small data-i18n="footer_credit">صنع بواسطة أحمد مدحت</small>
+  </footer>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 2 — GAME SETUP
+     ════════════════════════════════════════════════════════ -->
+<section
+  id="screen-setup"
+  class="screen setup-screen screen--hidden"
+  aria-label="إعداد اللعبة"
+>
+  <div class="container">
+    <h1 class="fs-xl fw-black mt-6 mb-6" data-i18n="setup_title">إعداد اللعبة</h1>
+
+    <!-- League Selection -->
+    <div class="setup-section" id="section-league">
+      <p class="setup-section__label" data-i18n="setup_league_label">اختر الدوري</p>
+      <div class="hex-grid" id="league-grid" role="group" aria-label="اختيار الدوري">
+        <!-- Placeholder league buttons — real data loaded in A4 -->
+        <button class="hex-btn selected" id="league-pl" aria-pressed="true" data-league="pl">
+          <span class="hex-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+          <span>البريمير ليغ</span>
+        </button>
+        <button class="hex-btn" id="league-la" aria-pressed="false" data-league="la">
+          <span class="hex-icon">🇪🇸</span>
+          <span>لا ليغا</span>
+        </button>
+        <button class="hex-btn" id="league-bl" aria-pressed="false" data-league="bl">
+          <span class="hex-icon">🇩🇪</span>
+          <span>بوندسليغا</span>
+        </button>
+        <button class="hex-btn" id="league-sa" aria-pressed="false" data-league="sa">
+          <span class="hex-icon">🇮🇹</span>
+          <span>سيريا آ</span>
+        </button>
+        <button class="hex-btn" id="league-l1" aria-pressed="false" data-league="l1">
+          <span class="hex-icon">🇫🇷</span>
+          <span>ليغ 1</span>
+        </button>
+        <button class="hex-btn" id="league-cl" aria-pressed="false" data-league="cl">
+          <span class="hex-icon">⭐</span>
+          <span>أبطال أوروبا</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Club Selection -->
+    <div class="setup-section" id="section-club">
+      <p class="setup-section__label" data-i18n="setup_club_label">اختر النادي</p>
+      <div class="hex-grid" id="club-grid" role="group" aria-label="اختيار النادي">
+        <!-- Placeholder club buttons — real data loaded based on selected league in A4 -->
+        <button class="hex-btn" id="club-mancity" aria-pressed="false" data-club="mancity">
+          <span class="hex-icon">🔵</span>
+          <span>مان سيتي</span>
+        </button>
+        <button class="hex-btn" id="club-liverpool" aria-pressed="false" data-club="liverpool">
+          <span class="hex-icon">🔴</span>
+          <span>ليفربول</span>
+        </button>
+        <button class="hex-btn" id="club-arsenal" aria-pressed="false" data-club="arsenal">
+          <span class="hex-icon">🔴</span>
+          <span>أرسنال</span>
+        </button>
+        <button class="hex-btn" id="club-chelsea" aria-pressed="false" data-club="chelsea">
+          <span class="hex-icon">🔵</span>
+          <span>تشيلسي</span>
+        </button>
+        <button class="hex-btn" id="club-manutd" aria-pressed="false" data-club="manutd">
+          <span class="hex-icon">🔴</span>
+          <span>مان يونايتد</span>
+        </button>
+        <button class="hex-btn" id="club-spurs" aria-pressed="false" data-club="spurs">
+          <span class="hex-icon">⚪</span>
+          <span>توتنهام</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Challenge Category -->
+    <div class="setup-section" id="section-category">
+      <p class="setup-section__label" data-i18n="setup_category_label">نوع التحدي</p>
+      <div class="hex-grid" id="category-grid" role="group" aria-label="اختيار نوع التحدي">
+        <button class="hex-btn selected" id="cat-goals" aria-pressed="true" data-category="goals">
+          <span class="hex-icon">⚽</span>
+          <span data-i18n="setup_category_goals">أهداف</span>
+        </button>
+        <button class="hex-btn" id="cat-assists" aria-pressed="false" data-category="assists">
+          <span class="hex-icon">🎯</span>
+          <span data-i18n="setup_category_assists">تمريرات</span>
+        </button>
+        <button class="hex-btn" id="cat-clubs" aria-pressed="false" data-category="clubs">
+          <span class="hex-icon">🏟️</span>
+          <span data-i18n="setup_category_clubs">أندية</span>
+        </button>
+        <button class="hex-btn" id="cat-nations" aria-pressed="false" data-category="nations">
+          <span class="hex-icon">🌍</span>
+          <span data-i18n="setup_category_nations">دول</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Action buttons -->
+    <div class="setup-action-btns mt-6">
+      <button
+        id="btn-player-setup"
+        class="btn btn-ghost"
+        aria-haspopup="dialog"
+        aria-controls="modal-player-setup"
+        data-i18n="setup_players_btn"
+      >إعداد اللاعبين</button>
+
+      <button
+        id="btn-game-settings"
+        class="btn btn-ghost"
+        aria-haspopup="dialog"
+        aria-controls="modal-game-settings"
+        data-i18n="setup_settings_btn"
+      >إعدادات اللعبة</button>
+    </div>
+  </div><!-- /container -->
+
+  <!-- Sticky footer -->
+  <div class="setup-sticky-footer">
+    <button
+      id="btn-start-game"
+      class="btn btn-primary btn-lg w-full"
+      aria-label="ابدأ اللعبة"
+      data-i18n="btn_start_game"
+    >ابدأ اللعبة</button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 3 — PASS & PLAY (privacy transition)
+     ════════════════════════════════════════════════════════ -->
+<section
+  id="screen-pass"
+  class="screen pass-screen screen--hidden"
+  aria-label="تمرير الجهاز"
+  aria-live="polite"
+>
+  <!-- Floating ball -->
+  <div class="pass-screen__ball" role="img" aria-hidden="true">⚽</div>
+
+  <!-- Dynamic heading — name interpolated by JS -->
+  <h1 id="pass-title" class="pass-screen__title">
+    <span data-i18n="pass_title"
+          data-i18n-data-key="name"
+          id="pass-title-text">مرر الجهاز لـ </span><span
+      id="pass-player-name"
+      class="pass-screen__name"
+    >علي</span>
+  </h1>
+
+  <p class="pass-screen__subtitle" data-i18n="pass_subtitle">
+    لا تنظر! انتظر حتى يستلم اللاعب الجهاز
+  </p>
+
+  <button
+    id="btn-pass-ready"
+    class="btn btn-primary btn-lg"
+    aria-label="مستعد للعب"
+    data-i18n="btn_ready"
+  >أنا جاهز</button>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCREEN 4 — THE ARENA (main gameplay)
+     ════════════════════════════════════════════════════════ -->
+<section
+  id="screen-arena"
+  class="screen arena-screen screen--hidden"
+  aria-label="ملعب اللعبة"
+>
+
+  <!-- HUD (replaces navbar on this screen) -->
+  <header class="hud" id="arena-hud" role="banner" aria-label="لوحة اللعبة">
+    <!-- Timer -->
+    <div class="hud__timer" id="hud-timer" aria-live="polite" aria-label="العداد">
+      <span aria-hidden="true">⏱</span>
+      <span id="timer-display">01:30</span>
+    </div>
+
+    <!-- Active player -->
+    <div class="hud__player" aria-label="اللاعب الحالي">
+      <span class="active-dot" aria-hidden="true"></span>
+      <span class="hud__player-name" id="hud-player-name">علي</span>
+    </div>
+
+    <!-- Balance -->
+    <div class="hud__balance" aria-label="الرصيد المتبقي">
+      <span aria-hidden="true">🏆</span>
+      <span id="hud-balance">700</span>
+    </div>
+  </header>
+
+  <!-- Burned players panel (sidebar / drawer) -->
+  <aside
+    id="burned-panel"
+    class="burned-panel"
+    aria-label="قائمة اللاعبين المحروقين"
+    aria-live="polite"
+  >
+    <h2 class="burned-panel__title" data-i18n="arena_burned_list_title">
+      اللاعبون المحروقون
+    </h2>
+    <!-- Entries injected by JS -->
+    <p id="burned-empty-msg" class="text-muted fs-sm" data-i18n="arena_burned_empty">
+      لا أحد بعد
+    </p>
+    <ul id="burned-list" class="flex flex-col flex-gap-2" aria-label="قائمة المحروقين">
+      <!-- Placeholder entries for visual structure -->
+      <li class="burned-entry">
+        <span class="burned-entry__flame" aria-hidden="true">🔥</span>
+        <span>محمد صلاح</span>
+      </li>
+      <li class="burned-entry">
+        <span class="burned-entry__flame" aria-hidden="true">🔥</span>
+        <span>إيرلينغ هالاند</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main arena content -->
+  <div class="container">
+
+    <!-- Search bar -->
+    <div class="arena-search-wrap" role="search" aria-label="البحث عن لاعب">
+      <div style="position:relative; flex:1;">
+        <span class="arena-search-icon" aria-hidden="true">⚽</span>
+        <input
+          id="arena-search-input"
+          type="search"
+          class="input arena-search-input"
+          data-i18n-attr="placeholder"
+          data-i18n="arena_search_placeholder"
+          placeholder="اكتب اسم اللاعب..."
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-label="ابحث عن لاعب"
+          aria-autocomplete="list"
+          aria-controls="arena-suggest"
+          aria-expanded="false"
+        />
+        <!-- Auto-suggest dropdown -->
+        <div
+          id="arena-suggest"
+          class="arena-suggest"
+          role="listbox"
+          aria-label="نتائج البحث"
+          hidden
+        >
+          <!-- Placeholder suggestion items -->
+          <div class="arena-suggest__item" role="option" id="suggest-opt-1" tabindex="0">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="32" height="32" loading="lazy" />
+            <span>محمد صلاح</span>
+          </div>
+          <div class="arena-suggest__item" role="option" id="suggest-opt-2" tabindex="0">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="32" height="32" loading="lazy" />
+            <span>صادق محمد</span>
+          </div>
+          <div class="arena-suggest__item arena-suggest__item--loading fs-sm text-muted"
+               id="suggest-loading"
+               data-i18n="arena_suggest_loading"
+               hidden>
+            جاري البحث...
+          </div>
+        </div>
+      </div>
+
+      <button
+        id="btn-arena-search"
+        class="btn btn-primary"
+        aria-label="ابحث"
+        data-i18n="btn_search"
+      >بحث</button>
+    </div>
+
+    <!-- Category switcher -->
+    <div class="arena-category-grid" aria-label="تغيير نوع التحدي">
+      <p class="setup-section__label" data-i18n="setup_category_label">نوع التحدي</p>
+      <div class="hex-grid" id="arena-category-grid" role="group">
+        <button class="hex-btn selected" id="arena-cat-goals" aria-pressed="true" data-category="goals">
+          <span class="hex-icon">⚽</span>
+          <span data-i18n="setup_category_goals">أهداف</span>
+        </button>
+        <button class="hex-btn" id="arena-cat-assists" aria-pressed="false" data-category="assists">
+          <span class="hex-icon">🎯</span>
+          <span data-i18n="setup_category_assists">تمريرات</span>
+        </button>
+        <button class="hex-btn" id="arena-cat-clubs" aria-pressed="false" data-category="clubs">
+          <span class="hex-icon">🏟️</span>
+          <span data-i18n="setup_category_clubs">أندية</span>
+        </button>
+        <button class="hex-btn" id="arena-cat-nations" aria-pressed="false" data-category="nations">
+          <span class="hex-icon">🌍</span>
+          <span data-i18n="setup_category_nations">دول</span>
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Bottom navigation -->
+  <nav
+    class="bottom-nav"
+    id="arena-bottom-nav"
+    role="navigation"
+    aria-label="شريط التنقل السفلي"
+  >
+    <button class="bottom-nav__item" id="nav-leaderboard" aria-label="الترتيب">
+      <span class="nav-icon" aria-hidden="true">🏅</span>
+      <span data-i18n="arena_nav_leaderboard">الترتيب</span>
+    </button>
+    <button class="bottom-nav__item active" id="nav-arena" aria-label="الملعب" aria-current="page">
+      <span class="nav-icon" aria-hidden="true">⚽</span>
+      <span data-i18n="arena_nav_arena">الملعب</span>
+    </button>
+    <button class="bottom-nav__item" id="nav-stats" aria-label="إحصائيات">
+      <span class="nav-icon" aria-hidden="true">📊</span>
+      <span data-i18n="arena_nav_stats">إحصائيات</span>
+    </button>
+    <button
+      class="bottom-nav__item"
+      id="nav-settings"
+      aria-label="إعدادات اللعبة"
+      aria-haspopup="dialog"
+      aria-controls="modal-quick-settings"
+    >
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span data-i18n="arena_nav_settings">إعدادات</span>
+    </button>
+  </nav>
+
+</section>
+<!-- /screen-arena -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     MODALS — all six Turn Result variants + 3 utility modals
+     All modals start hidden; JS toggles .open on .modal-overlay
+     ════════════════════════════════════════════════════════ -->
+
+<!-- ── UTILITY MODAL: Player Setup ──────────────────────────── -->
+<div
+  id="modal-player-setup"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-player-setup-title"
+>
+  <div class="modal glass">
+    <div class="modal__header">
+      <h2 id="modal-player-setup-title" class="modal__title" data-i18n="setup_players_modal_title">
+        اللاعبون
+      </h2>
+      <button
+        class="btn btn-icon"
+        id="btn-close-player-setup"
+        aria-label="إغلاق"
+        data-i18n="btn_cancel"
+      >✕</button>
+    </div>
+    <div class="modal__body">
+      <label class="setup-section__label" for="player-count" data-i18n="setup_players_count_label">
+        عدد اللاعبين
+      </label>
+      <select id="player-count" class="input mt-4" aria-label="اختر عدد اللاعبين">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <div id="player-name-fields" class="flex flex-col flex-gap-2 mt-6">
+        <!-- Generated by JS based on player count -->
+        <label for="player-name-1" class="setup-section__label">
+          <span data-i18n="setup_player_name_label" data-i18n-n="1">اسم اللاعب 1</span>
+        </label>
+        <input
+          id="player-name-1"
+          type="text"
+          class="input"
+          placeholder="أدخل الاسم"
+          autocomplete="given-name"
+          aria-label="اسم اللاعب الأول"
+        />
+        <label for="player-name-2" class="setup-section__label">
+          <span data-i18n="setup_player_name_label" data-i18n-n="2">اسم اللاعب 2</span>
+        </label>
+        <input
+          id="player-name-2"
+          type="text"
+          class="input"
+          placeholder="أدخل الاسم"
+          autocomplete="given-name"
+          aria-label="اسم اللاعب الثاني"
+        />
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn-ghost" id="btn-cancel-player-setup" data-i18n="btn_cancel">إلغاء</button>
+      <button class="btn btn-primary" id="btn-confirm-player-setup" data-i18n="btn_confirm">تأكيد</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── UTILITY MODAL: Game Settings ─────────────────────────── -->
+<div
+  id="modal-game-settings"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-game-settings-title"
+>
+  <div class="modal glass">
+    <div class="modal__header">
+      <h2 id="modal-game-settings-title" class="modal__title" data-i18n="setup_settings_modal_title">
+        إعدادات اللعبة
+      </h2>
+      <button class="btn btn-icon" id="btn-close-game-settings" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="modal__body">
+
+      <!-- Timer toggle -->
+      <div class="toggle-wrap mb-6">
+        <label for="toggle-timer" class="setup-section__label" data-i18n="setup_settings_timer_label">
+          تفعيل العداد
+        </label>
+        <input
+          type="checkbox"
+          class="toggle"
+          id="toggle-timer"
+          role="switch"
+          aria-checked="false"
+          aria-label="تفعيل العداد"
+        />
+      </div>
+
+      <!-- Timer duration (visible only when timer enabled) -->
+      <div id="timer-duration-wrap" hidden>
+        <label for="timer-duration" class="setup-section__label" data-i18n="setup_settings_timer_duration">
+          مدة العداد
+        </label>
+        <select id="timer-duration" class="input mt-4" aria-label="مدة العداد">
+          <option value="30">30 ثانية</option>
+          <option value="60">دقيقة</option>
+          <option value="90" selected>دقيقة ونصف</option>
+          <option value="120">دقيقتان</option>
+          <option value="180">3 دقائق</option>
+        </select>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Starting balance -->
+      <label for="start-balance" class="setup-section__label" data-i18n="setup_settings_balance_label">
+        الرصيد الابتدائي
+      </label>
+      <input
+        id="start-balance"
+        type="number"
+        class="input mt-4"
+        value="700"
+        min="10"
+        max="9999"
+        step="1"
+        data-i18n-attr="placeholder"
+        data-i18n="setup_settings_balance_placeholder"
+        aria-label="الرصيد الابتدائي"
+      />
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn-ghost" id="btn-cancel-game-settings" data-i18n="btn_cancel">إلغاء</button>
+      <button class="btn btn-primary" id="btn-confirm-game-settings" data-i18n="btn_confirm">تأكيد</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── UTILITY MODAL: Quick Settings (Arena ⚙️) ──────────────── -->
+<div
+  id="modal-quick-settings"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-quick-settings-title"
+>
+  <div class="modal glass">
+    <div class="modal__header">
+      <h2 id="modal-quick-settings-title" class="modal__title" data-i18n="arena_nav_settings">
+        إعدادات
+      </h2>
+      <button class="btn btn-icon" id="btn-close-quick-settings" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="modal__body flex flex-col flex-gap-2">
+      <button
+        class="btn btn-ghost w-full"
+        id="qs-btn-mute"
+        data-i18n="modal_settings_mute"
+      >كتم الصوت</button>
+      <button
+        class="btn btn-ghost w-full"
+        id="qs-btn-category"
+        data-i18n="modal_settings_change_category"
+      >تغيير التحدي</button>
+      <div class="divider"></div>
+      <button
+        class="btn btn-danger w-full"
+        id="qs-btn-quit"
+        data-i18n="modal_settings_quit"
+      >إنهاء اللعبة</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── RESULT MODAL 1: SUCCESS ───────────────────────────────── -->
+<div
+  id="modal-result-success"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-success-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--success anim-scale-in">
+    <div class="modal__header">
+      <span class="badge badge--success">SUCCESS</span>
+      <h2 id="modal-success-title" class="modal__title" data-i18n="result_success_title">
+        أهلاً وسهلاً! 🎉
+      </h2>
+    </div>
+    <div class="modal__body">
+      <!-- Player info -->
+      <div class="flex flex-center flex-gap-4 mb-6">
+          <img
+          id="success-player-photo"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+          alt=""
+          width="64"
+          height="64"
+          style="border-radius:50%; background:var(--bg-secondary); object-fit:cover;"
+          loading="lazy"
+        />
+        <div>
+          <p class="fw-black fs-lg" id="success-player-name">محمد صلاح</p>
+          <p class="fs-sm text-muted" id="success-player-club">ليفربول · البريمير ليغ</p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-row">
+        <span class="stat-row__label" data-i18n="result_success_goals">الأهداف</span>
+        <span class="stat-row__value highlight" id="success-stat-value">19</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-row__label" data-i18n="result_success_new_balance">الرصيد الجديد</span>
+        <span class="stat-row__value highlight text-success" id="success-new-balance">681</span>
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button
+        id="btn-success-next"
+        class="btn btn-success w-full"
+        data-i18n="btn_next_turn"
+      >الدور التالي</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT MODAL 2: BUST ──────────────────────────────────── -->
+<div
+  id="modal-result-bust"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-bust-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--bust anim-shake">
+    <div class="modal__header">
+      <span class="badge badge--danger">BUST</span>
+      <h2 id="modal-bust-title" class="modal__title text-danger" data-i18n="result_bust_title">
+        تخطيت الحد! 💥
+      </h2>
+    </div>
+    <div class="modal__body">
+      <p class="text-muted" data-i18n="result_bust_body">
+        الرصيد لم يكفي — الدور انتهى بدون خصم.
+      </p>
+      <div class="stat-row mt-4">
+        <span class="stat-row__label">الرصيد لم يتغير</span>
+        <span class="stat-row__value text-danger" id="bust-balance">700</span>
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button
+        id="btn-bust-next"
+        class="btn btn-ghost w-full"
+        data-i18n="btn_next_turn"
+      >الدور التالي</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT MODAL 3: ALREADY BURNED ───────────────────────── -->
+<div
+  id="modal-result-burned"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-burned-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--burned">
+    <div class="modal__header">
+      <span class="badge badge--orange">BURNED</span>
+      <h2 id="modal-burned-title" class="modal__title text-orange" data-i18n="result_burned_title">
+        اللاعب ده اتحرق! 🔥
+      </h2>
+    </div>
+    <div class="modal__body">
+      <p class="text-muted" data-i18n="result_burned_body">
+        هذا اللاعب استُخدم بالفعل في هذه اللعبة.
+      </p>
+      <p class="fw-bold mt-4" id="burned-player-name">محمد صلاح</p>
+    </div>
+    <div class="modal__footer">
+      <button
+        id="btn-burned-retry"
+        class="btn btn-ghost w-full"
+        data-i18n="btn_cancel"
+      >حاول مرة أخرى</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT MODAL 4: TIME UP ───────────────────────────────── -->
+<div
+  id="modal-result-timeup"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-timeup-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--timeup flash">
+    <div class="modal__header">
+      <span class="badge badge--danger">TIME UP</span>
+      <h2 id="modal-timeup-title" class="modal__title text-danger" data-i18n="result_timeup_title">
+        الوقت خلص! ⏰
+      </h2>
+    </div>
+    <div class="modal__body">
+      <p class="text-muted" data-i18n="result_timeup_body">
+        انتهى الوقت قبل الإجابة — الدور ضاع.
+      </p>
+    </div>
+    <div class="modal__footer">
+      <button
+        id="btn-timeup-next"
+        class="btn btn-ghost w-full"
+        data-i18n="btn_next_turn"
+      >الدور التالي</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT MODAL 5: NOT ASSOCIATED ───────────────────────── -->
+<div
+  id="modal-result-not-associated"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-notassoc-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--info">
+    <div class="modal__header">
+      <span class="badge badge--blue">NOT FOUND</span>
+      <h2 id="modal-notassoc-title" class="modal__title" data-i18n="result_not_associated_title">
+        اللاعب غير موجود في قاعدة البيانات
+      </h2>
+    </div>
+    <div class="modal__body">
+      <p class="text-muted" data-i18n="result_not_associated_body">
+        هذا اللاعب لم يلعب للنادي المختار في هذا الدوري.
+      </p>
+      <p class="fw-bold mt-4" id="not-assoc-player-name">كريم بنزيمة</p>
+    </div>
+    <div class="modal__footer">
+      <button
+        id="btn-notassoc-retry"
+        class="btn btn-ghost w-full"
+        data-i18n="btn_cancel"
+      >حاول مرة أخرى</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT MODAL 6: WIN ───────────────────────────────────── -->
+<div
+  id="modal-result-win"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-win-title"
+  aria-live="assertive"
+>
+  <div class="modal glass modal--win anim-scale-in">
+    <div class="modal__header" style="justify-content:center;">
+      <h2 id="modal-win-title" class="modal__title fs-xl" data-i18n="result_win_title">
+        صفر بالمللي! 🏆
+      </h2>
+    </div>
+    <div class="modal__body text-center">
+      <p class="fs-3xl" aria-hidden="true" style="margin-block:var(--sp-6);">🥇</p>
+      <p class="text-muted" data-i18n="result_win_body">لقد فزت!</p>
+      <p class="fw-black fs-xl mt-4 text-gold" id="win-player-name">علي</p>
+      <p class="fs-sm text-muted mt-6" data-i18n="result_win_player">الفائز</p>
+    </div>
+    <div class="modal__footer">
+      <button
+        id="btn-win-again"
+        class="btn btn-gold w-full"
+        data-i18n="btn_play_again"
+      >العب مرة تانية</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT MODAL 7: DISAMBIGUATION ───────────────────────── -->
+<div
+  id="modal-result-disambiguation"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-disambig-title"
+>
+  <div class="modal glass">
+    <div class="modal__header">
+      <h2 id="modal-disambig-title" class="modal__title" data-i18n="result_disambiguation_title">
+        قصدك مين؟
+      </h2>
+      <button class="btn btn-icon" id="btn-close-disambig" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="modal__body">
+      <p class="text-muted mb-4" data-i18n="result_disambiguation_body">
+        وجدنا أكثر من لاعب — اختر الصحيح:
+      </p>
+      <div id="disambig-list" class="disambiguation-list" role="listbox" aria-label="اختر اللاعب">
+        <!-- Placeholder items — real items injected by JS -->
+        <div class="disambiguation-item" role="option" id="disambig-opt-1" tabindex="0">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="48" height="48" loading="lazy" />
+          <div class="disambiguation-item__info">
+            <span class="disambiguation-item__name">محمد صلاح (مصر)</span>
+            <span class="disambiguation-item__meta">ليفربول · البريمير ليغ</span>
+          </div>
+        </div>
+        <div class="disambiguation-item" role="option" id="disambig-opt-2" tabindex="0">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="48" height="48" loading="lazy" />
+          <div class="disambiguation-item__info">
+            <span class="disambiguation-item__name">صلاح محسن (المغرب)</span>
+            <span class="disambiguation-item__meta">أياكس · إيريديفيسي</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS — i18n first, then app logic
+     ════════════════════════════════════════════════════════ -->
+<script src="/scripts/i18n.js"></script>
+<script src="/scripts/app.js"></script>
+
+</body>
+</html>
