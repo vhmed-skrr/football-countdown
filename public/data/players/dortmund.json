@@ -1,0 +1,1845 @@
+{
+  "club": "Dortmund",
+  "players": [
+    {
+      "name": "Abdou Diallo",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Achraf Hakimi",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alexander Isak",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alexander Meyer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ansgar Knauff",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Antonios Papadopoulos",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Axel Witsel",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Abdoulaye Kamara",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ayman Azhil",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Bartosz Białek",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Benno Schmitz",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Christian Pulisic",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 13
+      },
+      "total_goals": 13,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Dan-Axel Zagadou",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Daniel Svensson",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Donyell Malen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 30
+      },
+      "total_goals": 30,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Emre Can",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Felix Nmecha",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Felix Passlack",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Filippo Mané",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Giovanni Reyna",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gregor Kobel",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Hannes Wolf",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Hendry Blank",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ian Maatsen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jadon Sancho",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 38
+      },
+      "total_goals": 38,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jamie Bynoe-Gittens",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jobe Bellingham",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Julian Brandt",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 32
+      },
+      "total_goals": 32,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Julian Duranville",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Julian Ryerson",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jude Bellingham",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Karim Adeyemi",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 12
+      },
+      "total_goals": 12,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Leonardo Balerdi",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mahmoud Dahoud",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marcel Sabitzer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marco Reus",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 120
+      },
+      "total_goals": 120,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marcel Schmelzer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mats Hummels",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 14
+      },
+      "total_goals": 14,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mateu Morey",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Maximilian Beier",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marius Wolf",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Manuel Akanji",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mario Götze",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 45
+      },
+      "total_goals": 45,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marwin Hitz",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nico Schulz",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nico Schlotterbeck",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nuri Şahin",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 15
+      },
+      "total_goals": 15,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ousmane Dembélé",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ömer Toprak",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paco Alcácer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 18
+      },
+      "total_goals": 18,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Patrick Osterhage",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Raphaël Guerreiro",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 23
+      },
+      "total_goals": 23,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ramy Bensebaini",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Reinier",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "René Bürkardt",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Roman Bürki",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Salih Özcan",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sébastien Haller",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Serhou Guirassy",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Shinji Kagawa",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 41
+      },
+      "total_goals": 41,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Soumaïla Coulibaly",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thorgan Hazard",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 9
+      },
+      "total_goals": 9,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Delaney",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tom Rothe",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tobias Raschl",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Torben Müsel",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Youssoufa Moukoko",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 22
+      },
+      "total_goals": 22,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Zakaria Aboukhlal",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Waldemar Anton",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marcel Lotka",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alexander Nübel",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stefan Drljača",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Luca Unbehaun",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Justin Njinmah",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Moukoko Youssoufa",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 22
+      },
+      "total_goals": 22,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jayden Braaf",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Samuel Bamba",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kjell Wätjen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paris Brunner",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Cole Campbell",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Almugera Kabar",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ayman Kari",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Soumaila Coulibaly",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Coulibaly Soumaila",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mateu Morey Bauzà",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Meunier",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Erling Haaland",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 62
+      },
+      "total_goals": 62,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "André Schürrle",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Maximilian Philipp",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jacob Bruun Larsen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mikel Merino",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jeremy Toljan",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jens Lehmann",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stefan Klos",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Roman Weidenfeller",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Guillaume Warmuz",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Evanilson",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Christoph Metzelder",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Christian Wörns",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stefan Reuter",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jörg Heinrich",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Dede",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 12
+      },
+      "total_goals": 12,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lars Ricken",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 49
+      },
+      "total_goals": 49,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tomáš Rosický",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 19
+      },
+      "total_goals": 19,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jan Koller",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 59
+      },
+      "total_goals": 59,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Márcio Amoroso",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 28
+      },
+      "total_goals": 28,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ewerthon",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 22
+      },
+      "total_goals": 22,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Fredi Bobic",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Heiko Herrlich",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 60
+      },
+      "total_goals": 60,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Giuseppe Reina",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Otto Addo",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sunday Oliseh",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Guy Demel",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Torsten Frings",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 10
+      },
+      "total_goals": 10,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Flávio Conceição",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ahmed Madouni",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Markus Brzenska",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sebastian Kehl",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 20
+      },
+      "total_goals": 20,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "David Odonkor",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Philipp Degen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Florian Kringe",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sahr Senesie",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kosi Saka",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Delron Buckley",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Matthew Amoah",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alexander Frei",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 34
+      },
+      "total_goals": 34,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nelson Valdez",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 16
+      },
+      "total_goals": 16,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marc-André Kruska",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Martin Amedick",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Steven Pienaar",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mohamed Zidan",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 13
+      },
+      "total_goals": 13,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Wolfgang de Beer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Hans-Jörg Butt",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Martin Pieckenhagen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Dirk Heyne",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Zorc",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 131
+      },
+      "total_goals": 131,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Norbert Dickel",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 40
+      },
+      "total_goals": 40,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Frank Mill",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 47
+      },
+      "total_goals": 47,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Rummenigge",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 29
+      },
+      "total_goals": 29,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Andreas Möller",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 14
+      },
+      "total_goals": 14,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Matthias Sammer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 21
+      },
+      "total_goals": 21,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jürgen Kohler",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Karl-Heinz Riedle",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 24
+      },
+      "total_goals": 24,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stéphane Chapuisat",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 102
+      },
+      "total_goals": 102,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ibrahim Tanko",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Vladimir But",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Christian Nerlinger",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paul Lambert",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paulo Sousa",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "René Tretschok",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Knut Reinhardt",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Günter Kutowski",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Schulz",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Franck",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Julio César",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Martin Kree",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Wolfgang Feiersinger",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Karsten Baumann",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Helmer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stefan Böger",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thorsten Fink",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ralf Loose",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Henke",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Häßler",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Billy Reina",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sergej Barbarez",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jan Derek Sørensen",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Evanílson",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sergej Kirjakov",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marcio Amoroso",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 28
+      },
+      "total_goals": 28,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Miroslav Stevic",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Giovanni Federico",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lars Müller",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marco Kurz",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jens Dowe",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Frank Greiner",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ralf Köttker",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Gurski",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Bernd Meier",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Rüdiger Abramczik",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Andreas Schmidt",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Bernd Hobsch",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Zeyer",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Oliver Kirch",
+      "aliases": [],
+      "goals_by_competition": {
+        "Bundesliga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Bundesliga.md)",
+      "notes": "Bundesliga-only entry; no Champions League or cup data provided in source."
+    }
+  ]
+}

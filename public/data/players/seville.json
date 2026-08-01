@@ -1,0 +1,1455 @@
+{
+  "club": "Seville",
+  "players": [
+    {
+      "name": "Aaron Martín",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Akor Adams",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alberto Botía",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alberto Flores",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alberto Moreno",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Aleix Vidal",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alejandro Alfaro",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alejandro Gómez (Papu Gómez)",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alejo Véliz",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Aleksandar Dragović",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Aleksandr Kerzhakov",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alfonso Pastor",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alhassane Pléa",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Andrés Palop",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Antonio Puerta",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Antonio Álvarez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Arouna Dindane",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Arouna Koné",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Álvaro Fernández",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Álvaro Negredo",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 70
+      },
+      "total_goals": 70,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Beto",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Bryan Gil",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Carlos Bacca",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 34
+      },
+      "total_goals": 34,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Carlos Fernández",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Carlos Marchena",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Carmona (José Ángel Carmona)",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Coke",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Cristhian Mosquera",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Dani Alves",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Daniel Carriço",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "David Castedo",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "David Soria",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Diego Capel",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 12
+      },
+      "total_goals": 12,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Diego Carlos",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Diego López",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Djibril Sow",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Dodi Lukebakio",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 13
+      },
+      "total_goals": 13,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Esteban Andrada",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Érik Lamela",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 16
+      },
+      "total_goals": 16,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Éver Banega",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 27
+      },
+      "total_goals": 27,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Federico Fazio",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Fernando",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Fernando Navarro",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Frederic Kanouté",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 89
+      },
+      "total_goals": 89,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gabriel Mercado",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gabriel Suazo",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gary Medel",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Geoffrey Kondogbia",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gerard Deulofeu",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Giuliano Simeone",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gonzalo Montiel",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Guido Pizarro",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Guilherme Arana",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Hiroshi Kiyotake",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Iago Aspas",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 10
+      },
+      "total_goals": 10,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ibrahim Amadou",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Isaac Romero",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ivan Rakitić",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 38
+      },
+      "total_goals": 38,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jairo Samperio",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Javi Hervás",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Javi Navarro",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Javi Varas",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jesús Fernández",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jesús Navas",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 25
+      },
+      "total_goals": 25,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Joan Jordán",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Joris Gnagnon",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "José Antonio Reyes",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 21
+      },
+      "total_goals": 21,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "José Campaña",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "José Luis Martí",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "José Ángel Carmona",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jules Koundé",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Julien Escudé",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kasper Dolberg",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Keita Baldé",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kike Salas",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kiko Casilla",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Konrad de la Fuente",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Krychowiak",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kwadwo Asamoah",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kévin Gameiro",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 45
+      },
+      "total_goals": 45,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lautaro Acosta",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lolo",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Loïc Badé",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lucien Agoumé",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Luis Muriel",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 13
+      },
+      "total_goals": 13,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Luismi Cruz",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Luís Fabiano",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 49
+      },
+      "total_goals": 49,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Manu Bueno",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Manu del Moral",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Manuel Agudo \"Nolito\"",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Manuel Jiménez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Manuel Lanzini",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marcos Acuña",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marcos André",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marek Jankulovski",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mariano Barbosa",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mariano Díaz",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mariano Ferreira",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marko Dmitrović",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Maxime Gonalons",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Michael Krohn-Dehli",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Moisés Hurtado",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Monchi",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mouhamadou Dabo",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mudo Vázquez (Franco Vázquez)",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 15
+      },
+      "total_goals": 15,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Munas Dabbur",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Míchel Herrero",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nemanja Gudelj",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nemanja Maksimović",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nicolás Pareja",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nolito",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Odysseas Vlachodimos",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Óliver Torres",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Óscar Rodríguez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Pablo Alfaro",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Pablo Sarabia",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 26
+      },
+      "total_goals": 26,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Papu Gómez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Pepe Martí",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Perotti (Diego Perotti)",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 32
+      },
+      "total_goals": 32,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Piotr Trochowski",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Promes (Quincy Promes)",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Rafa Mir",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 24
+      },
+      "total_goals": 24,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ramon Martínez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ramon Sánchez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Renato",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Romain Perraud",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Roque Mesa",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sergi Gómez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sergio Ramos",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 10
+      },
+      "total_goals": 10,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sergio Rico",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Seydou Keita",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Simon Kjær",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stevan Jovetić",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Steven Nzonzi",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sébastien Corchia",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Delaney",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tomas Vaclík",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Toni Doblas",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Toni Payne",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Torrijos",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Vicente Iborra",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 9
+      },
+      "total_goals": 9,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Víctor Machín \"Vitolo\"",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 28
+      },
+      "total_goals": 28,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Wissam Ben Yedder",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 70
+      },
+      "total_goals": 70,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Yassine Bounou (Bono)",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Youssef En-Nesyri",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 73
+      },
+      "total_goals": 73,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    }
+  ]
+}
