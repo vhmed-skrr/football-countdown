@@ -1,0 +1,8 @@
+[
+  { "id": "pl", "name_ar": "البريمير ليغ", "name_en": "Premier League", "icon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
+  { "id": "la", "name_ar": "لا ليغا", "name_en": "La Liga", "icon": "🇪🇸" },
+  { "id": "bl", "name_ar": "بوندسليغا", "name_en": "Bundesliga", "icon": "🇩🇪" },
+  { "id": "sa", "name_ar": "سيريا آ", "name_en": "Serie A", "icon": "🇮🇹" },
+  { "id": "l1", "name_ar": "ليغ 1", "name_en": "Ligue 1", "icon": "🇫🇷" },
+  { "id": "cl", "name_ar": "أبطال أوروبا", "name_en": "Champions League", "icon": "⭐" }
+]

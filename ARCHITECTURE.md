@@ -6,7 +6,7 @@
 |---|---|---|
 | Backend | Node.js (Vercel Serverless Functions) | No Express needed; routing handled by Vercel via `/api` file structure |
 | Frontend | Vanilla JS · HTML5 · CSS3 | No React/Vue — project scope does not justify a framework |
-| Data | Static JSON files (`data/`) | No database, no ORM |
+| Data | Static JSON files (`public/data/`) | No database, no ORM; must be inside `public/` so Vercel's `outputDirectory` serves them |
 | Caching | None persistent | Serverless constraint — see Caching Strategy below |
 | Hosting | Vercel free tier | Single project, single root, zero credit-card requirement |
 
@@ -30,10 +30,11 @@ football-countdown/
 │   ├── scraper.js            # Fetch & parse player stats from external source
 │   ├── gameEngine.js         # Pure game-state transition logic (balance, burned lists)
 │   └── fuzzyMatch.js         # Fuse.js-based fuzzy comparison utilities
-├── data/                     # Static JSON (league/club lists, etc.)
-│   └── .gitkeep
-└── public/                   # Frontend root — served as static files by Vercel
+└── public/                   # Frontend root — served as static files by Vercel (outputDirectory)
     ├── index.html
+    ├── data/                 # Static JSON (league/club lists) — MUST live here, not at project root
+    │   ├── leagues.json      # League definitions (id, name_ar, name_en, icon)
+    │   └── clubs.json        # Club lists keyed by league id
     ├── styles/
     │   ├── main.css          # Shared variables, resets, layout primitives
     │   ├── theme-light.css   # Light mode CSS custom-property tokens (PRIMARY/default)

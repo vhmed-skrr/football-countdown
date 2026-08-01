@@ -79,3 +79,17 @@ End-to-End local verification completed (`dev-server.js` & `test-e2e-game.js`). 
 ---
 
 ## All Implementation Phases Complete 🎉
+
+---
+
+### Hotfix — Clubs Not Loading After League Selection (2026-08-01)
+
+**Status**: Fixed ✅
+
+**Root Cause**: `vercel.json` sets `"outputDirectory": "public"`, meaning only the contents of `public/` are published as browser-reachable static files. The `data/` folder was sitting at the project root — a sibling of `public/`, not inside it — so `fetch('/data/leagues.json')` and `fetch('/data/clubs.json')` both returned HTTP 404 on the deployed site. Leagues appeared to work because `loadSetupData()` already had a hardcoded fallback array for `state.leagues`; no equivalent fallback existed for `state.clubsMap`, causing the club grid to silently render empty ("Select a league first") after any league was selected.
+
+**Fix Applied**:
+1. Moved `data/leagues.json` → `public/data/leagues.json` and `data/clubs.json` → `public/data/clubs.json`. Deleted the old root-level `data/` folder entirely.
+2. Verified `fetch('/data/leagues.json')` and `fetch('/data/clubs.json')` in `public/scripts/app.js` remain correct: the browser path `/data/...` now correctly resolves to `public/data/...` once `public/` is the Vercel output root.
+3. Added a `state.clubsMap` fallback in `loadSetupData()` (mirroring the existing `state.leagues` fallback) covering all 6 league IDs (`pl`, `la`, `bl`, `sa`, `l1`, `cl`) — ensures graceful degradation if the static JSON files ever fail to load in future, rather than silently showing an empty club list.
+4. Updated `ARCHITECTURE.md` Stack table and Project Structure diagram to document `public/data/` as the canonical data path with an explicit warning that it must not be moved back outside `public/`.
