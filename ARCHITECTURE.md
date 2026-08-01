@@ -6,7 +6,8 @@
 |---|---|---|
 | Backend | Node.js (Vercel Serverless Functions) | No Express needed; routing handled by Vercel via `/api` file structure |
 | Frontend | Vanilla JS · HTML5 · CSS3 | No React/Vue — project scope does not justify a framework |
-| Data | Static JSON files (`public/data/`) | No database, no ORM; must be inside `public/` so Vercel's `outputDirectory` serves them |
+| Player Data | Static per-club JSON files (`public/data/players/`) | Pre-curated datasets; no live HTTP requests to any external source during gameplay |
+| Config Data | Static JSON files (`public/data/`) | League and club list definitions; must be inside `public/` so Vercel serves them |
 | Caching | None persistent | Serverless constraint — see Caching Strategy below |
 | Hosting | Vercel free tier | Single project, single root, zero credit-card requirement |
 
@@ -26,15 +27,18 @@ football-countdown/
 │       ├── setup.js          # POST /api/game/setup — initialise game session state
 │       └── play.js           # POST /api/game/play  — resolve a player name, return result
 ├── lib/                      # Shared backend logic, imported by api/ functions
-│   ├── playerResolver.js     # Name → player identity (+ fuzzy matching, disambiguation)
-│   ├── scraper.js            # Fetch & parse player stats from external source
+│   ├── playerResolver.js     # Name → player record (fuzzy match against static dataset)
+│   ├── playerDataStore.js    # Load/cache static per-club JSON datasets from disk
+│   ├── scraper.js            # Look up goals_by_competition from a loaded player record
 │   ├── gameEngine.js         # Pure game-state transition logic (balance, burned lists)
 │   └── fuzzyMatch.js         # Fuse.js-based fuzzy comparison utilities
 └── public/                   # Frontend root — served as static files by Vercel (outputDirectory)
     ├── index.html
-    ├── data/                 # Static JSON (league/club lists) — MUST live here, not at project root
+    ├── data/                 # Static JSON data — MUST live here, not at project root
     │   ├── leagues.json      # League definitions (id, name_ar, name_en, icon)
-    │   └── clubs.json        # Club lists keyed by league id
+    │   ├── clubs.json        # Club lists keyed by league id
+    │   └── players/          # Per-club player datasets — one file per club
+    │       └── liverpool.json  # Example: Liverpool roster with goals_by_competition
     ├── styles/
     │   ├── main.css          # Shared variables, resets, layout primitives
     │   ├── theme-light.css   # Light mode CSS custom-property tokens (PRIMARY/default)
@@ -45,6 +49,70 @@ football-countdown/
     └── locales/
         ├── ar.json           # Arabic strings (PRIMARY/default language)
         └── en.json           # English strings (SECONDARY language)
+```
+
+**Adding a new club** requires only dropping a new `public/data/players/<club-slug>.json` file matching the documented shape — no code changes needed for new clubs, only new data files.
+
+---
+
+## Data Resolution Flow
+
+No live HTTP requests to any external service occur during gameplay. All player data comes from static JSON files bundled with the deployment.
+
+```
+User types player name
+        │
+        ▼
+ resolvePlayer(name, clubSlug)          ← lib/playerResolver.js
+        │
+        ├─ loadClubDataset(clubSlug)     ← lib/playerDataStore.js
+        │   └─ reads public/data/players/<clubSlug>.json from disk
+        │      (cached in-memory for this invocation)
+        │
+        ├─ Fuse.js fuzzy match against player names + aliases
+        │
+        ├─ Returns FOUND (1 match)       → proceed to stats lookup
+        ├─ Returns FOUND (multiple)      → return NEEDS_DISAMBIGUATION to frontend
+        ├─ Returns UNKNOWN_PLAYER        → player not in dataset (future: manual-addition flow)
+        └─ Returns ERROR                 → dataset file missing or malformed
+
+ FOUND (1 match)
+        │
+        ▼
+ fetchPlayerStats(playerRecord, league)  ← lib/scraper.js
+        │
+        └─ looks up playerRecord.goals_by_competition[league]
+           (no HTTP request — data already in memory)
+           │
+           ├─ key exists (even if value is 0) → SUCCESS
+           └─ key absent                      → NOT_ASSOCIATED
+
+ stat result
+        │
+        ▼
+ evaluateTurn(sessionState, turnData)    ← lib/gameEngine.js
+        └─ pure state transition → SUCCESS / BUST / WIN / etc.
+```
+
+### Per-club Dataset File Shape
+
+```json
+{
+  "club": "Liverpool",
+  "players": [
+    {
+      "name": "Mohamed Salah",
+      "aliases": ["Mo Salah", "Salah"],
+      "goals_by_competition": {
+        "Premier League": 186,
+        "Champions League": 33,
+        "FA Cup": 15,
+        "EFL Cup": 8
+      },
+      "total_goals": 242
+    }
+  ]
+}
 ```
 
 **Critical constraint**: there is exactly **one** `package.json` at the project root. No sub-folder `package.json` files exist anywhere.
@@ -178,9 +246,13 @@ Processes a player guess or timer expiration against the current session state.
   "sessionState": { /* ... */ },
   "selectedPlayer": {
     "name": "Mohamed Salah",
-    "profileUrl": "https://fbref.com/en/players/e342ad68/Mohamed-Salah",
-    "photoUrl": "https://fbref.com/smedia/.../e342ad68.png",
-    "meta": "FW-MF · Egypt · 1992-06-15"
+    "goals_by_competition": {
+      "Premier League": 186,
+      "Champions League": 33,
+      "FA Cup": 15,
+      "EFL Cup": 8
+    },
+    "total_goals": 242
   }
 }
 ```
@@ -202,11 +274,12 @@ Processes a player guess or timer expiration against the current session state.
     ],
     "player2BurnedList": []
   },
-  "statDeducted": 19,
-  "message": "Success! Subtracted 19. New balance: 681.",
+  "statDeducted": 186,
+  "message": "Success! Subtracted 186. New balance: 514.",
   "player": {
     "name": "Mohamed Salah",
-    "profileUrl": "https://fbref.com/en/players/e342ad68/Mohamed-Salah"
+    "goals_by_competition": { "Premier League": 186, "Champions League": 33 },
+    "total_goals": 242
   }
 }
 ```
@@ -218,15 +291,13 @@ Processes a player guess or timer expiration against the current session state.
   "candidates": [
     {
       "name": "Mohamed Salah",
-      "profileUrl": "https://fbref.com/en/players/e342ad68/Mohamed-Salah",
-      "photoUrl": "https://fbref.com/smedia/.../e342ad68.png",
-      "meta": "FW-MF · Egypt"
+      "goals_by_competition": { "Premier League": 186 },
+      "total_goals": 242
     },
     {
       "name": "Mohamed Elneny",
-      "profileUrl": "https://fbref.com/en/players/elneny",
-      "photoUrl": null,
-      "meta": "MF · Egypt"
+      "goals_by_competition": { "Premier League": 12 },
+      "total_goals": 12
     }
   ],
   "sessionState": { /* ... unchanged ... */ },
@@ -239,7 +310,7 @@ Processes a player guess or timer expiration against the current session state.
 {
   "resultCase": "ALREADY_BURNED",
   "sessionState": { /* ... unchanged ... */ },
-  "player": { "name": "Mohamed Salah" },
+  "player": { "name": "Mohamed Salah", "total_goals": 242 },
   "message": "Player \"Mohamed Salah\" is already burned in this game!"
 }
 ```

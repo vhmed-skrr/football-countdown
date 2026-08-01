@@ -1,0 +1,50 @@
+{
+  "_note": "PLACEHOLDER DATA — replace with verified researched dataset before relying on this for real gameplay. Goal numbers below are approximate and NOT verified from primary sources. Included only for end-to-end testing of the static data loading code path.",
+  "club": "Liverpool",
+  "players": [
+    {
+      "name": "Mohamed Salah",
+      "aliases": ["Mo Salah", "Salah", "محمد صلاح"],
+      "goals_by_competition": {
+        "Premier League": 186,
+        "Champions League": 33,
+        "FA Cup": 15,
+        "EFL Cup": 8
+      },
+      "total_goals": 242
+    },
+    {
+      "name": "Steven Gerrard",
+      "aliases": ["Gerrard", "Steve Gerrard"],
+      "goals_by_competition": {
+        "Premier League": 120,
+        "Champions League": 21,
+        "FA Cup": 18,
+        "EFL Cup": 6
+      },
+      "total_goals": 165
+    },
+    {
+      "name": "Robbie Fowler",
+      "aliases": ["Fowler", "God"],
+      "goals_by_competition": {
+        "Premier League": 128,
+        "Champions League": 4,
+        "FA Cup": 10,
+        "EFL Cup": 22
+      },
+      "total_goals": 164
+    },
+    {
+      "name": "Ian Rush",
+      "aliases": ["Rush"],
+      "goals_by_competition": {
+        "Premier League": 229,
+        "Champions League": 0,
+        "FA Cup": 39,
+        "EFL Cup": 48
+      },
+      "total_goals": 316
+    }
+  ]
+}

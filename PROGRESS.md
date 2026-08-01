@@ -93,3 +93,36 @@ End-to-End local verification completed (`dev-server.js` & `test-e2e-game.js`). 
 2. Verified `fetch('/data/leagues.json')` and `fetch('/data/clubs.json')` in `public/scripts/app.js` remain correct: the browser path `/data/...` now correctly resolves to `public/data/...` once `public/` is the Vercel output root.
 3. Added a `state.clubsMap` fallback in `loadSetupData()` (mirroring the existing `state.leagues` fallback) covering all 6 league IDs (`pl`, `la`, `bl`, `sa`, `l1`, `cl`) — ensures graceful degradation if the static JSON files ever fail to load in future, rather than silently showing an empty club list.
 4. Updated `ARCHITECTURE.md` Stack table and Project Structure diagram to document `public/data/` as the canonical data path with an explicit warning that it must not be moved back outside `public/`.
+
+---
+
+### Backend Overhaul — Removed Live FBref Scraping, Replaced with Static Per-Club Datasets (2026-08-01)
+
+**Status**: Complete ✅
+
+**Problem**: The original `lib/playerResolver.js` and `lib/scraper.js` fetched and parsed player data live from FBref.com using `axios` + `cheerio`. FBref sits behind Cloudflare bot protection that blocks requests inconsistently — sometimes 200, sometimes 403 — regardless of whether the request comes from Vercel, a local server, or other approaches. This is not a code bug; it is a fundamental architectural reliability problem.
+
+**New Architecture**: Player data is now a static, manually-curated dataset stored as one JSON file per club at `public/data/players/<club-slug>.json`, each containing that club's roster with goals broken down by competition. All data access is file I/O — zero live HTTP requests during gameplay.
+
+**Changes Applied**:
+1. **Removed** all FBref-fetching code from `lib/playerResolver.js` (axios, cheerio, `FBREF_BASE`, `SEARCH_URL`, `BROWSER_HEADERS`, `_parseSearchResultsPage`, `_parsePlayerProfilePage`).
+2. **Removed** all FBref-fetching code from `lib/scraper.js` (axios, cheerio, `loadCheerioWithComments`, `parsePlayerStats`, `fetchPlayerStats` as a live fetch). `scraper.js` now exposes only a single `fetchPlayerStats(playerRecord, leagueName)` function that looks up `goals_by_competition[leagueName]` from the already-loaded player record.
+3. **Created** `lib/playerDataStore.js` — new module responsible for loading and caching per-club JSON datasets. Uses `fs.readFileSync` anchored on `process.cwd()` (project root, correct in Vercel serverless functions). Returns structured `{ ok, dataset/error }` results instead of throwing. Caches parsed files in a module-level `Map` for the lifetime of a single function invocation.
+4. **Rewrote** `lib/playerResolver.js` — now loads the club dataset, builds a Fuse.js search pool from player names + all aliases, and returns `FOUND` / `UNKNOWN_PLAYER` / `ERROR`. The `translate_input()` stub is preserved unchanged. `sleep()` helper removed (no longer needed).
+5. **Updated** `api/game/play.js` — passes `clubSlug` to `resolvePlayer()`, passes the full player record (not a URL) to `fetchPlayerStats()`, handles the new `UNKNOWN_PLAYER` result type.
+6. **Created** `public/data/players/liverpool.json` — placeholder dataset with 4 well-known Liverpool players (Salah, Gerrard, Fowler, Ian Rush) with approximate goal numbers. Clearly marked as PLACEHOLDER DATA in the file.
+7. **Removed** `cheerio` and `playwright-core` from `package.json` dependencies (no remaining usage). `axios` kept — still used by `test-e2e-game.js` as an HTTP client for local dev server POST requests.
+8. **Rewrote** `test-resolver.js` and `test-scraper.js` to test the static data path with zero network calls.
+9. **Updated** `ARCHITECTURE.md` with new Data Resolution Flow section, updated Project Structure, and dataset file shape documentation.
+
+**Current State of Player Data**:
+- Only Liverpool has a dataset, and it is placeholder/approximate data only — not verified from primary sources.
+- Real, hand-researched datasets are the next step and are collected separately outside of code changes.
+- `UNKNOWN_PLAYER` is now returned correctly by the resolver when a search matches nothing in the dataset, but the manual-addition feature (letting users add a player and their goal count on the fly) is **not yet implemented** — that is the next prompt.
+
+**Not Changed**:
+- `translate_input()` stub — preserved as-is (still relevant for future Arabic input support).
+- `lib/fuzzyMatch.js` — unchanged.
+- `lib/gameEngine.js` — unchanged.
+- All 7 result cases (`SUCCESS`, `BUST`, `ALREADY_BURNED`, `TIME_UP`, `WIN`, `NOT_ASSOCIATED`, `NEEDS_DISAMBIGUATION`) — preserved with the same semantics.
+
