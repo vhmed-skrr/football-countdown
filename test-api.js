@@ -87,7 +87,8 @@ async function runApiTests() {
     sessionState,
     selectedPlayer: {
       name: 'Mohamed Salah',
-      profileUrl: 'https://fbref.com/en/players/e342ad68/Mohamed-Salah'
+      profileUrl: 'https://fbref.com/en/players/e342ad68/Mohamed-Salah',
+      goals_by_competition: { 'Premier League': 186 }
     }
   });
 

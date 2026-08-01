@@ -151,4 +151,36 @@ End-to-End local verification completed (`dev-server.js` & `test-e2e-game.js`). 
    - Documented `UNKNOWN_PLAYER` as Case 8 in Core Game Rules, highlighting distinction from `NOT_ASSOCIATED`.
    - Documented in-memory session-only lifetime under Caching Strategy.
 
+---
+
+### Dataset Conversion — Premier League Clubs (2026-08-02)
+
+**Status**: Complete ✅
+
+**Details**:
+1. Converted `premier_league_clubs_players.md` (1,129 total player lines across 6 Premier League clubs) into static per-club JSON datasets in `public/data/players/<club-slug>.json`:
+   - `manchester-united.json` (216 players)
+   - `liverpool.json` (235 players)
+   - `arsenal.json` (178 players)
+   - `manchester-city.json` (93 players)
+   - `chelsea.json` (206 players)
+   - `tottenham-hotspur.json` (201 players)
+2. Strict exact deduplication rule applied (0 exact duplicates found, 0 conflicts). All low-scoring, zero-scoring, fringe, youth, and alternate name spellings preserved in full.
+
+---
+
+### Bug Fix — League Name Mismatch Between Datasets and Gameplay Requests (2026-08-02)
+
+**Status**: Complete ✅
+
+**Root Cause**:
+Player search returned false `NOT_ASSOCIATED` ("Player Not Found") because `goals_by_competition` keys in generated static per-club JSON files were named `"League"`, while gameplay API requests (`api/game/play.js`) looked up competition names like `"Premier League"`. Since `"league"` and `"premier league"` do not match in `_lookupCompGoals()`, valid players were evaluated as not associated with the competition.
+
+**Fix Applied (Approach A — Normalized Stored Keys)**:
+1. Updated all per-club JSON datasets in `public/data/players/*.json` so `goals_by_competition` uses the exact real competition name (`"Premier League"` instead of `"League"`).
+2. Updated `scratch/generate_json_datasets.js` to ensure all future Premier League dataset conversions map goal counts to `"Premier League"`.
+3. Verified fix with unit tests (`test-resolver.js`, `test-scraper.js`) and end-to-end API play tests (`test_e2e_fix.js`, `test-api.js`), confirming player stats for `Andreas Isaksson` (0 goals), `Erling Haaland` (91 goals), `Mohamed Salah` (193 goals), `Cole Palmer` (40 goals), and `Bukayo Saka` (73 goals) return `SUCCESS` instead of false `NOT_ASSOCIATED`.
+4. Kept `lib/playerResolver.js`, `lib/fuzzyMatch.js`, and `lib/playerDataStore.js` untouched as required.
+
+
 

@@ -124,7 +124,7 @@ for (const [clubName, rawEntries] of Object.entries(clubsData)) {
     name: p.name,
     aliases: [],
     goals_by_competition: {
-      League: p.goals
+      "Premier League": p.goals
     },
     total_goals: p.goals,
     source: "user-provided dataset (premier_league_clubs_players.md)",
