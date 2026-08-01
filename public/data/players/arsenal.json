@@ -1,8 +1,18 @@
 {
-  "club": "Liverpool",
+  "club": "Arsenal",
   "players": [
     {
-      "name": "Abel Xavier",
+      "name": "Aaron Ramsey",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 40
+      },
+      "total_goals": 40,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Aaron Runarsson",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -12,7 +22,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Adam Bogdan",
+      "name": "Abou Diaby",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Alan Miller",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -22,42 +42,12 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Adam Hammill",
+      "name": "Albert Sambi Lokonga",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
       },
       "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Adrián",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Alan Hansen",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Alberto Aquilani",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
@@ -72,17 +62,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Alexis Mac Allister",
+      "name": "Alex Oxlade-Chamberlain",
       "aliases": [],
       "goals_by_competition": {
-        "League": 11
+        "League": 9
       },
-      "total_goals": 11,
+      "total_goals": 9,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Alisson Becker",
+      "name": "Alex Song",
       "aliases": [],
       "goals_by_competition": {
         "League": 1
@@ -92,37 +82,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Andrea Dossena",
+      "name": "Alexandre Lacazette",
       "aliases": [],
       "goals_by_competition": {
-        "League": 0
+        "League": 54
       },
-      "total_goals": 0,
+      "total_goals": 54,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Andrew Robertson",
+      "name": "Alexis Sánchez",
       "aliases": [],
       "goals_by_competition": {
-        "League": 11
+        "League": 60
       },
-      "total_goals": 11,
+      "total_goals": 60,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Andriy Voronin",
+      "name": "Anders Limpar",
       "aliases": [],
       "goals_by_competition": {
-        "League": 5
+        "League": 20
       },
-      "total_goals": 5,
+      "total_goals": 20,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Andy Carroll",
+      "name": "Andrey Arshavin",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 23
+      },
+      "total_goals": 23,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "André Santos",
       "aliases": [],
       "goals_by_competition": {
         "League": 6
@@ -132,37 +132,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Anthony Le Tallec",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Anthony Warnock",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Antonio Núñez",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Álvaro Arbeloa",
+      "name": "Andy Linighan",
       "aliases": [],
       "goals_by_competition": {
         "League": 2
@@ -172,27 +142,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Barry Jones",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Barry Venison",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 14
-      },
-      "total_goals": 14,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ben Davies",
+      "name": "Armand Traoré",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -202,7 +152,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Billy Koumetio",
+      "name": "Arturo Lupoli",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -212,7 +162,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Bobby Clark",
+      "name": "Ashley Cole",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Auston Trusty",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -222,197 +182,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Boudewijn Zenden",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Brad Jones",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Bruce Grobbelaar",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Bruno Cheyrou",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Calvin Ramsay",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Caoimhín Kelleher",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Carl Medjani",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Charles Itandje",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Charlie Adam",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Chris Kirkland",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Christian Benteke",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 9
-      },
-      "total_goals": 9,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Christian Ziege",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Cody Gakpo",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 26
-      },
-      "total_goals": 26,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Conor Bradley",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Conor Coady",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Curtis Jones",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 16
-      },
-      "total_goals": 16,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Damien Plessis",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Daniel Agger",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 9
-      },
-      "total_goals": 9,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Daniel Ayala",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Danny Ings",
+      "name": "Ben White",
       "aliases": [],
       "goals_by_competition": {
         "League": 4
@@ -422,17 +192,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Danny Murphy",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 44
-      },
-      "total_goals": 44,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Danny Ward",
+      "name": "Boro Primorac",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -442,17 +202,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Darren Potter",
+      "name": "Bukayo Saka",
       "aliases": [],
       "goals_by_competition": {
-        "League": 0
+        "League": 73
       },
-      "total_goals": 0,
+      "total_goals": 73,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "David Burrows",
+      "name": "Calum Chambers",
       "aliases": [],
       "goals_by_competition": {
         "League": 3
@@ -462,7 +222,27 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "David James",
+      "name": "Carl Jenkinson",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Cesc Fàbregas",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 35
+      },
+      "total_goals": 35,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Charlie Gilmour",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -472,7 +252,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "David Martin",
+      "name": "Charlie Patino",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -482,27 +262,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "David Ngog",
+      "name": "Chris Kiwomya",
       "aliases": [],
       "goals_by_competition": {
-        "League": 9
+        "League": 0
       },
-      "total_goals": 9,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "David Speedie",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 6
-      },
-      "total_goals": 6,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "David Thompson",
+      "name": "Christopher Wreh",
       "aliases": [],
       "goals_by_competition": {
         "League": 3
@@ -512,167 +282,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Dean Saunders",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 18
-      },
-      "total_goals": 18,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Dejan Lovren",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 5
-      },
-      "total_goals": 5,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Dietmar Hamann",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Diogo Jota",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 47
-      },
-      "total_goals": 47,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Dirk Kuyt",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 51
-      },
-      "total_goals": 51,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Divock Origi",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 22
-      },
-      "total_goals": 22,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Djibril Cissé",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 9
-      },
-      "total_goals": 9,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Djimi Traoré",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Dominic Matteo",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Dominic Solanke",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Dominik Szoboszlai",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 13
-      },
-      "total_goals": 13,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Don Hutchison",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 7
-      },
-      "total_goals": 7,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "El Hadji Diouf",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 6
-      },
-      "total_goals": 6,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Emile Heskey",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 39
-      },
-      "total_goals": 39,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Emiliano Insúa",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Emre Can",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 10
-      },
-      "total_goals": 10,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Erik Meijer",
+      "name": "Chuba Akpom",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -682,47 +292,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Fabinho",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 11
-      },
-      "total_goals": 11,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Fabio Aurelio",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Fabio Aurélio",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Fabio Carvalho",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Federico Chiesa",
+      "name": "Cohen Bramall",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -732,57 +302,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Fernando Morientes",
+      "name": "Conor Henderson",
       "aliases": [],
       "goals_by_competition": {
-        "League": 8
+        "League": 0
       },
-      "total_goals": 8,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Fernando Torres",
+      "name": "Constantin Schumacher",
       "aliases": [],
       "goals_by_competition": {
-        "League": 65
+        "League": 0
       },
-      "total_goals": 65,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Florent Sinama Pongolle",
+      "name": "Cédric Soares",
       "aliases": [],
       "goals_by_competition": {
-        "League": 2
+        "League": 0
       },
-      "total_goals": 2,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Gary Ablett",
+      "name": "Dani Ceballos",
       "aliases": [],
       "goals_by_competition": {
-        "League": 1
+        "League": 0
       },
-      "total_goals": 1,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Gary Gillespie",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Georginio Wijnaldum",
+      "name": "Danny Welbeck",
       "aliases": [],
       "goals_by_competition": {
         "League": 16
@@ -792,207 +352,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Glen Johnson",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Glenn Hysén",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Gregory Vignal",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Harry Kewell",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 12
-      },
-      "total_goals": 12,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Harvey Davies",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Harvey Elliott",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Iago Aspas",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ian Rush",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 158
-      },
-      "total_goals": 158,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ibrahima Konaté",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 5
-      },
-      "total_goals": 5,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Igor Bišćan",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jack Hobbs",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jack Robinson",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "James Balagizi",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "James McConnell",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "James Milner",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 19
-      },
-      "total_goals": 19,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jamie Carragher",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jamie Cassidy",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jamie Redknapp",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 30
-      },
-      "total_goals": 30,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jan Kromkamp",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jan Mølby",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 42
-      },
-      "total_goals": 42,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jarell Quansah",
+      "name": "David Hillier",
       "aliases": [],
       "goals_by_competition": {
         "League": 2
@@ -1002,7 +362,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jari Litmanen",
+      "name": "David Luiz",
       "aliases": [],
       "goals_by_competition": {
         "League": 3
@@ -1012,7 +372,57 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jason McAteer",
+      "name": "David O'Leary",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 14
+      },
+      "total_goals": 14,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "David Platt",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 13
+      },
+      "total_goals": 13,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "David Rocastle",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 24
+      },
+      "total_goals": 24,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "David Seaman",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Davor Šuker",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Declan Rice",
       "aliases": [],
       "goals_by_competition": {
         "League": 9
@@ -1022,7 +432,77 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Javier Manquillo",
+      "name": "Dennis Bergkamp",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 87
+      },
+      "total_goals": 87,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Denílson",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Eddie Nketiah",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 38
+      },
+      "total_goals": 38,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Edu",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Edu Gaspar",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Eduardo",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 21
+      },
+      "total_goals": 21,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Emile Smith Rowe",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 18
+      },
+      "total_goals": 18,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Emiliano Martínez",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1032,7 +512,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Javier Mascherano",
+      "name": "Emmanuel Petit",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ethan Nwaneri",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 9
+      },
+      "total_goals": 9,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Fabrice Muamba",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Folarin Balogun",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Francis Coquelin",
       "aliases": [],
       "goals_by_competition": {
         "League": 1
@@ -1042,7 +562,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jay Spearing",
+      "name": "Francis Jeffers",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Freddie Ljungberg",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 46
+      },
+      "total_goals": 46,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Fábio Vieira",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gabriel",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 20
+      },
+      "total_goals": 20,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gabriel Heinze",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1052,12 +612,212 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jayden Danns",
+      "name": "Gabriel Jesus",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 19
+      },
+      "total_goals": 19,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gabriel Martinelli",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 52
+      },
+      "total_goals": 52,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gavin McGowan",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
       },
       "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gaël Clichy",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gervinho",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 11
+      },
+      "total_goals": 11,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gilberto Silva",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 17
+      },
+      "total_goals": 17,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Gilles Grimandi",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Giovanni van Bronckhorst",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Glenn Helder",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Graham Stack",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Granit Xhaka",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 17
+      },
+      "total_goals": 17,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Havard Nordtveit",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Henrikh Mkhitaryan",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 6
+      },
+      "total_goals": 6,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Héctor Bellerín",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ian Selley",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ian Wright",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 128
+      },
+      "total_goals": 128,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Igors Stepanovs",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jack Wilshere",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 14
+      },
+      "total_goals": 14,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jakub Kiwior",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jens Lehmann",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jeremie Aliadière",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
@@ -1072,37 +832,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jerzy Dudek",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jim Beglin",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jimmy Carter",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Joe Allen",
+      "name": "John Hartson",
       "aliases": [],
       "goals_by_competition": {
         "League": 4
@@ -1112,67 +842,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Joe Gomez",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Joe Hart",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "John Arne Riise",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 21
-      },
-      "total_goals": 21,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "John Barnes",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 84
-      },
-      "total_goals": 84,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "John Scales",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 4
-      },
-      "total_goals": 4,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "John Welsh",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Jon Flanagan",
+      "name": "John Jensen",
       "aliases": [],
       "goals_by_competition": {
         "League": 1
@@ -1182,7 +852,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jonjo Shelvey",
+      "name": "John Lukic",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Jorginho",
       "aliases": [],
       "goals_by_competition": {
         "League": 2
@@ -1192,27 +872,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jordan Henderson",
+      "name": "José Antonio Reyes",
       "aliases": [],
       "goals_by_competition": {
-        "League": 29
+        "League": 16
       },
-      "total_goals": 29,
+      "total_goals": 16,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Jordon Ibe",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 4
-      },
-      "total_goals": 4,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Josemi",
+      "name": "Justin Hoyte",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1222,7 +892,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "José Enrique",
+      "name": "Kaba Diawara",
       "aliases": [],
       "goals_by_competition": {
         "League": 2
@@ -1232,37 +902,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Joël Matip",
+      "name": "Kai Havertz",
       "aliases": [],
       "goals_by_competition": {
-        "League": 8
+        "League": 24
       },
-      "total_goals": 8,
+      "total_goals": 24,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Julian Dicks",
+      "name": "Kevin Campbell",
       "aliases": [],
       "goals_by_competition": {
-        "League": 0
+        "League": 46
       },
-      "total_goals": 0,
+      "total_goals": 46,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Kaide Gordon",
+      "name": "Kieran Gibbs",
       "aliases": [],
       "goals_by_competition": {
-        "League": 0
+        "League": 6
       },
-      "total_goals": 0,
+      "total_goals": 6,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Karl Miller",
+      "name": "Kieran Tierney",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Kim Källström",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1275,246 +955,6 @@
       "name": "Kolo Touré",
       "aliases": [],
       "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Kostas Tsimikas",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Lazar Marković",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Lee Peltier",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Leighton Clarkson",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Lucas Leiva",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Luis Alberto",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Luis Díaz",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 34
-      },
-      "total_goals": 34,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Luis García",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 18
-      },
-      "total_goals": 18,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Luis Suárez",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 69
-      },
-      "total_goals": 69,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Luke Chambers",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Mamadou Sakho",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Marcelo Pitaluga",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Mark Walters",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 4
-      },
-      "total_goals": 4,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Mark Wright",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Martin Kelly",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Martin Skrtel",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 16
-      },
-      "total_goals": 16,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Martin Škrtel",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 16
-      },
-      "total_goals": 16,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Maxi Rodríguez",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 13
-      },
-      "total_goals": 13,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Michael Owen",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 118
-      },
-      "total_goals": 118,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Michael Thomas",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Mike Hooper",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Mike Marsh",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Miki Roqué",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Milan Baroš",
-      "aliases": [],
-      "goals_by_competition": {
         "League": 9
       },
       "total_goals": 9,
@@ -1522,37 +962,27 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Mohamed Salah",
+      "name": "Konstantinos Mavropanos",
       "aliases": [],
       "goals_by_competition": {
-        "League": 193
+        "League": 0
       },
-      "total_goals": 193,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Mohamed Sissoko",
+      "name": "Krystian Bielik",
       "aliases": [],
       "goals_by_competition": {
-        "League": 1
+        "League": 0
       },
-      "total_goals": 1,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Nabil El Zhar",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Naby Keïta",
+      "name": "Lauren",
       "aliases": [],
       "goals_by_competition": {
         "League": 7
@@ -1562,177 +992,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Nat Phillips",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Nathaniel Clyne",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Neil Mellor",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Neil Ruddock",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 5
-      },
-      "total_goals": 5,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Nick Barmby",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Nicolas Anelka",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 4
-      },
-      "total_goals": 4,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Nigel Clough",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 14
-      },
-      "total_goals": 14,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ovie Ejaria",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Owen Beck",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ozan Kabak",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Patrik Berger",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 28
-      },
-      "total_goals": 28,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Paul Anderson",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Paul Harrison",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Paul Stewart",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 8
-      },
-      "total_goals": 8,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Pegguy Arphexad",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Pepe Reina",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Peter Beardsley",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 46
-      },
-      "total_goals": 46,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Peter Crouch",
+      "name": "Laurent Koscielny",
       "aliases": [],
       "goals_by_competition": {
         "League": 22
@@ -1742,17 +1002,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Phil Babb",
+      "name": "Leandro Trossard",
       "aliases": [],
       "goals_by_competition": {
-        "League": 2
+        "League": 22
       },
-      "total_goals": 2,
+      "total_goals": 22,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Phil Charnock",
+      "name": "Lee Dixon",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 25
+      },
+      "total_goals": 25,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lucas Pérez",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lucas Torreira",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Lukasz Fabiański",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1762,7 +1052,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Philipp Degen",
+      "name": "Luís Boa Morte",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Mads Hermansen",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1772,7 +1072,47 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Philippe Coutinho",
+      "name": "Manuel Almunia",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marc Overmars",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 25
+      },
+      "total_goals": 25,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Marouane Chamakh",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Martin Keown",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 5
+      },
+      "total_goals": 5,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Martin Ødegaard",
       "aliases": [],
       "goals_by_competition": {
         "League": 41
@@ -1782,7 +1122,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Ragnar Klavan",
+      "name": "Mathieu Debuchy",
       "aliases": [],
       "goals_by_competition": {
         "League": 1
@@ -1792,27 +1132,17 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Raheem Sterling",
+      "name": "Mathieu Flamini",
       "aliases": [],
       "goals_by_competition": {
-        "League": 18
+        "League": 7
       },
-      "total_goals": 18,
+      "total_goals": 7,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Ray Houghton",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 37
-      },
-      "total_goals": 37,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Rhian Brewster",
+      "name": "Matt Turner",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -1822,27 +1152,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Rhys Williams",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Richie Partridge",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Rickie Lambert",
+      "name": "Matthew Upson",
       "aliases": [],
       "goals_by_competition": {
         "League": 2
@@ -1852,277 +1162,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Rio Ngumoha",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Rob Jones",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Robbie Fowler",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 128
-      },
-      "total_goals": 128,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Robby Jones",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Roberto Firmino",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 82
-      },
-      "total_goals": 82,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ronnie Whelan",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 46
-      },
-      "total_goals": 46,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ronny Rosenthal",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 21
-      },
-      "total_goals": 21,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ryan Babel",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 12
-      },
-      "total_goals": 12,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Ryan Gravenberch",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 5
-      },
-      "total_goals": 5,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sadio Mané",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 90
-      },
-      "total_goals": 90,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Salif Diao",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sami Hyypiä",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 22
-      },
-      "total_goals": 22,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sander Westerveld",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Scott Carson",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sean Dundee",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sebastian Leto",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sebastián Coates",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sepp van den Berg",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Simon Mignolet",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Sotirios Kyrgiakos",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Stefan Bajčetić",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Stephen Darby",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Stephen Warnock",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Stephen Wright",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Steve Finnan",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Steve Harkness",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Steve McManaman",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 46
-      },
-      "total_goals": 46,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Steve Nicol",
+      "name": "Mesut Özil",
       "aliases": [],
       "goals_by_competition": {
         "League": 33
@@ -2132,47 +1172,27 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Steve Staunton",
+      "name": "Michael Thomas",
       "aliases": [],
       "goals_by_competition": {
-        "League": 7
+        "League": 30
       },
-      "total_goals": 7,
+      "total_goals": 30,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Steven Gerrard",
+      "name": "Mika Biereth",
       "aliases": [],
       "goals_by_competition": {
-        "League": 120
+        "League": 0
       },
-      "total_goals": 120,
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Stewart Downing",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Stig Inge Bjørnebye",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Stéphane Henchoz",
+      "name": "Mikael Silvestre",
       "aliases": [],
       "goals_by_competition": {
         "League": 2
@@ -2182,137 +1202,7 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Takumi Minamino",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Thiago Alcântara",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 2
-      },
-      "total_goals": 2,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Tiago Ilori",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Titi Camara",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 9
-      },
-      "total_goals": 9,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Tony Cousins",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Trent Alexander-Arnold",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 18
-      },
-      "total_goals": 18,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Tyler Morton",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Vegard Heggem",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Victor Moses",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Virgil van Dijk",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 26
-      },
-      "total_goals": 26,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Vladimir Šmicer",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 3
-      },
-      "total_goals": 3,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Vítězslav Jaroš",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 0
-      },
-      "total_goals": 0,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Wataru Endō",
-      "aliases": [],
-      "goals_by_competition": {
-        "League": 1
-      },
-      "total_goals": 1,
-      "source": "user-provided dataset (premier_league_clubs_players.md)",
-      "notes": "League-only entry; no Champions League or cup data provided in source."
-    },
-    {
-      "name": "Xabi Alonso",
+      "name": "Mikel Arteta",
       "aliases": [],
       "goals_by_competition": {
         "League": 14
@@ -2322,17 +1212,37 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Yossi Benayoun",
+      "name": "Mohamed Elneny",
       "aliases": [],
       "goals_by_competition": {
-        "League": 18
+        "League": 6
       },
-      "total_goals": 18,
+      "total_goals": 6,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Zak Whitbread",
+      "name": "Myles Lewis-Skelly",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nacho Monreal",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 10
+      },
+      "total_goals": 10,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nelson Vivas",
       "aliases": [],
       "goals_by_competition": {
         "League": 0
@@ -2342,12 +1252,532 @@
       "notes": "League-only entry; no Champions League or cup data provided in source."
     },
     {
-      "name": "Øyvind Leonhardsen",
+      "name": "Nicolas Anelka",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 23
+      },
+      "total_goals": 23,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nigel Winterburn",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 9
+      },
+      "total_goals": 9,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nuno Tavares",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Nwankwo Kanu",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 30
+      },
+      "total_goals": 30,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Oleg Luzhny",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Oleksandr Zinchenko",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Olivier Giroud",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 73
+      },
+      "total_goals": 73,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Pablo Marí",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Park Chu-young",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Pascal Cygan",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 3
+      },
+      "total_goals": 3,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Patrick Vieira",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 28
+      },
+      "total_goals": 28,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Patrik Vieira",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 28
+      },
+      "total_goals": 28,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paul Davis",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 16
+      },
+      "total_goals": 16,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paul Dickov",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Paul Merson",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 78
+      },
+      "total_goals": 78,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Per Mertesacker",
       "aliases": [],
       "goals_by_competition": {
         "League": 7
       },
       "total_goals": 7,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Petr Čech",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Philippe Senderos",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 4
+      },
+      "total_goals": 4,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Pierre-Emerick Aubameyang",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 68
+      },
+      "total_goals": 68,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Quincy Owusu-Abeyie",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Rami Shaaban",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ray Parlour",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 22
+      },
+      "total_goals": 22,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Reiss Nelson",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Riccardo Calafiori",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Rob Holding",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Robert Pirès",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 62
+      },
+      "total_goals": 62,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Robin van Persie",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 96
+      },
+      "total_goals": 96,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Ryan Garry",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Samir Nasri",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 18
+      },
+      "total_goals": 18,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Santi Cazorla",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 25
+      },
+      "total_goals": 25,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sead Kolašinac",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Shkodran Mustafi",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sol Campbell",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 8
+      },
+      "total_goals": 8,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Stephen Hughes",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Steve Bould",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 10
+      },
+      "total_goals": 10,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sylvain Wiltord",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 31
+      },
+      "total_goals": 31,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Sylvinho",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Takehiro Tomiyasu",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 2
+      },
+      "total_goals": 2,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Theo Walcott",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 65
+      },
+      "total_goals": 65,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thierry Henry",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 175
+      },
+      "total_goals": 175,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Partey",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 9
+      },
+      "total_goals": 9,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Thomas Vermaelen",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 13
+      },
+      "total_goals": 13,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tomas Rosický",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 19
+      },
+      "total_goals": 19,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tommy Setford",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tomáš Souček",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Tony Adams",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 32
+      },
+      "total_goals": 32,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Volz Kerrea Gilbert",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "William Gallas",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 12
+      },
+      "total_goals": 12,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "William Saliba",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 7
+      },
+      "total_goals": 7,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Willian",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 1
+      },
+      "total_goals": 1,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Wojciech Szczęsny",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Yaya Sanogo",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
+      "source": "user-provided dataset (premier_league_clubs_players.md)",
+      "notes": "League-only entry; no Champions League or cup data provided in source."
+    },
+    {
+      "name": "Yossi Benayoun",
+      "aliases": [],
+      "goals_by_competition": {
+        "League": 0
+      },
+      "total_goals": 0,
       "source": "user-provided dataset (premier_league_clubs_players.md)",
       "notes": "League-only entry; no Champions League or cup data provided in source."
     }
