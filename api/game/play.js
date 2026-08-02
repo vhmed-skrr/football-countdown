@@ -7,13 +7,20 @@
  *
  * The backend is fully stateless — all session state is passed in by the client
  * and returned updated in the response.
+ *
+ * Data flow (new static-dataset architecture):
+ *   1. resolvePlayer(query, clubSlug) — fuzzy-matches query against the club's
+ *      static JSON dataset in public/data/players/<clubSlug>.json
+ *   2. fetchPlayerStats(playerRecord, leagueName) — looks up goals_by_competition
+ *      directly from the already-loaded player record; no HTTP request.
+ *   3. evaluateTurn() — pure game-state transition as before.
  */
 
 'use strict';
 
 const { resolvePlayer } = require('../../lib/playerResolver');
 const { fetchPlayerStats } = require('../../lib/scraper');
-const { evaluateTurn, isPlayerBurned } = require('../../lib/gameEngine');
+const { evaluateTurn, isPlayerBurned, submitManualPlayer } = require('../../lib/gameEngine');
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -29,7 +36,23 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ error: 'Missing or invalid sessionState in request body' });
     }
 
-    // Step A: Timer expired check
+    // Step A: Manual player addition submission (UNKNOWN_PLAYER flow)
+    if (body.manualEntry === true) {
+      const playerName = body.playerName || body.playerQuery || '';
+      const goalsScored = body.goalsScored;
+
+      const manualResult = submitManualPlayer(sessionState, playerName, goalsScored);
+
+      return res.status(200).json({
+        resultCase: manualResult.resultCase,
+        sessionState: manualResult.newState,
+        statDeducted: manualResult.statDeducted,
+        message: manualResult.message,
+        player: manualResult.player
+      });
+    }
+
+    // Step B: Timer expired check
     if (body.timerExpired === true) {
       const result = evaluateTurn(sessionState, { timerExpired: true });
       return res.status(200).json({
@@ -39,11 +62,19 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    // Derive the club slug from session state for dataset lookup.
+    // Convention: lowercase the club name and replace spaces with hyphens
+    // (e.g. "Liverpool" → "liverpool", "Man City" → "man-city").
+    const club = sessionState.club || '';
+    const clubSlug = club.toLowerCase().replace(/\s+/g, '-');
+    const league = sessionState.league || 'Premier League';
+    const category = sessionState.category || 'goals';
+
     let targetPlayer = null;
 
-    // Step B & C: Determine target player (resubmitted selectedPlayer vs raw query resolution)
+    // Step C & D: Determine target player (resubmitted selectedPlayer vs raw query resolution)
     if (body.selectedPlayer && typeof body.selectedPlayer === 'object' && body.selectedPlayer.name) {
-      // Direct resubmission from disambiguation selection -> skip resolver to prevent loop
+      // Direct resubmission from disambiguation selection — skip resolver to prevent loop
       targetPlayer = body.selectedPlayer;
     } else if (body.playerQuery && typeof body.playerQuery === 'string') {
       const query = body.playerQuery.trim();
@@ -51,16 +82,17 @@ module.exports = async function handler(req, res) {
         return res.status(400).json({ error: 'playerQuery cannot be empty' });
       }
 
-      // Call playerResolver (A1)
-      const resolveResult = await resolvePlayer(query);
+      // Call playerResolver — looks up the club's static dataset
+      const resolveResult = await resolvePlayer(query, clubSlug);
 
-      if (resolveResult.type === 'NOT_FOUND') {
-        // Player name does not exist on FBref
-        const notFoundResult = evaluateTurn(sessionState, { statStatus: 'NOT_ASSOCIATED' });
+      if (resolveResult.type === 'UNKNOWN_PLAYER') {
+        // No match found in the static dataset for this club.
+        // Return UNKNOWN_PLAYER with the originally typed player name so frontend can prompt manual addition.
         return res.status(200).json({
-          resultCase: 'NOT_ASSOCIATED',
-          sessionState: notFoundResult.newState,
-          message: `No football player found matching "${query}".`
+          resultCase: 'UNKNOWN_PLAYER',
+          playerName: query,
+          sessionState,
+          message: `No player matching "${query}" found in the static dataset for ${club}.`
         });
       }
 
@@ -75,7 +107,7 @@ module.exports = async function handler(req, res) {
       if (resolveResult.type === 'FOUND') {
         const candidates = resolveResult.players || [];
 
-        // Ambiguous search -> return NEEDS_DISAMBIGUATION (do NOT proceed to scrape)
+        // Ambiguous search → return NEEDS_DISAMBIGUATION (do NOT proceed to scrape)
         if (candidates.length > 1) {
           const disambigResult = evaluateTurn(sessionState, {
             needsDisambiguation: true,
@@ -106,7 +138,7 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    // Step D: Pre-check ALREADY_BURNED against both burned lists before scraping
+    // Step D: Pre-check ALREADY_BURNED against both burned lists before fetching stats
     if (isPlayerBurned(sessionState, targetPlayer)) {
       const burnedResult = evaluateTurn(sessionState, { player: targetPlayer });
       return res.status(200).json({
@@ -117,15 +149,11 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    // Step E: Fetch stats via scraper (A2) for target club/league/category
-    const club = sessionState.club || 'Liverpool';
-    const league = sessionState.league || 'Premier League';
-    const category = sessionState.category || 'goals';
-    const profileRef = targetPlayer.profileUrl || targetPlayer.name;
+    // Step E: Fetch stats from the static dataset player record (no HTTP request)
+    // targetPlayer is a full player record from the dataset, including goals_by_competition.
+    const scrapeResult = await fetchPlayerStats(targetPlayer, league);
 
-    const scrapeResult = await fetchPlayerStats(profileRef, club, league, category);
-
-    // Step F: Evaluate result via gameEngine (A3)
+    // Step F: Evaluate result via gameEngine
     const turnEvaluation = evaluateTurn(sessionState, {
       player: targetPlayer,
       statStatus: scrapeResult.status,

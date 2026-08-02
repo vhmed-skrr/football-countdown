@@ -154,7 +154,4 @@ const i18n = (() => {
   return { t, getLang, setLang, init, applyToDOM: _applyToDOM };
 })();
 
-// Auto-init when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  i18n.init().catch(err => console.error('i18n init failed:', err));
-});
+// Initialization is handled by app.js

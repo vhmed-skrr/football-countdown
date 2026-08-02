@@ -114,11 +114,33 @@ function showScreen(screenId) {
     }
   }
 
-  // Stop timer if moving away from Arena
+  // Setup sticky footer is shown on Screen 2 (Game Setup) only
+  const setupFooter = document.getElementById('setup-sticky-footer');
+  if (setupFooter) {
+    if (screenId === 'screen-setup') {
+      setupFooter.removeAttribute('hidden');
+    } else {
+      setupFooter.setAttribute('hidden', '');
+    }
+  }
+
+  // Bottom nav is a body-level fixed element — show only on arena screen
+  const bottomNav = document.getElementById('arena-bottom-nav');
+  if (bottomNav) {
+    if (screenId === 'screen-arena') {
+      bottomNav.removeAttribute('hidden');
+    } else {
+      bottomNav.setAttribute('hidden', '');
+    }
+  }
+
+  // Close burned panel drawer when leaving arena
   if (screenId !== 'screen-arena') {
+    closeBurnedDrawer();
     stopTimer();
   }
 }
+
 
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
@@ -609,15 +631,21 @@ function handleReadyClick() {
 function prepareArenaScreen() {
   if (!state.sessionState) return;
 
-  // Update HUD
+  // Update HUD — show active player name and their OWN balance
   const activeIdx = state.sessionState.currentPlayerIndex || 0;
   const activeName = (state.sessionState.players && state.sessionState.players[activeIdx]) || `Player ${activeIdx + 1}`;
 
   const hudPlayer = document.getElementById('hud-player-name');
   if (hudPlayer) hudPlayer.textContent = activeName;
 
+  // Read the active player's own balance from playerData
+  const playerData = state.sessionState.playerData || {};
+  const activeBalance = (playerData[activeIdx] && typeof playerData[activeIdx].balance === 'number')
+    ? playerData[activeIdx].balance
+    : state.sessionState.balance || 0;
+
   const hudBalance = document.getElementById('hud-balance');
-  if (hudBalance) hudBalance.textContent = String(state.sessionState.balance);
+  if (hudBalance) hudBalance.textContent = String(activeBalance);
 
   // Update Timer display
   const timerDisplay = document.getElementById('timer-display');
@@ -637,7 +665,7 @@ function prepareArenaScreen() {
   if (searchInput) searchInput.value = '';
   hideSuggestions();
 
-  // Render Burned Players Panel
+  // Render Burned Players Panel (includes opponents' balance standings)
   renderBurnedPanel();
 }
 
@@ -687,17 +715,48 @@ function renderBurnedPanel() {
 
   listEl.innerHTML = '';
 
-  const p1List = state.sessionState.player1BurnedList || [];
-  const p2List = state.sessionState.player2BurnedList || [];
-  const p3List = state.sessionState.player3BurnedList || [];
-  const p4List = state.sessionState.player4BurnedList || [];
+  const playerData = state.sessionState.playerData || {};
+  const playerNames = state.sessionState.players || [];
 
-  const allBurned = [
-    ...p1List.map(item => ({ ...item, p: 1 })),
-    ...p2List.map(item => ({ ...item, p: 2 })),
-    ...p3List.map(item => ({ ...item, p: 3 })),
-    ...p4List.map(item => ({ ...item, p: 4 }))
-  ];
+  // --- Opponents' balance standings at the top of the panel ---
+  // Show every player's current balance so all participants can track standing.
+  // This is the UX decision for displaying opponent balances: a compact standings
+  // strip at the top of the burned-panel sidebar, always visible from the drawer.
+  const activeIdx = state.sessionState.currentPlayerIndex || 0;
+  const standingsEl = document.getElementById('player-standings');
+  if (standingsEl) {
+    standingsEl.innerHTML = '';
+    playerNames.forEach((name, idx) => {
+      const pd = playerData[idx];
+      const bal = pd ? pd.balance : '—';
+      const isActive = idx === activeIdx;
+      const row = document.createElement('div');
+      row.className = `standings-row${isActive ? ' standings-row--active' : ''}`;
+      row.setAttribute('aria-label', `${name}: ${bal}`);
+      row.innerHTML = `
+        <span class="standings-row__name">${isActive ? '▶ ' : ''}${name}</span>
+        <span class="standings-row__balance">${bal}</span>
+      `;
+      standingsEl.appendChild(row);
+    });
+  }
+
+  // --- Burned players list ---
+  const allBurned = [];
+  playerNames.forEach((name, idx) => {
+    const pd = playerData[idx];
+    if (pd && pd.burnedList) {
+      pd.burnedList.forEach(item => allBurned.push({ ...item, playerIdx: idx }));
+    }
+  });
+
+  const countLabel = document.getElementById('burned-drawer-count');
+  if (countLabel) {
+    const lang = i18n.getLang ? i18n.getLang() : 'ar';
+    countLabel.textContent = lang === 'en'
+      ? `Burned (${allBurned.length}) 🔥`
+      : `المحروقون (${allBurned.length}) 🔥`;
+  }
 
   if (allBurned.length === 0) {
     if (emptyMsg) emptyMsg.style.display = 'block';
@@ -709,7 +768,7 @@ function renderBurnedPanel() {
   allBurned.forEach(entry => {
     const li = document.createElement('li');
     li.className = 'burned-entry';
-    const pName = (state.sessionState.players && state.sessionState.players[entry.p - 1]) || `P${entry.p}`;
+    const pName = playerNames[entry.playerIdx] || `P${entry.playerIdx + 1}`;
     const nameStr = entry.name || (typeof entry === 'string' ? entry : 'Player');
 
     li.innerHTML = `
@@ -718,6 +777,47 @@ function renderBurnedPanel() {
     `;
     listEl.appendChild(li);
   });
+}
+
+function openBurnedDrawer() {
+  const panel = document.getElementById('burned-panel');
+  const backdrop = document.getElementById('burned-backdrop');
+  const toggle = document.getElementById('btn-burned-drawer-toggle');
+
+  if (panel) panel.classList.add('open');
+  if (backdrop) backdrop.classList.add('active');
+  if (toggle) toggle.setAttribute('aria-expanded', 'true');
+}
+
+function closeBurnedDrawer() {
+  const panel = document.getElementById('burned-panel');
+  const backdrop = document.getElementById('burned-backdrop');
+  const toggle = document.getElementById('btn-burned-drawer-toggle');
+
+  if (panel) panel.classList.remove('open');
+  if (backdrop) backdrop.classList.remove('active');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
+}
+
+function toggleBurnedDrawer() {
+  const panel = document.getElementById('burned-panel');
+  if (panel && panel.classList.contains('open')) {
+    closeBurnedDrawer();
+  } else {
+    openBurnedDrawer();
+  }
+}
+
+function setupBurnedDrawer() {
+  const toggleBtn = document.getElementById('btn-burned-drawer-toggle');
+  const backdrop = document.getElementById('burned-backdrop');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleBurnedDrawer);
+  }
+  if (backdrop) {
+    backdrop.addEventListener('click', closeBurnedDrawer);
+  }
 }
 
 // ============================================================
@@ -762,6 +862,36 @@ function setupArenaSearch() {
         hideSuggestions();
         submitPlay(query, false);
       }
+    });
+  }
+
+  // Always-visible "Add Player Manually" shortcut on Arena screen
+  const manualAddBtn = document.getElementById('btn-arena-manual-add');
+  if (manualAddBtn) {
+    manualAddBtn.addEventListener('click', () => {
+      stopTimer();
+      hideSuggestions();
+
+      const nameInput = document.getElementById('unknown-player-name');
+      if (nameInput) {
+        nameInput.value = '';
+        nameInput.style.borderColor = '';
+        nameInput.readOnly = false;
+        nameInput.removeAttribute('readonly');
+        nameInput.disabled = false;
+      }
+
+      const goalsInput = document.getElementById('unknown-goals-input');
+      if (goalsInput) {
+        goalsInput.value = '';
+        goalsInput.style.borderColor = '';
+      }
+
+      const errMsg = document.getElementById('unknown-error-msg');
+      if (errMsg) errMsg.style.display = 'none';
+
+      openModal('modal-result-unknown');
+      if (nameInput) nameInput.focus();
     });
   }
 }
@@ -870,8 +1000,43 @@ async function submitPlay(playerQuery, timerExpired = false, selectedPlayer = nu
   }
 }
 
+async function submitManualPlay(playerName, goalsScored) {
+  if (state.isSubmittingPlay || !state.sessionState) return;
+
+  state.isSubmittingPlay = true;
+  stopTimer();
+
+  const payload = {
+    sessionState: state.sessionState,
+    manualEntry: true,
+    playerName,
+    goalsScored
+  };
+
+  try {
+    const resp = await fetch('/api/game/play', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await resp.json();
+
+    if (data.sessionState) {
+      state.sessionState = data.sessionState;
+    }
+
+    handleTurnResult(data, playerName);
+  } catch (err) {
+    console.error('Error submitting manual player:', err);
+    showToast(i18n.getLang() === 'en' ? 'Network error submitting manual player' : 'خطأ في الاتصال أثناء إضافة اللاعب');
+  } finally {
+    state.isSubmittingPlay = false;
+  }
+}
+
 // ============================================================
-// Handle 7 Turn Result Modal Cases
+// Handle 8 Turn Result Modal Cases
 // ============================================================
 
 function handleTurnResult(response, querySubmitted) {
@@ -883,8 +1048,13 @@ function handleTurnResult(response, querySubmitted) {
 
       const photoEl = document.getElementById('success-player-photo');
       if (photoEl) {
-        photoEl.src = (response.player && response.player.photoUrl) || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><text y="20" font-size="20">⚽</text></svg>';
-        photoEl.alt = response.player ? response.player.name : '';
+        if (response.player && response.player.photoUrl) {
+          photoEl.src = response.player.photoUrl;
+          photoEl.alt = response.player.name;
+          photoEl.style.display = 'block';
+        } else {
+          photoEl.style.display = 'none';
+        }
       }
 
       const nameEl = document.getElementById('success-player-name');
@@ -898,16 +1068,42 @@ function handleTurnResult(response, querySubmitted) {
       const statEl = document.getElementById('success-stat-value');
       if (statEl) statEl.textContent = String(response.statDeducted || 0);
 
+      // Show the ACTIVE player's new balance (from their own independent balance slot)
+      // We look at the player who just played — their index is in the PREVIOUS state's
+      // currentPlayerIndex (before the turn advanced). We derive it from the response
+      // message or fall back to reading the updated sessionState's playerData.
       const balEl = document.getElementById('success-new-balance');
-      if (balEl && state.sessionState) balEl.textContent = String(state.sessionState.balance);
+      if (balEl && state.sessionState) {
+        // After SUCCESS the turn advances, so currentPlayerIndex now points to next player.
+        // The player who just played is at (currentPlayerIndex - 1 + total) % total.
+        const ss = state.sessionState;
+        const totalPlayers = (ss.players && ss.players.length) || 2;
+        const justPlayedIdx = ((ss.currentPlayerIndex - 1) + totalPlayers) % totalPlayers;
+        const pd = ss.playerData || {};
+        const newBal = (pd[justPlayedIdx] && typeof pd[justPlayedIdx].balance === 'number')
+          ? pd[justPlayedIdx].balance
+          : '—';
+        balEl.textContent = String(newBal);
+      }
 
       break;
     }
 
     case 'BUST': {
       openModal('modal-result-bust');
+      // Show the current (busted) player's unchanged balance from their own slot
       const balEl = document.getElementById('bust-balance');
-      if (balEl && state.sessionState) balEl.textContent = String(state.sessionState.balance);
+      if (balEl && state.sessionState) {
+        // After BUST the turn also advances — same back-calculation as SUCCESS
+        const ss = state.sessionState;
+        const totalPlayers = (ss.players && ss.players.length) || 2;
+        const bustedIdx = ((ss.currentPlayerIndex - 1) + totalPlayers) % totalPlayers;
+        const pd = ss.playerData || {};
+        const bustedBal = (pd[bustedIdx] && typeof pd[bustedIdx].balance === 'number')
+          ? pd[bustedIdx].balance
+          : '—';
+        balEl.textContent = String(bustedBal);
+      }
       break;
     }
 
@@ -930,6 +1126,29 @@ function handleTurnResult(response, querySubmitted) {
       break;
     }
 
+    case 'UNKNOWN_PLAYER': {
+      openModal('modal-result-unknown');
+      const nameInput = document.getElementById('unknown-player-name');
+      if (nameInput) {
+        nameInput.value = response.playerName || querySubmitted || '';
+        nameInput.style.borderColor = '';
+        nameInput.readOnly = false;
+        nameInput.removeAttribute('readonly');
+        nameInput.disabled = false;
+      }
+
+      const goalsInput = document.getElementById('unknown-goals-input');
+      if (goalsInput) {
+        goalsInput.value = '';
+        goalsInput.style.borderColor = '';
+      }
+
+      const errMsg = document.getElementById('unknown-error-msg');
+      if (errMsg) errMsg.style.display = 'none';
+
+      break;
+    }
+
     case 'NEEDS_DISAMBIGUATION': {
       openModal('modal-result-disambiguation');
       renderDisambiguationList(response.candidates || []);
@@ -938,8 +1157,19 @@ function handleTurnResult(response, querySubmitted) {
 
     case 'WIN': {
       openModal('modal-result-win');
+      const winner = (response.sessionState && response.sessionState.winner)
+        || (state.sessionState && state.sessionState.winner)
+        || 'Winner!';
       const nameEl = document.getElementById('win-player-name');
-      if (nameEl) nameEl.textContent = response.sessionState.winner || 'Winner!';
+      if (nameEl) nameEl.textContent = winner;
+      // Update the win subtitle to mention the winner by name
+      const bodyEl = document.getElementById('win-body-text');
+      if (bodyEl) {
+        const winMsg = i18n.getLang() === 'en'
+          ? `${winner} wins!`
+          : `${winner} فاز!`;
+        bodyEl.textContent = winMsg;
+      }
       break;
     }
 
@@ -962,19 +1192,32 @@ function renderDisambiguationList(candidates) {
     item.setAttribute('role', 'option');
     item.setAttribute('tabindex', '0');
 
-    const photoUrl = cand.photoUrl || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><text y="20" font-size="20">⚽</text></svg>';
+    const info = document.createElement('div');
+    info.className = 'disambiguation-item__info';
 
-    item.innerHTML = `
-      <img src="${photoUrl}" alt="${cand.name}" width="48" height="48" loading="lazy" />
-      <div class="disambiguation-item__info">
-        <span class="disambiguation-item__name">${cand.name}</span>
-        <span class="disambiguation-item__meta">${cand.meta || `${state.sessionState.club || ''} · ${state.sessionState.league || ''}`}</span>
-      </div>
-    `;
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'disambiguation-item__name';
+    nameSpan.textContent = cand.name || '';
 
-    item.addEventListener('click', () => {
+    const metaSpan = document.createElement('span');
+    metaSpan.className = 'disambiguation-item__meta';
+    metaSpan.textContent = cand.meta || `${(state.sessionState && state.sessionState.club) || ''} · ${(state.sessionState && state.sessionState.league) || ''}`;
+
+    info.appendChild(nameSpan);
+    info.appendChild(metaSpan);
+    item.appendChild(info);
+
+    const onSelect = () => {
       closeModal('modal-result-disambiguation');
       submitPlay(null, false, cand);
+    };
+
+    item.addEventListener('click', onSelect);
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onSelect();
+      }
     });
 
     listEl.appendChild(item);
@@ -1038,6 +1281,56 @@ function setupModalActions() {
     });
   }
 
+  // UNKNOWN_PLAYER -> Add and Submit
+  const unknownSubmitBtn = document.getElementById('btn-unknown-submit');
+  if (unknownSubmitBtn) {
+    unknownSubmitBtn.addEventListener('click', () => {
+      const nameInput = document.getElementById('unknown-player-name');
+      const goalsInput = document.getElementById('unknown-goals-input');
+      const errMsg = document.getElementById('unknown-error-msg');
+
+      const playerName = nameInput ? nameInput.value.trim() : '';
+      const rawGoals = goalsInput ? goalsInput.value.trim() : '';
+
+      if (!playerName) {
+        if (nameInput) nameInput.style.borderColor = 'var(--accent-danger)';
+        if (errMsg) {
+          errMsg.textContent = i18n.t('result_unknown_error_name') || 'Please enter a player name.';
+          errMsg.style.display = 'block';
+        }
+        return;
+      }
+      if (nameInput) nameInput.style.borderColor = '';
+
+      if (!rawGoals || !/^\d+$/.test(rawGoals)) {
+        if (goalsInput) goalsInput.style.borderColor = 'var(--accent-danger)';
+        if (errMsg) {
+          errMsg.textContent = i18n.t('result_unknown_error_goals');
+          errMsg.style.display = 'block';
+        }
+        return;
+      }
+
+      const goalsScored = parseInt(rawGoals, 10);
+      if (goalsInput) goalsInput.style.borderColor = '';
+      if (errMsg) errMsg.style.display = 'none';
+
+      closeModal('modal-result-unknown');
+      submitManualPlay(playerName, goalsScored);
+    });
+  }
+
+  // UNKNOWN_PLAYER -> Cancel / Try Another Name
+  const unknownCancelBtn = document.getElementById('btn-unknown-cancel');
+  if (unknownCancelBtn) {
+    unknownCancelBtn.addEventListener('click', () => {
+      closeModal('modal-result-unknown');
+      if (state.timerEnabled) startTimer();
+      const input = document.getElementById('arena-search-input');
+      if (input) input.focus();
+    });
+  }
+
   // DISAMBIGUATION Close Button
   const closeDisambigBtn = document.getElementById('btn-close-disambig');
   if (closeDisambigBtn) {
@@ -1086,28 +1379,6 @@ function setupModalActions() {
 // ============================================================
 // Setup Bottom Navigation Bar & Placeholders
 // ============================================================
-
-function setupHowToPlayModal() {
-  const openBtn = document.getElementById('btn-main-how-to-play');
-  const closeBtn = document.getElementById('btn-close-how-to-play');
-  const modal = document.getElementById('modal-how-to-play');
-
-  if (openBtn) {
-    openBtn.addEventListener('click', () => openModal('modal-how-to-play'));
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => closeModal('modal-how-to-play'));
-  }
-
-  if (modal) {
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        closeModal('modal-how-to-play');
-      }
-    });
-  }
-}
 
 function setupBottomNav() {
   const navArena = document.getElementById('nav-arena');
@@ -1170,10 +1441,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupCategorySelection();
   setupPlayerModal();
   setupSettingsModal();
-  setupHowToPlayModal();
   setupArenaSearch();
   setupModalActions();
   setupBottomNav();
+  setupBurnedDrawer();
 
   // Load setup data (leagues and clubs JSON)
   loadSetupData();
