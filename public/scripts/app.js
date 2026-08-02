@@ -671,6 +671,8 @@ function prepareArenaScreen() {
 
 function startTimer() {
   stopTimer();
+  if (!state.timerEnabled) return;
+
   state.remainingSeconds = state.timerDuration;
   updateTimerDisplay();
 
@@ -680,7 +682,6 @@ function startTimer() {
 
     if (state.remainingSeconds <= 0) {
       stopTimer();
-      // Automatic TIME_UP submission
       submitPlay(null, true);
     }
   }, 1000);
@@ -962,7 +963,9 @@ function hideSuggestions() {
 // ============================================================
 
 async function submitPlay(playerQuery, timerExpired = false, selectedPlayer = null) {
-  if (state.isSubmittingPlay || !state.sessionState) return;
+  if (!state.sessionState) return;
+  // If timer expired, force submission even if isSubmittingPlay was previously true
+  if (state.isSubmittingPlay && !timerExpired) return;
 
   state.isSubmittingPlay = true;
   stopTimer();
@@ -984,16 +987,30 @@ async function submitPlay(playerQuery, timerExpired = false, selectedPlayer = nu
       body: JSON.stringify(payload)
     });
 
-    const data = await resp.json();
-
-    if (data.sessionState) {
-      state.sessionState = data.sessionState;
+    if (resp.ok) {
+      const data = await resp.json();
+      if (data.sessionState) {
+        state.sessionState = data.sessionState;
+      }
+      handleTurnResult(data, playerQuery);
+    } else {
+      if (timerExpired && state.sessionState) {
+        const total = (state.sessionState.players && state.sessionState.players.length) || 2;
+        state.sessionState.currentPlayerIndex = (state.sessionState.currentPlayerIndex + 1) % total;
+        handleTurnResult({ resultCase: 'TIME_UP', sessionState: state.sessionState }, null);
+      } else {
+        showToast(i18n.getLang() === 'en' ? 'Error resolving play' : 'خطأ في تنفيذ اللعبة');
+      }
     }
-
-    handleTurnResult(data, playerQuery);
   } catch (err) {
     console.error('Error executing play turn:', err);
-    showToast(i18n.getLang() === 'en' ? 'Network error resolving play' : 'خطأ في الاتصال أثناء تنفيذ اللعبة');
+    if (timerExpired && state.sessionState) {
+      const total = (state.sessionState.players && state.sessionState.players.length) || 2;
+      state.sessionState.currentPlayerIndex = (state.sessionState.currentPlayerIndex + 1) % total;
+      handleTurnResult({ resultCase: 'TIME_UP', sessionState: state.sessionState }, null);
+    } else {
+      showToast(i18n.getLang() === 'en' ? 'Network error resolving play' : 'خطأ في الاتصال أثناء تنفيذ اللعبة');
+    }
   } finally {
     state.isSubmittingPlay = false;
     if (searchBtn) searchBtn.disabled = false;
