@@ -114,6 +114,16 @@ function showScreen(screenId) {
     }
   }
 
+  // Setup sticky footer is shown on Screen 2 (Game Setup) only
+  const setupFooter = document.getElementById('setup-sticky-footer');
+  if (setupFooter) {
+    if (screenId === 'screen-setup') {
+      setupFooter.removeAttribute('hidden');
+    } else {
+      setupFooter.setAttribute('hidden', '');
+    }
+  }
+
   // Bottom nav is a body-level fixed element — show only on arena screen
   const bottomNav = document.getElementById('arena-bottom-nav');
   if (bottomNav) {

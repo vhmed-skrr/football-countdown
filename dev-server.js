@@ -60,9 +60,11 @@ const server = http.createServer(async (req, res) => {
   // Static File Serving
   let filePath = path.join(PUBLIC_DIR, urlPath === '/' ? 'index.html' : urlPath);
 
-  // Serve static JSON files from root /data directory if requested as /data/*
+  // Serve static JSON files from public/data or root /data directory if requested as /data/*
   if (urlPath.startsWith('/data/')) {
-    filePath = path.join(__dirname, urlPath);
+    if (!fs.existsSync(filePath)) {
+      filePath = path.join(__dirname, urlPath);
+    }
   }
 
   fs.stat(filePath, (err, stats) => {
