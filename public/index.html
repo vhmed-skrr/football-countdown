@@ -97,6 +97,12 @@
         aria-label="ابدأ اللعب"
         data-i18n="btn_play"
       >العب الآن</button>
+      <button
+        id="btn-main-rules"
+        class="btn btn-ghost"
+        aria-label="افهم اللعبة"
+        data-i18n="btn_how_to_play"
+      >افهم اللعبة</button>
     </div>
   </section>
 
@@ -487,6 +493,45 @@
      MODALS — all six Turn Result variants + 3 utility modals
      All modals start hidden; JS toggles .open on .modal-overlay
      ════════════════════════════════════════════════════════ -->
+
+<!-- ── UTILITY MODAL: Rules (How to Play) ───────────────────── -->
+<div
+  id="modal-rules"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-rules-title"
+>
+  <div class="modal glass modal-rules-card">
+    <div class="modal__header">
+      <h2 id="modal-rules-title" class="modal__title" data-i18n="rules_modal_title">
+        إزاي تلعب
+      </h2>
+      <button
+        class="btn btn-icon"
+        id="btn-close-rules"
+        aria-label="إغلاق"
+      >✕</button>
+    </div>
+    <div class="modal__body rules-body">
+      <p data-i18n="rules_p1">
+        بتتنافسوا مع صحابك على مين يوصل برصيده لصفر أول. كل لاعب بيبدأ برصيد خاص بيه لوحده (بتحددوا الرقم في الإعداد، زي 700 مثلاً)، وكل واحد بيلعب برصيده هو بس — رصيدك مالوش علاقة برصيد خصمك.
+      </p>
+      <p data-i18n="rules_p2">
+        في دورك، بتقول اسم لاعب كورة سجل أهداف مع النادي أو في البطولة اللي اخترتوها. عدد الأهداف اللي سجلها بيتخصم من رصيدك أنت. مثلاً لو رصيدك 700 وقلت لاعب سجل 400 هدف، هيبقى رصيدك 300.
+      </p>
+      <p data-i18n="rules_p3">
+        لازم توصل لصفر بالظبط عشان تكسب. لو قلت اسم لاعب سجل أهداف أكتر من رصيدك المتبقي (مثلاً فاضلك 10 وقلت لاعب سجل 11)، المحاولة بتتلغي ودورك بيضيع من غير ما رصيدك يتأثر.
+      </p>
+      <p data-i18n="rules_p4">
+        كل اسم لاعب بيتقال مرة واحدة بس في الجولة كلها — أول ما حد يقوله، بيدخل قائمة "المحروقين" ومحدش يقدر يقوله تاني، حتى لو كان دورك.
+      </p>
+      <p data-i18n="rules_p5">
+        أول واحد يوصل رصيده لصفر بالظبط، بيكسب فوراً.
+      </p>
+    </div>
+  </div>
+</div>
 
 <!-- ── UTILITY MODAL: Player Setup ──────────────────────────── -->
 <div

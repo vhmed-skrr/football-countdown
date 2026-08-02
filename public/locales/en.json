@@ -101,5 +101,13 @@
   "result_disambiguation_body": "We found multiple players — pick the right one:",
 
   "leaderboard_title": "Leaderboard",
-  "stats_title": "Statistics"
+  "stats_title": "Statistics",
+
+  "btn_how_to_play": "How to Play",
+  "rules_modal_title": "How to Play",
+  "rules_p1": "Compete with your friends to see who can reach a balance of zero first. Each player starts with their own independent balance (configured in settings, e.g. 700), and each plays only with their own balance — your balance is completely separate from your opponent's.",
+  "rules_p2": "On your turn, name a football player who scored goals for the selected club or competition. The number of goals they scored is deducted from your balance. For example, if your balance is 700 and you name a player who scored 400 goals, your new balance becomes 300.",
+  "rules_p3": "You must reach exactly zero to win. If you name a player who scored more goals than your remaining balance (e.g. you have 10 left and name a player with 11 goals), your turn is invalidated and lost without affecting your balance.",
+  "rules_p4": "Each player name can only be used once per match — as soon as a player is named, they enter the \"Burned\" list and no one can name them again, even on your turn.",
+  "rules_p5": "The first player to reach exactly zero balance wins immediately!"
 }

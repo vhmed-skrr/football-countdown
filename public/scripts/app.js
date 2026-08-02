@@ -1374,6 +1374,22 @@ function setupModalActions() {
       showScreen('screen-menu');
     });
   }
+
+  // How to Play Rules Modal
+  const rulesBtn = document.getElementById('btn-main-rules');
+  if (rulesBtn) rulesBtn.addEventListener('click', () => openModal('modal-rules'));
+
+  const closeRulesBtn = document.getElementById('btn-close-rules');
+  if (closeRulesBtn) closeRulesBtn.addEventListener('click', () => closeModal('modal-rules'));
+
+  // Close modals when clicking overlay backdrop outside the modal content
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeModal(overlay.id);
+      }
+    });
+  });
 }
 
 // ============================================================
