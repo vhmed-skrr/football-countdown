@@ -22,6 +22,16 @@
       "notes": "La Liga-only entry; no Champions League or cup data provided in source."
     },
     {
+      "name": "Luis Suarez",
+      "aliases": [],
+      "goals_by_competition": {
+        "La Liga": 147
+      },
+      "total_goals": 147,
+      "source": "user-provided dataset (Laliga.md)",
+      "notes": "La Liga-only entry; no Champions League or cup data provided in source."
+    },
+    {
       "name": "Adama Traoré",
       "aliases": [],
       "goals_by_competition": {

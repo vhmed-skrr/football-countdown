@@ -90,8 +90,9 @@
   "btn_cancel_try_another": "Cancel / Try Another Name",
 
   "result_win_title": "Exactly Zero! 🏆",
-  "result_win_body": "You win!",
+  "result_win_body": "wins!",
   "result_win_player": "Winner",
+  "arena_standings_label": "Player Standings",
 
   "result_disambiguation_title": "Who did you mean?",
   "result_disambiguation_body": "We found multiple players — pick the right one:",

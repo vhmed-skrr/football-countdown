@@ -318,6 +318,9 @@
     <h2 class="burned-panel__title" data-i18n="arena_burned_list_title">
       اللاعبون المحروقون
     </h2>
+    <!-- Player balance standings (injected by JS) -->
+    <div id="player-standings" class="player-standings" aria-label="أرصدة اللاعبين"></div>
+
     <!-- Entries injected by JS -->
     <p id="burned-empty-msg" class="text-muted fs-sm" data-i18n="arena_burned_empty">
       لا أحد بعد
@@ -899,7 +902,7 @@
     </div>
     <div class="modal__body text-center">
       <p class="fs-3xl" aria-hidden="true" style="margin-block:var(--sp-6);">🥇</p>
-      <p class="text-muted" data-i18n="result_win_body">لقد فزت!</p>
+      <p class="text-muted" id="win-body-text" data-i18n="result_win_body">لقد فزت!</p>
       <p class="fw-black fs-xl mt-4 text-gold" id="win-player-name">علي</p>
       <p class="fs-sm text-muted mt-6" data-i18n="result_win_player">الفائز</p>
     </div>

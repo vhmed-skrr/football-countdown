@@ -620,6 +620,47 @@ a:hover { text-decoration: underline; }
 
 .burned-entry__flame { color: var(--accent-secondary); font-size: var(--fs-sm); }
 
+/* Player balance standings strip (per-player independent balances) */
+.player-standings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.standings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-xs);
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  background: transparent;
+  transition: background var(--trans-fast);
+}
+
+.standings-row--active {
+  background: color-mix(in srgb, var(--accent-primary) 12%, transparent);
+  color: var(--accent-primary);
+  font-weight: var(--fw-bold);
+}
+
+.standings-row__name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.standings-row__balance {
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  margin-inline-start: var(--sp-2);
+}
+
 /* Mobile: collapsed drawer */
 @media (max-width: 63.99rem) {
   .burned-panel {

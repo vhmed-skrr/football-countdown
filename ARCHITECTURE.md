@@ -122,18 +122,28 @@ User types player name
 ## Core Game Rules
 
 - **Players**: 2–4, local pass-and-play (single device is passed between players).
-- **Setup**: players choose a league + club at game start (fixed for the whole game), a challenge category (Goals / Assists / Clubs / Nations), and a starting balance (default **700**).
-- **Turn flow**: the active player receives the device, types a football player's name, presses Search. The backend resolves it and returns one of the eight result cases below.
+- **Setup**: players choose a league + club at game start (fixed for the whole game), a challenge category (Goals / Assists / Clubs / Nations), and a starting balance (default **700**). Every player starts with the same configured balance and it is tracked independently from that point on.
+- **Turn flow**: the active player receives the device, types a football player’s name, presses Search. The backend resolves it and returns one of the eight result cases below.
+
+### Per-Player Independent Balance Rule
+
+**Each player has their own starting balance.** A player’s turn deducts goals **only from that player’s own balance** — never from any other player’s balance. Balances diverge independently as the game progresses.
+
+- `SUCCESS`: `goals ≤ currentPlayer.balance` → subtract goals from **that player’s** balance only. Pass turn.
+- `BUST`: `goals > currentPlayer.balance` → **that player’s** balance unchanged. Turn lost.
+- `WIN`: **that player’s** balance reaches **exactly 0** → game ends immediately. The win is credited to the specific player whose balance hit 0, not to all players. The game does **not** continue waiting for other players to also reach 0.
+
+The first player to reach exactly 0 wins. Other players may still have balance remaining when the game ends — this is correct and expected behaviour.
 
 ### The Eight Result Cases (must be distinguished in code — never merged)
 
 | # | Case | Condition | Effect |
 |---|---|---|---|
-| 1 | **SUCCESS** | Player has ≥ 1 row for that club; stat value ≤ remaining balance | Subtract stat from balance; add player to burned list; pass turn |
-| 2 | **BUST** | Player has ≥ 1 row for that club; stat value > remaining balance | Balance unchanged; turn lost |
-| 3 | **ALREADY_BURNED** | Player (by resolved identity, not raw string) already used this game | Reject before any data fetch |
-| 4 | **TIME_UP** | Timer reached 0 before submission | Turn lost; balance unchanged |
-| 5 | **WIN** | Balance reaches exactly 0 | Game ends; current player wins |
+| 1 | **SUCCESS** | Player has ≥ 1 row for that club; stat value ≤ **active player’s** remaining balance | Subtract stat from **active player’s own** balance; add player to that player’s burned list; pass turn |
+| 2 | **BUST** | Player has ≥ 1 row for that club; stat value > **active player’s** remaining balance | **Active player’s** balance unchanged; turn lost |
+| 3 | **ALREADY_BURNED** | Player (by resolved identity, not raw string) already used this game by **any participant** | Reject before any data fetch; cross-player global check |
+| 4 | **TIME_UP** | Timer reached 0 before submission | Turn lost; active player’s balance unchanged |
+| 5 | **WIN** | **Active player’s own** balance reaches exactly 0 | Game ends immediately; that specific player wins; other players may still have balance |
 | 6 | **NOT_ASSOCIATED** | Player is in dataset but has zero recorded appearances/goals for that club | Reject with clear message; does **not** count as a turn; does **not** affect balance. Distinct from `UNKNOWN_PLAYER` |
 | 7 | **NEEDS_DISAMBIGUATION** | Partial/ambiguous name → multiple candidates | Return candidate list (name + photo, no stats); wait for user selection; resubmit |
 | 8 | **UNKNOWN_PLAYER** | Searched name does not match any entry in static dataset for club | Prompt user to manually enter player & goals count for current session; distinct from `NOT_ASSOCIATED` (uncertainty vs certainty) |
@@ -149,10 +159,10 @@ Goals (or the chosen stat) are **summed across all seasons** the player played f
 **No persistent caching.** Vercel Serverless Functions start with a clean process on every invocation — in-memory stores and file-system writes do not reliably survive between separate calls. Therefore:
 
 - No Redis, no file-based cache, no global in-memory LRU.
-- **Per-game-session tracking** is handled purely on the **frontend**: the JavaScript client holds the full session state object (balance, both burned-player lists, current turn indicator, league/club/category selection) and sends the complete relevant state with every API request.
+- **Per-game-session tracking** is handled purely on the **frontend**: the JavaScript client holds the full session state object (per-player balances, per-player burned lists nested in `playerData[idx]`, current turn indicator, league/club/category selection) and sends the complete relevant state with every API request.
 - The backend is **stateless**: it receives a request, computes a result, returns it, and forgets everything.
-- Burned-player deduplication uses the **resolved player identity** (a canonical ID or normalised full name returned by `playerResolver`), not the raw typed string, so "Salah", "Mohamed Salah", and "محمد صلاح" all map to the same burned entry.
-- Manually-added players (via the `UNKNOWN_PLAYER` flow) exist only in the current session's in-memory state and are never persisted to the static dataset files.
+- Burned-player deduplication uses the **resolved player identity** (a canonical ID or normalised full name returned by `playerResolver`), not the raw typed string, so “Salah”, “Mohamed Salah”, and “محمد صلاح” all map to the same burned entry. This check is **cross-player global**: a player burned by P1 is also rejected if P2 or P3 tries to use them.
+- Manually-added players (via the `UNKNOWN_PLAYER` flow) exist only in the current session’s in-memory state and are never persisted to the static dataset files.
 
 ---
 

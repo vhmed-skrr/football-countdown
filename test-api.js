@@ -8,11 +8,10 @@
  * Run with: node test-api.js
  *
  * Verifies:
- *   1. /api/game/setup returns valid initial session state with custom player names.
- *   2. /api/game/play with unambiguous player -> SUCCESS / stat deducted.
- *   3. /api/game/play with partial name -> NEEDS_DISAMBIGUATION (returns candidates).
- *   4. /api/game/play resubmitting with selectedPlayer -> SUCCESS (skips resolver, evaluates stat).
- *   5. /api/game/play with already-burned player -> ALREADY_BURNED.
+ *   1. /api/game/setup returns valid initial session state with custom player names and playerData per-player balances.
+ *   2. /api/game/play with unambiguous player -> SUCCESS / stat deducted from active player balance.
+ *   3. /api/game/play with already-burned player -> ALREADY_BURNED.
+ *   4. /api/game/play with timerExpired -> TIME_UP.
  */
 
 'use strict';
@@ -21,8 +20,15 @@ const setupHandler = require('./api/game/setup');
 const playHandler = require('./api/game/play');
 
 function pass(label) { console.log(`  ✅ PASS — ${label}`); }
-function fail(label) { console.log(`  ❌ FAIL — ${label}`); }
+function fail(label) { console.log(`  ❌ FAIL — ${label}`); process.exitCode = 1; }
 function info(label) { console.log(`  ℹ  ${label}`); }
+function assertEqual(actual, expected, label) {
+  if (actual === expected) {
+    pass(`${label} (Got ${actual})`);
+  } else {
+    fail(`${label} (Expected ${expected}, got ${actual})`);
+  }
+}
 
 function createMockReqRes(method, body) {
   const req = {
@@ -72,7 +78,7 @@ async function runApiTests() {
   const out1 = res1._getResult();
 
   if (out1.statusCode === 200 && out1.data?.success && out1.data?.sessionState) {
-    pass(`Setup returned HTTP 200 with initial sessionState (Balance: ${out1.data.sessionState.balance})`);
+    pass(`Setup returned HTTP 200 with initial sessionState (P1 Balance: ${out1.data.sessionState.playerData[0].balance}, P2 Balance: ${out1.data.sessionState.playerData[1].balance})`);
     pass(`Players: ${out1.data.sessionState.players.join(', ')}`);
   } else {
     fail(`Setup failed: ${JSON.stringify(out1)}`);
@@ -97,17 +103,13 @@ async function runApiTests() {
 
   info(`Result case: ${out2.data?.resultCase}`);
   pass(`Direct play call executed successfully. Result case: ${out2.data.resultCase}`);
+  assertEqual(out2.data.sessionState.playerData[0].balance, 514, 'P1 balance updated to 514');
+  assertEqual(out2.data.sessionState.playerData[1].balance, 700, 'P2 balance untouched at 700');
 
   // ─── Step 3: POST /api/game/play (ALREADY_BURNED Pre-check) ──────
   console.log('\n---- Step 3: POST /api/game/play (ALREADY_BURNED Pre-check) ----');
-  // Populate player1BurnedList with Mohamed Salah
-  const stateWithBurned = {
-    ...sessionState,
-    player1BurnedList: [
-      { name: 'Mohamed Salah', profileUrl: 'https://fbref.com/en/players/e342ad68/Mohamed-Salah' }
-    ],
-    currentPlayerIndex: 1 // Player 2's turn
-  };
+  const stateWithBurned = JSON.parse(JSON.stringify(out2.data.sessionState));
+  // Player 2's turn (index 1), try to pick Salah who is in P1's burned list
 
   const { req: req3, res: res3 } = createMockReqRes('POST', {
     sessionState: stateWithBurned,
@@ -122,7 +124,7 @@ async function runApiTests() {
 
   info(`Result case: ${out3.data?.resultCase}`);
   if (out3.statusCode === 200 && out3.data?.resultCase === 'ALREADY_BURNED') {
-    pass('Re-playing Mohamed Salah correctly returned ALREADY_BURNED before scraping.');
+    pass('Re-playing Mohamed Salah correctly returned ALREADY_BURNED.');
     assertEqual(out3.data.sessionState.currentPlayerIndex, 1, 'Turn retained by Player 2');
   } else {
     fail(`Expected ALREADY_BURNED, got: ${JSON.stringify(out3.data)}`);
@@ -149,14 +151,6 @@ async function runApiTests() {
   console.log('\n==================================================');
   console.log('  API End-to-End Walkthrough Completed');
   console.log('==================================================\n');
-}
-
-function assertEqual(actual, expected, label) {
-  if (actual === expected) {
-    pass(`${label} (Got ${actual})`);
-  } else {
-    fail(`${label} (Expected ${expected}, got ${actual})`);
-  }
 }
 
 runApiTests();

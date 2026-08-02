@@ -90,8 +90,9 @@
   "btn_cancel_try_another": "إلغاء / جرب اسماً آخر",
 
   "result_win_title": "صفر بالمللي! 🏆",
-  "result_win_body": "لقد فزت!",
+  "result_win_body": "فاز!",
   "result_win_player": "الفائز",
+  "arena_standings_label": "أرصدة اللاعبين",
 
   "result_disambiguation_title": "قصدك مين؟",
   "result_disambiguation_body": "وجدنا أكثر من لاعب — اختر الصحيح:",

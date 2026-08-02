@@ -60,10 +60,10 @@ async function runTests() {
   // Test 3: submitManualPlayer SUCCESS
   const validSuccessRes = submitManualPlayer(state, 'John Doe', 25);
   assert.strictEqual(validSuccessRes.resultCase, 'SUCCESS');
-  assert.strictEqual(validSuccessRes.newState.balance, 75);
+  assert.strictEqual(validSuccessRes.newState.playerData[0].balance, 75);
   assert.strictEqual(validSuccessRes.newState.currentPlayerIndex, 1);
-  assert.strictEqual(validSuccessRes.newState.player1BurnedList.length, 1);
-  assert.strictEqual(validSuccessRes.newState.player1BurnedList[0].name, 'John Doe');
+  assert.strictEqual(validSuccessRes.newState.playerData[0].burnedList.length, 1);
+  assert.strictEqual(validSuccessRes.newState.playerData[0].burnedList[0].name, 'John Doe');
   console.log('✅ Test 3 Passed: Valid manual entry deducts balance, burns player, and advances turn');
 
   // Test 4: ALREADY_BURNED check on manual entry
@@ -74,14 +74,14 @@ async function runTests() {
   // Test 5: submitManualPlayer BUST
   const bustRes = submitManualPlayer(state, 'Big Scorer', 150);
   assert.strictEqual(bustRes.resultCase, 'BUST');
-  assert.strictEqual(bustRes.newState.balance, 100);
+  assert.strictEqual(bustRes.newState.playerData[0].balance, 100);
   assert.strictEqual(bustRes.newState.currentPlayerIndex, 1);
   console.log('✅ Test 5 Passed: Manual submission > balance returns BUST');
 
   // Test 6: submitManualPlayer WIN
   const winRes = submitManualPlayer(state, 'Exact Finisher', 100);
   assert.strictEqual(winRes.resultCase, 'WIN');
-  assert.strictEqual(winRes.newState.balance, 0);
+  assert.strictEqual(winRes.newState.playerData[0].balance, 0);
   assert.strictEqual(winRes.newState.isGameOver, true);
   assert.strictEqual(winRes.newState.winner, 'Player 1');
   console.log('✅ Test 6 Passed: Manual submission matching balance returns WIN');
@@ -99,29 +99,26 @@ async function runTests() {
   await handler(req1, res1);
   assert.strictEqual(res1.body.resultCase, 'UNKNOWN_PLAYER');
   assert.strictEqual(res1.body.playerName, 'Non Existent Player');
-  console.log('✅ Test 7a Passed: API /play returns resultCase UNKNOWN_PLAYER with original playerName');
+  console.log('✅ Test 7a Passed: API play returns UNKNOWN_PLAYER for unlisted search');
 
-  // 7b: manualEntry submission
+  // 7b: manualEntry execution via API
   const req2 = {
     method: 'POST',
     body: {
       sessionState: state,
       manualEntry: true,
-      playerName: 'Local Hero',
-      goalsScored: 20
+      playerName: 'Custom Legend',
+      goalsScored: 40
     }
   };
   const res2 = createMockRes();
   await handler(req2, res2);
   assert.strictEqual(res2.body.resultCase, 'SUCCESS');
-  assert.strictEqual(res2.body.sessionState.balance, 80);
-  assert.strictEqual(res2.body.player.name, 'Local Hero');
-  console.log('✅ Test 7b Passed: API /play with manualEntry: true successfully processes manual player');
+  assert.strictEqual(res2.body.statDeducted, 40);
+  assert.strictEqual(res2.body.sessionState.playerData[0].balance, 60);
+  console.log('✅ Test 7b Passed: API play manualEntry successfully processes and deducts balance');
 
-  console.log('\n🎉 ALL MANUAL PLAYER ADDITION TESTS PASSED SUCCESSFULLY!');
+  console.log('\nAll UNKNOWN_PLAYER & manual player submission tests passed successfully!');
 }
 
-runTests().catch(err => {
-  console.error('❌ Test failed:', err);
-  process.exit(1);
-});
+runTests();

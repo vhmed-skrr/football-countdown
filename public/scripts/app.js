@@ -609,15 +609,21 @@ function handleReadyClick() {
 function prepareArenaScreen() {
   if (!state.sessionState) return;
 
-  // Update HUD
+  // Update HUD — show active player name and their OWN balance
   const activeIdx = state.sessionState.currentPlayerIndex || 0;
   const activeName = (state.sessionState.players && state.sessionState.players[activeIdx]) || `Player ${activeIdx + 1}`;
 
   const hudPlayer = document.getElementById('hud-player-name');
   if (hudPlayer) hudPlayer.textContent = activeName;
 
+  // Read the active player's own balance from playerData
+  const playerData = state.sessionState.playerData || {};
+  const activeBalance = (playerData[activeIdx] && typeof playerData[activeIdx].balance === 'number')
+    ? playerData[activeIdx].balance
+    : state.sessionState.balance || 0;
+
   const hudBalance = document.getElementById('hud-balance');
-  if (hudBalance) hudBalance.textContent = String(state.sessionState.balance);
+  if (hudBalance) hudBalance.textContent = String(activeBalance);
 
   // Update Timer display
   const timerDisplay = document.getElementById('timer-display');
@@ -637,7 +643,7 @@ function prepareArenaScreen() {
   if (searchInput) searchInput.value = '';
   hideSuggestions();
 
-  // Render Burned Players Panel
+  // Render Burned Players Panel (includes opponents' balance standings)
   renderBurnedPanel();
 }
 
@@ -687,17 +693,40 @@ function renderBurnedPanel() {
 
   listEl.innerHTML = '';
 
-  const p1List = state.sessionState.player1BurnedList || [];
-  const p2List = state.sessionState.player2BurnedList || [];
-  const p3List = state.sessionState.player3BurnedList || [];
-  const p4List = state.sessionState.player4BurnedList || [];
+  const playerData = state.sessionState.playerData || {};
+  const playerNames = state.sessionState.players || [];
 
-  const allBurned = [
-    ...p1List.map(item => ({ ...item, p: 1 })),
-    ...p2List.map(item => ({ ...item, p: 2 })),
-    ...p3List.map(item => ({ ...item, p: 3 })),
-    ...p4List.map(item => ({ ...item, p: 4 }))
-  ];
+  // --- Opponents' balance standings at the top of the panel ---
+  // Show every player's current balance so all participants can track standing.
+  // This is the UX decision for displaying opponent balances: a compact standings
+  // strip at the top of the burned-panel sidebar, always visible from the drawer.
+  const activeIdx = state.sessionState.currentPlayerIndex || 0;
+  const standingsEl = document.getElementById('player-standings');
+  if (standingsEl) {
+    standingsEl.innerHTML = '';
+    playerNames.forEach((name, idx) => {
+      const pd = playerData[idx];
+      const bal = pd ? pd.balance : '—';
+      const isActive = idx === activeIdx;
+      const row = document.createElement('div');
+      row.className = `standings-row${isActive ? ' standings-row--active' : ''}`;
+      row.setAttribute('aria-label', `${name}: ${bal}`);
+      row.innerHTML = `
+        <span class="standings-row__name">${isActive ? '▶ ' : ''}${name}</span>
+        <span class="standings-row__balance">${bal}</span>
+      `;
+      standingsEl.appendChild(row);
+    });
+  }
+
+  // --- Burned players list ---
+  const allBurned = [];
+  playerNames.forEach((name, idx) => {
+    const pd = playerData[idx];
+    if (pd && pd.burnedList) {
+      pd.burnedList.forEach(item => allBurned.push({ ...item, playerIdx: idx }));
+    }
+  });
 
   if (allBurned.length === 0) {
     if (emptyMsg) emptyMsg.style.display = 'block';
@@ -709,7 +738,7 @@ function renderBurnedPanel() {
   allBurned.forEach(entry => {
     const li = document.createElement('li');
     li.className = 'burned-entry';
-    const pName = (state.sessionState.players && state.sessionState.players[entry.p - 1]) || `P${entry.p}`;
+    const pName = playerNames[entry.playerIdx] || `P${entry.playerIdx + 1}`;
     const nameStr = entry.name || (typeof entry === 'string' ? entry : 'Player');
 
     li.innerHTML = `
@@ -933,16 +962,42 @@ function handleTurnResult(response, querySubmitted) {
       const statEl = document.getElementById('success-stat-value');
       if (statEl) statEl.textContent = String(response.statDeducted || 0);
 
+      // Show the ACTIVE player's new balance (from their own independent balance slot)
+      // We look at the player who just played — their index is in the PREVIOUS state's
+      // currentPlayerIndex (before the turn advanced). We derive it from the response
+      // message or fall back to reading the updated sessionState's playerData.
       const balEl = document.getElementById('success-new-balance');
-      if (balEl && state.sessionState) balEl.textContent = String(state.sessionState.balance);
+      if (balEl && state.sessionState) {
+        // After SUCCESS the turn advances, so currentPlayerIndex now points to next player.
+        // The player who just played is at (currentPlayerIndex - 1 + total) % total.
+        const ss = state.sessionState;
+        const totalPlayers = (ss.players && ss.players.length) || 2;
+        const justPlayedIdx = ((ss.currentPlayerIndex - 1) + totalPlayers) % totalPlayers;
+        const pd = ss.playerData || {};
+        const newBal = (pd[justPlayedIdx] && typeof pd[justPlayedIdx].balance === 'number')
+          ? pd[justPlayedIdx].balance
+          : '—';
+        balEl.textContent = String(newBal);
+      }
 
       break;
     }
 
     case 'BUST': {
       openModal('modal-result-bust');
+      // Show the current (busted) player's unchanged balance from their own slot
       const balEl = document.getElementById('bust-balance');
-      if (balEl && state.sessionState) balEl.textContent = String(state.sessionState.balance);
+      if (balEl && state.sessionState) {
+        // After BUST the turn also advances — same back-calculation as SUCCESS
+        const ss = state.sessionState;
+        const totalPlayers = (ss.players && ss.players.length) || 2;
+        const bustedIdx = ((ss.currentPlayerIndex - 1) + totalPlayers) % totalPlayers;
+        const pd = ss.playerData || {};
+        const bustedBal = (pd[bustedIdx] && typeof pd[bustedIdx].balance === 'number')
+          ? pd[bustedIdx].balance
+          : '—';
+        balEl.textContent = String(bustedBal);
+      }
       break;
     }
 
@@ -990,8 +1045,19 @@ function handleTurnResult(response, querySubmitted) {
 
     case 'WIN': {
       openModal('modal-result-win');
+      const winner = (response.sessionState && response.sessionState.winner)
+        || (state.sessionState && state.sessionState.winner)
+        || 'Winner!';
       const nameEl = document.getElementById('win-player-name');
-      if (nameEl) nameEl.textContent = response.sessionState.winner || 'Winner!';
+      if (nameEl) nameEl.textContent = winner;
+      // Update the win subtitle to mention the winner by name
+      const bodyEl = document.getElementById('win-body-text');
+      if (bodyEl) {
+        const winMsg = i18n.getLang() === 'en'
+          ? `${winner} wins!`
+          : `${winner} فاز!`;
+        bodyEl.textContent = winMsg;
+      }
       break;
     }
 

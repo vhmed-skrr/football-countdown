@@ -182,5 +182,20 @@ Player search returned false `NOT_ASSOCIATED` ("Player Not Found") because `goal
 3. Verified fix with unit tests (`test-resolver.js`, `test-scraper.js`) and end-to-end API play tests (`test_e2e_fix.js`, `test-api.js`), confirming player stats for `Andreas Isaksson` (0 goals), `Erling Haaland` (91 goals), `Mohamed Salah` (193 goals), `Cole Palmer` (40 goals), and `Bukayo Saka` (73 goals) return `SUCCESS` instead of false `NOT_ASSOCIATED`.
 4. Kept `lib/playerResolver.js`, `lib/fuzzyMatch.js`, and `lib/playerDataStore.js` untouched as required.
 
+---
+
+### Per-Player Independent Balances (2026-08-02)
+
+**Status**: Complete ✅
+
+**Details**:
+- Redesigned balance system from a single shared balance to per-player independent balances — each player now has their own balance that only they can deplete, and the first player to reach exactly 0 wins immediately. This replaces the original shared-balance race rule.
+- Updated session state shape in `lib/gameEngine.js` (`createInitialState`, `evaluateTurn`, `submitManualPlayer`) to use `playerData[idx] = { balance, burnedList }`, supporting 2–4 players.
+- Preserved global cross-player `ALREADY_BURNED` deduplication across all participants' burned lists.
+- Updated Arena HUD, result modals, standings display, and locale text in `public/scripts/app.js`, `public/index.html`, `public/styles/main.css`, `public/locales/ar.json`, and `public/locales/en.json`.
+- Updated `ARCHITECTURE.md` to reflect the new Core Game Rules and state structure.
+- Updated unit test suite `test-gameEngine.js` to verify per-player balance isolation, immediate WIN triggers, and 2-4 player support.
+
+
 
 
