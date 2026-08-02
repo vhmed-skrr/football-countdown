@@ -23,8 +23,18 @@ const { fetchPlayerStats } = require('../../lib/scraper');
 const { evaluateTurn, isPlayerBurned, submitManualPlayer } = require('../../lib/gameEngine');
 
 module.exports = async function handler(req, res) {
+  // CORS Headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle OPTIONS preflight request
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
+  }
+
   if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
+    res.setHeader('Allow', ['POST', 'OPTIONS']);
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
