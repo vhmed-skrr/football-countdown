@@ -682,11 +682,87 @@ a:hover { text-decoration: underline; }
     inset-inline: 0;
     top: auto;
     width: 100%;
-    max-height: 50vh;
+    max-height: 60vh;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     transform: translateY(100%);
+    /* Ensure drawer sits above bottom-nav on mobile */
+    z-index: calc(var(--z-panel) + 10);
   }
   .burned-panel.open { transform: translateY(0); }
+
+  /* Backdrop overlay (tap-to-close) */
+  .burned-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: calc(var(--z-panel) + 9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--trans-base);
+  }
+  .burned-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Drawer toggle handle — pill bar above bottom-nav */
+  .burned-drawer-handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-1);
+    position: fixed;
+    bottom: var(--bottom-nav-height);
+    inset-inline: 0;
+    height: 2.25rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-bottom: none;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    z-index: calc(var(--z-panel) + 11);
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: var(--fs-xs);
+    font-family: inherit;
+    font-weight: var(--fw-medium);
+    transition:
+      background var(--trans-fast),
+      color var(--trans-fast);
+    padding: 0;
+    border-block-start: 1px solid var(--glass-border);
+    outline: none;
+  }
+  .burned-drawer-handle:hover,
+  .burned-drawer-handle:focus-visible {
+    color: var(--text-primary);
+    background: var(--card-bg);
+  }
+  .burned-drawer-handle__pip {
+    width: 2.25rem;
+    height: 3px;
+    border-radius: 99px;
+    background: var(--text-secondary);
+    opacity: 0.45;
+    margin-top: var(--sp-1);
+    transition: opacity var(--trans-fast);
+  }
+  .burned-drawer-handle:hover .burned-drawer-handle__pip {
+    opacity: 0.7;
+  }
+  .burned-drawer-handle__label {
+    font-size: 0.7rem;
+    margin-bottom: var(--sp-1);
+  }
+}
+
+/* Hide drawer handle on desktop — panel is always-visible sidebar there */
+@media (min-width: 64rem) {
+  .burned-drawer-handle { display: none; }
+  .burned-backdrop { display: none !important; }
 }
 
 /* ---------------------------------------------------------
@@ -697,10 +773,14 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  /* NOTE: overflow-x: hidden only — do NOT use overflow: hidden here.
+     A stacking context with overflow: hidden clips position:fixed children
+     on mobile WebKit/Blink when combined with position: relative.
+     The bottom-nav and burned-panel are fixed and must escape this context. */
+  overflow-x: hidden;
 }
 
-.screen--hidden { display: none; }
+.screen--hidden { display: none !important; }
 
 /* ---------------------------------------------------------
    Screen 1: Main Menu
@@ -837,15 +917,21 @@ a:hover { text-decoration: underline; }
    Screen 4: Arena
    --------------------------------------------------------- */
 .arena-screen {
-  padding-top: calc(var(--hud-height) + var(--sp-6));
-  padding-bottom: calc(var(--bottom-nav-height) + var(--sp-6));
-  padding-inline: var(--sp-4);
-  /* On desktop, leave room for burned panel */
+  /* Scroll the arena content between the fixed HUD and bottom-nav */
+  overflow-y: auto;
+  padding-top: calc(var(--hud-height) + var(--sp-4));
+  padding-bottom: calc(var(--bottom-nav-height) + 2.25rem + var(--sp-4));
+  padding-inline: 0;
+  /* Reserve space for the handle above the bottom-nav on mobile.
+     The handle is 2.25rem tall and sits on top of the bottom-nav. */
 }
 
 @media (min-width: 64rem) {
+  /* Desktop: no drawer handle, normal padding */
   .arena-screen {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--sp-6));
     padding-inline-start: calc(14rem + var(--sp-8));
+    padding-inline-end: var(--sp-4);
   }
   body.LTR .arena-screen {
     padding-inline-start: var(--sp-4);
@@ -857,13 +943,14 @@ a:hover { text-decoration: underline; }
   display: flex;
   gap: var(--sp-3);
   align-items: center;
-  margin-bottom: var(--sp-6);
+  margin-bottom: var(--sp-4);
   position: relative;
+  padding-inline: var(--sp-4);
 }
 
 .arena-search-icon {
   position: absolute;
-  inset-inline-start: var(--sp-4);
+  inset-inline-start: calc(var(--sp-4) + var(--sp-4));
   font-size: var(--fs-md);
   color: var(--text-secondary);
   pointer-events: none;
@@ -908,7 +995,8 @@ a:hover { text-decoration: underline; }
 }
 
 .arena-category-grid {
-  margin-top: var(--sp-6);
+  margin-top: var(--sp-2);
+  padding-inline: var(--sp-4);
 }
 
 /* ---------------------------------------------------------

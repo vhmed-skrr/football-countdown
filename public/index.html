@@ -427,42 +427,60 @@
       </div>
     </div>
 
-  </div><!-- /container -->
 
-  <!-- Bottom navigation -->
-  <nav
-    class="bottom-nav"
-    id="arena-bottom-nav"
-    role="navigation"
-    aria-label="شريط التنقل السفلي"
+  <!-- Burned-panel drawer toggle (mobile only) -->
+  <button
+    id="btn-burned-drawer-toggle"
+    class="burned-drawer-handle"
+    aria-label="عرض اللاعبين المحروقين"
+    aria-expanded="false"
+    aria-controls="burned-panel"
   >
-    <button class="bottom-nav__item" id="nav-leaderboard" aria-label="الترتيب">
-      <span class="nav-icon" aria-hidden="true">🏅</span>
-      <span data-i18n="arena_nav_leaderboard">الترتيب</span>
-    </button>
-    <button class="bottom-nav__item active" id="nav-arena" aria-label="الملعب" aria-current="page">
-      <span class="nav-icon" aria-hidden="true">⚽</span>
-      <span data-i18n="arena_nav_arena">الملعب</span>
-    </button>
-    <button class="bottom-nav__item" id="nav-stats" aria-label="إحصائيات">
-      <span class="nav-icon" aria-hidden="true">📊</span>
-      <span data-i18n="arena_nav_stats">إحصائيات</span>
-    </button>
-    <button
-      class="bottom-nav__item"
-      id="nav-settings"
-      aria-label="إعدادات اللعبة"
-      aria-haspopup="dialog"
-      aria-controls="modal-quick-settings"
-    >
-      <span class="nav-icon" aria-hidden="true">⚙️</span>
-      <span data-i18n="arena_nav_settings">إعدادات</span>
-    </button>
-  </nav>
+    <span class="burned-drawer-handle__pip" aria-hidden="true"></span>
+    <span class="burned-drawer-handle__label" id="burned-drawer-count">المحروقون 🔥</span>
+  </button>
 
 </section>
 <!-- /screen-arena -->
 
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOTTOM NAVIGATION — fixed, direct body child so it is never
+     clipped by arena screen's overflow containment
+     ════════════════════════════════════════════════════════ -->
+<nav
+  class="bottom-nav"
+  id="arena-bottom-nav"
+  role="navigation"
+  aria-label="شريط التنقل السفلي"
+  hidden
+>
+  <button class="bottom-nav__item" id="nav-leaderboard" aria-label="الترتيب">
+    <span class="nav-icon" aria-hidden="true">🏅</span>
+    <span data-i18n="arena_nav_leaderboard">الترتيب</span>
+  </button>
+  <button class="bottom-nav__item active" id="nav-arena" aria-label="الملعب" aria-current="page">
+    <span class="nav-icon" aria-hidden="true">⚽</span>
+    <span data-i18n="arena_nav_arena">الملعب</span>
+  </button>
+  <button class="bottom-nav__item" id="nav-stats" aria-label="إحصائيات">
+    <span class="nav-icon" aria-hidden="true">📊</span>
+    <span data-i18n="arena_nav_stats">إحصائيات</span>
+  </button>
+  <button
+    class="bottom-nav__item"
+    id="nav-settings"
+    aria-label="إعدادات اللعبة"
+    aria-haspopup="dialog"
+    aria-controls="modal-quick-settings"
+  >
+    <span class="nav-icon" aria-hidden="true">⚙️</span>
+    <span data-i18n="arena_nav_settings">إعدادات</span>
+  </button>
+</nav>
+
+<!-- Burned-panel backdrop overlay (mobile only, tap to close drawer) -->
+<div id="burned-backdrop" class="burned-backdrop" aria-hidden="true"></div>
 
 <!-- ═══════════════════════════════════════════════════════════
      MODALS — all six Turn Result variants + 3 utility modals
@@ -854,7 +872,9 @@
           id="unknown-player-name"
           type="text"
           class="input mt-2"
-          readonly
+          data-i18n-attr="placeholder"
+          data-i18n="result_unknown_player_placeholder"
+          placeholder="أدخل اسم اللاعب..."
         />
       </div>
 

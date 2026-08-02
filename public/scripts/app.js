@@ -114,11 +114,23 @@ function showScreen(screenId) {
     }
   }
 
-  // Stop timer if moving away from Arena
+  // Bottom nav is a body-level fixed element — show only on arena screen
+  const bottomNav = document.getElementById('arena-bottom-nav');
+  if (bottomNav) {
+    if (screenId === 'screen-arena') {
+      bottomNav.removeAttribute('hidden');
+    } else {
+      bottomNav.setAttribute('hidden', '');
+    }
+  }
+
+  // Close burned panel drawer when leaving arena
   if (screenId !== 'screen-arena') {
+    closeBurnedDrawer();
     stopTimer();
   }
 }
+
 
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
@@ -728,6 +740,14 @@ function renderBurnedPanel() {
     }
   });
 
+  const countLabel = document.getElementById('burned-drawer-count');
+  if (countLabel) {
+    const lang = i18n.getLang ? i18n.getLang() : 'ar';
+    countLabel.textContent = lang === 'en'
+      ? `Burned (${allBurned.length}) 🔥`
+      : `المحروقون (${allBurned.length}) 🔥`;
+  }
+
   if (allBurned.length === 0) {
     if (emptyMsg) emptyMsg.style.display = 'block';
     return;
@@ -747,6 +767,47 @@ function renderBurnedPanel() {
     `;
     listEl.appendChild(li);
   });
+}
+
+function openBurnedDrawer() {
+  const panel = document.getElementById('burned-panel');
+  const backdrop = document.getElementById('burned-backdrop');
+  const toggle = document.getElementById('btn-burned-drawer-toggle');
+
+  if (panel) panel.classList.add('open');
+  if (backdrop) backdrop.classList.add('active');
+  if (toggle) toggle.setAttribute('aria-expanded', 'true');
+}
+
+function closeBurnedDrawer() {
+  const panel = document.getElementById('burned-panel');
+  const backdrop = document.getElementById('burned-backdrop');
+  const toggle = document.getElementById('btn-burned-drawer-toggle');
+
+  if (panel) panel.classList.remove('open');
+  if (backdrop) backdrop.classList.remove('active');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
+}
+
+function toggleBurnedDrawer() {
+  const panel = document.getElementById('burned-panel');
+  if (panel && panel.classList.contains('open')) {
+    closeBurnedDrawer();
+  } else {
+    openBurnedDrawer();
+  }
+}
+
+function setupBurnedDrawer() {
+  const toggleBtn = document.getElementById('btn-burned-drawer-toggle');
+  const backdrop = document.getElementById('burned-backdrop');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleBurnedDrawer);
+  }
+  if (backdrop) {
+    backdrop.addEventListener('click', closeBurnedDrawer);
+  }
 }
 
 // ============================================================
@@ -802,7 +863,13 @@ function setupArenaSearch() {
       hideSuggestions();
 
       const nameInput = document.getElementById('unknown-player-name');
-      if (nameInput) nameInput.value = '';
+      if (nameInput) {
+        nameInput.value = '';
+        nameInput.style.borderColor = '';
+        nameInput.readOnly = false;
+        nameInput.removeAttribute('readonly');
+        nameInput.disabled = false;
+      }
 
       const goalsInput = document.getElementById('unknown-goals-input');
       if (goalsInput) {
@@ -1052,7 +1119,13 @@ function handleTurnResult(response, querySubmitted) {
     case 'UNKNOWN_PLAYER': {
       openModal('modal-result-unknown');
       const nameInput = document.getElementById('unknown-player-name');
-      if (nameInput) nameInput.value = response.playerName || querySubmitted || '';
+      if (nameInput) {
+        nameInput.value = response.playerName || querySubmitted || '';
+        nameInput.style.borderColor = '';
+        nameInput.readOnly = false;
+        nameInput.removeAttribute('readonly');
+        nameInput.disabled = false;
+      }
 
       const goalsInput = document.getElementById('unknown-goals-input');
       if (goalsInput) {
@@ -1209,6 +1282,16 @@ function setupModalActions() {
       const playerName = nameInput ? nameInput.value.trim() : '';
       const rawGoals = goalsInput ? goalsInput.value.trim() : '';
 
+      if (!playerName) {
+        if (nameInput) nameInput.style.borderColor = 'var(--accent-danger)';
+        if (errMsg) {
+          errMsg.textContent = i18n.t('result_unknown_error_name') || 'Please enter a player name.';
+          errMsg.style.display = 'block';
+        }
+        return;
+      }
+      if (nameInput) nameInput.style.borderColor = '';
+
       if (!rawGoals || !/^\d+$/.test(rawGoals)) {
         if (goalsInput) goalsInput.style.borderColor = 'var(--accent-danger)';
         if (errMsg) {
@@ -1351,6 +1434,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupArenaSearch();
   setupModalActions();
   setupBottomNav();
+  setupBurnedDrawer();
 
   // Load setup data (leagues and clubs JSON)
   loadSetupData();
