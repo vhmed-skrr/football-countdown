@@ -9,6 +9,7 @@
   "nav_unmute": "Unmute",
 
   "btn_play": "Play Now",
+  "btn_how_to_play": "How to Play",
   "btn_start_game": "Start Game",
   "btn_ready": "I'm Ready",
   "btn_next_turn": "Next Turn",
@@ -52,7 +53,6 @@
   "arena_burned_list_title": "Burned Players",
   "arena_burned_empty": "None yet",
   "arena_suggest_loading": "Searching...",
-  "arena_btn_manual_add": "➕ Add Player Manually",
 
   "arena_nav_leaderboard": "Leaderboard",
   "arena_nav_arena": "Arena",
@@ -62,6 +62,13 @@
   "modal_settings_mute": "Mute Sound",
   "modal_settings_quit": "Quit Game",
   "modal_settings_change_category": "Change Category",
+
+  "rules_modal_title": "How to Play",
+  "rules_paragraph_1": "You compete with your friends to see who reaches zero with their balance first. Each player starts with their own balance (you choose the number in Settings, like 700), and everyone only plays with their own balance — your balance has nothing to do with your opponent's.",
+  "rules_paragraph_2": "On your turn, you say the name of a football player who scored goals for the club or in the competition you chose. The number of goals they scored is deducted from your balance. For example, if your balance is 700 and you say a player scored 400 goals, your balance becomes 300.",
+  "rules_paragraph_3": "You must reach exactly zero to win. If you name a player who scored more goals than the balance you have left (for example, you have 10 left and you say a player scored 11), the attempt is cancelled and your turn is lost without your balance being affected.",
+  "rules_paragraph_4": "Every player name can only be said once in the whole round — as soon as someone says it, it goes onto the \"burned\" list and no one can say it again, even on their own turn.",
+  "rules_paragraph_5": "The first player to bring their balance exactly to zero wins immediately.",
 
   "result_success_title": "Great pick! 🎉",
   "result_success_goals": "Goals",
@@ -80,22 +87,9 @@
   "result_not_associated_title": "Player Not Found",
   "result_not_associated_body": "This player has no record for the selected club in this league.",
 
-  "result_unknown_title": "Player Not in Database",
-  "result_unknown_body": "This player was not found in our dataset for this club. You can add them manually for this game session.",
-  "result_unknown_session_note": "Note: Manually added entries apply to this game session only and are not saved permanently.",
-  "result_unknown_player_label": "Player Name",
-  "result_unknown_player_placeholder": "Enter player name...",
-  "result_unknown_goals_label": "Goals Scored",
-  "result_unknown_goals_placeholder": "Enter goals count...",
-  "result_unknown_error_name": "Please enter a player name.",
-  "result_unknown_error_goals": "Please enter a valid non-negative integer for goals.",
-  "btn_add_and_submit": "Add and Submit",
-  "btn_cancel_try_another": "Cancel / Try Another Name",
-
   "result_win_title": "Exactly Zero! 🏆",
-  "result_win_body": "wins!",
+  "result_win_body": "You win!",
   "result_win_player": "Winner",
-  "arena_standings_label": "Player Standings",
 
   "result_disambiguation_title": "Who did you mean?",
   "result_disambiguation_body": "We found multiple players — pick the right one:",

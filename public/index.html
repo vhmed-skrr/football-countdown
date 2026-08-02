@@ -97,6 +97,12 @@
         aria-label="ابدأ اللعب"
         data-i18n="btn_play"
       >العب الآن</button>
+      <button
+        id="btn-main-how-to-play"
+        class="btn btn-secondary"
+        aria-label="افهم اللعبة"
+        data-i18n="btn_how_to_play"
+      >افهم اللعبة</button>
     </div>
   </section>
 
@@ -230,18 +236,17 @@
       >إعدادات اللعبة</button>
     </div>
   </div><!-- /container -->
-</section>
-<!-- /screen-setup -->
 
-<!-- Sticky footer for Game Setup (Screen 2) -->
-<div class="setup-sticky-footer" id="setup-sticky-footer" hidden>
-  <button
-    id="btn-start-game"
-    class="btn btn-primary btn-lg w-full"
-    aria-label="ابدأ اللعبة"
-    data-i18n="btn_start_game"
-  >ابدأ اللعبة</button>
-</div>
+  <!-- Sticky footer -->
+  <div class="setup-sticky-footer">
+    <button
+      id="btn-start-game"
+      class="btn btn-primary btn-lg w-full"
+      aria-label="ابدأ اللعبة"
+      data-i18n="btn_start_game"
+    >ابدأ اللعبة</button>
+  </div>
+</section>
 
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -319,9 +324,6 @@
     <h2 class="burned-panel__title" data-i18n="arena_burned_list_title">
       اللاعبون المحروقون
     </h2>
-    <!-- Player balance standings (injected by JS) -->
-    <div id="player-standings" class="player-standings" aria-label="أرصدة اللاعبين"></div>
-
     <!-- Entries injected by JS -->
     <p id="burned-empty-msg" class="text-muted fs-sm" data-i18n="arena_burned_empty">
       لا أحد بعد
@@ -372,11 +374,11 @@
         >
           <!-- Placeholder suggestion items -->
           <div class="arena-suggest__item" role="option" id="suggest-opt-1" tabindex="0">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="32" height="32" loading="lazy" />
+            <img src="" alt="" width="32" height="32" loading="lazy" />
             <span>محمد صلاح</span>
           </div>
           <div class="arena-suggest__item" role="option" id="suggest-opt-2" tabindex="0">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="32" height="32" loading="lazy" />
+            <img src="" alt="" width="32" height="32" loading="lazy" />
             <span>صادق محمد</span>
           </div>
           <div class="arena-suggest__item arena-suggest__item--loading fs-sm text-muted"
@@ -394,15 +396,6 @@
         aria-label="ابحث"
         data-i18n="btn_search"
       >بحث</button>
-    </div>
-
-    <!-- Always-visible Manual Player Addition Shortcut -->
-    <div class="arena-manual-add-wrap">
-      <button
-        id="btn-arena-manual-add"
-        class="btn btn-ghost btn-sm"
-        data-i18n="arena_btn_manual_add"
-      >➕ إضافة لاعب يدوياً</button>
     </div>
 
     <!-- Category switcher -->
@@ -428,60 +421,42 @@
       </div>
     </div>
 
+  </div><!-- /container -->
 
-  <!-- Burned-panel drawer toggle (mobile only) -->
-  <button
-    id="btn-burned-drawer-toggle"
-    class="burned-drawer-handle"
-    aria-label="عرض اللاعبين المحروقين"
-    aria-expanded="false"
-    aria-controls="burned-panel"
+  <!-- Bottom navigation -->
+  <nav
+    class="bottom-nav"
+    id="arena-bottom-nav"
+    role="navigation"
+    aria-label="شريط التنقل السفلي"
   >
-    <span class="burned-drawer-handle__pip" aria-hidden="true"></span>
-    <span class="burned-drawer-handle__label" id="burned-drawer-count">المحروقون 🔥</span>
-  </button>
+    <button class="bottom-nav__item" id="nav-leaderboard" aria-label="الترتيب">
+      <span class="nav-icon" aria-hidden="true">🏅</span>
+      <span data-i18n="arena_nav_leaderboard">الترتيب</span>
+    </button>
+    <button class="bottom-nav__item active" id="nav-arena" aria-label="الملعب" aria-current="page">
+      <span class="nav-icon" aria-hidden="true">⚽</span>
+      <span data-i18n="arena_nav_arena">الملعب</span>
+    </button>
+    <button class="bottom-nav__item" id="nav-stats" aria-label="إحصائيات">
+      <span class="nav-icon" aria-hidden="true">📊</span>
+      <span data-i18n="arena_nav_stats">إحصائيات</span>
+    </button>
+    <button
+      class="bottom-nav__item"
+      id="nav-settings"
+      aria-label="إعدادات اللعبة"
+      aria-haspopup="dialog"
+      aria-controls="modal-quick-settings"
+    >
+      <span class="nav-icon" aria-hidden="true">⚙️</span>
+      <span data-i18n="arena_nav_settings">إعدادات</span>
+    </button>
+  </nav>
 
 </section>
 <!-- /screen-arena -->
 
-
-<!-- ═══════════════════════════════════════════════════════════
-     BOTTOM NAVIGATION — fixed, direct body child so it is never
-     clipped by arena screen's overflow containment
-     ════════════════════════════════════════════════════════ -->
-<nav
-  class="bottom-nav"
-  id="arena-bottom-nav"
-  role="navigation"
-  aria-label="شريط التنقل السفلي"
-  hidden
->
-  <button class="bottom-nav__item" id="nav-leaderboard" aria-label="الترتيب">
-    <span class="nav-icon" aria-hidden="true">🏅</span>
-    <span data-i18n="arena_nav_leaderboard">الترتيب</span>
-  </button>
-  <button class="bottom-nav__item active" id="nav-arena" aria-label="الملعب" aria-current="page">
-    <span class="nav-icon" aria-hidden="true">⚽</span>
-    <span data-i18n="arena_nav_arena">الملعب</span>
-  </button>
-  <button class="bottom-nav__item" id="nav-stats" aria-label="إحصائيات">
-    <span class="nav-icon" aria-hidden="true">📊</span>
-    <span data-i18n="arena_nav_stats">إحصائيات</span>
-  </button>
-  <button
-    class="bottom-nav__item"
-    id="nav-settings"
-    aria-label="إعدادات اللعبة"
-    aria-haspopup="dialog"
-    aria-controls="modal-quick-settings"
-  >
-    <span class="nav-icon" aria-hidden="true">⚙️</span>
-    <span data-i18n="arena_nav_settings">إعدادات</span>
-  </button>
-</nav>
-
-<!-- Burned-panel backdrop overlay (mobile only, tap to close drawer) -->
-<div id="burned-backdrop" class="burned-backdrop" aria-hidden="true"></div>
 
 <!-- ═══════════════════════════════════════════════════════════
      MODALS — all six Turn Result variants + 3 utility modals
@@ -659,6 +634,32 @@
   </div>
 </div>
 
+<!-- ── UTILITY MODAL: How to Play ─────────────────────────────── -->
+<div
+  id="modal-how-to-play"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-how-to-play-title"
+>
+  <div class="modal glass modal--rules">
+    <div class="modal__header">
+      <h2 id="modal-how-to-play-title" class="modal__title" data-i18n="rules_modal_title">
+        إزاي تلعب
+      </h2>
+      <button class="btn btn-icon" id="btn-close-how-to-play" aria-label="إغلاق">✕</button>
+    </div>
+    <div class="modal__body modal__body--scrollable">
+      <div class="rules-modal__content">
+        <p class="rules-modal__paragraph" data-i18n="rules_paragraph_1">بتتنافسوا مع صحابك على مين يوصل برصيده لصفر أول. كل لاعب بيبدأ برصيد خاص بيه لوحده (بتحددوا الرقم في الإعداد، زي 700 مثلاً)، وكل واحد بيلعب برصيده هو بس — رصيدك مالوش علاقة برصيد خصمك.</p>
+        <p class="rules-modal__paragraph" data-i18n="rules_paragraph_2">في دورك، بتقول اسم لاعب كورة سجل أهداف مع النادي أو في البطولة اللي اخترتوها. عدد الأهداف اللي سجلها بيتخصم من رصيدك أنت. مثلاً لو رصيدك 700 وقلت لاعب سجل 400 هدف، هيبقى رصيدك 300.</p>
+        <p class="rules-modal__paragraph" data-i18n="rules_paragraph_3">لازم توصل لصفر بالظبط عشان تكسب. لو قلت اسم لاعب سجل أهداف أكتر من رصيدك المتبقي (مثلاً فاضلك 10 وقلت لاعب سجل 11)، المحاولة بتتلغي ودورك بيضيع من غير ما رصيدك يتأثر.</p>
+        <p class="rules-modal__paragraph" data-i18n="rules_paragraph_4">كل اسم لاعب بيتقال مرة واحدة بس في الجولة كلها — أول ما حد يقوله، بيدخل قائمة "المحروقين" ومحدش يقدر يقوله تاني، حتى لو كان دورك.</p>
+        <p class="rules-modal__paragraph" data-i18n="rules_paragraph_5">أول واحد يوصل رصيده لصفر بالظبط، بيكسب فوراً.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ── RESULT MODAL 1: SUCCESS ───────────────────────────────── -->
 <div
@@ -679,9 +680,9 @@
     <div class="modal__body">
       <!-- Player info -->
       <div class="flex flex-center flex-gap-4 mb-6">
-          <img
+        <img
           id="success-player-photo"
-          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+          src=""
           alt=""
           width="64"
           height="64"
@@ -844,77 +845,6 @@
   </div>
 </div>
 
-<!-- ── RESULT MODAL 8: UNKNOWN PLAYER (MANUAL ADDITION) ──────── -->
-<div
-  id="modal-result-unknown"
-  class="modal-overlay"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="modal-unknown-title"
-  aria-live="assertive"
->
-  <div class="modal glass modal--info">
-    <div class="modal__header">
-      <span class="badge badge--orange">UNKNOWN</span>
-      <h2 id="modal-unknown-title" class="modal__title" data-i18n="result_unknown_title">
-        اللاعب غير مدرج في قاعدة البيانات
-      </h2>
-    </div>
-    <div class="modal__body">
-      <p class="text-muted" data-i18n="result_unknown_body">
-        هذا اللاعب غير موجود في قاعدة بياناتنا لهذا النادي. يمكنك إضافته يدوياً لهذه الجلسة.
-      </p>
-
-      <div class="mt-4">
-        <label for="unknown-player-name" class="setup-section__label" data-i18n="result_unknown_player_label">
-          اسم اللاعب
-        </label>
-        <input
-          id="unknown-player-name"
-          type="text"
-          class="input mt-2"
-          data-i18n-attr="placeholder"
-          data-i18n="result_unknown_player_placeholder"
-          placeholder="أدخل اسم اللاعب..."
-        />
-      </div>
-
-      <div class="mt-4">
-        <label for="unknown-goals-input" class="setup-section__label" data-i18n="result_unknown_goals_label">
-          عدد الأهداف
-        </label>
-        <input
-          id="unknown-goals-input"
-          type="number"
-          min="0"
-          step="1"
-          class="input mt-2"
-          data-i18n-attr="placeholder"
-          data-i18n="result_unknown_goals_placeholder"
-          placeholder="أدخل عدد الأهداف..."
-        />
-        <p id="unknown-error-msg" class="text-danger fs-xs mt-2" style="display:none;"></p>
-      </div>
-
-      <p class="fs-xs text-muted mt-4" data-i18n="result_unknown_session_note">
-        تنبيه: الإضافة اليدوية تسري على هذه الجلسة فقط ولن تُحفظ نهائياً.
-      </p>
-    </div>
-    <div class="modal__footer flex flex-col flex-gap-2">
-      <button
-        id="btn-unknown-submit"
-        class="btn btn-primary w-full"
-        data-i18n="btn_add_and_submit"
-      >إضافة وتأكيد</button>
-      <button
-        id="btn-unknown-cancel"
-        class="btn btn-ghost w-full"
-        data-i18n="btn_cancel_try_another"
-      >إلغاء / جرب اسماً آخر</button>
-    </div>
-  </div>
-</div>
-
 <!-- ── RESULT MODAL 6: WIN ───────────────────────────────────── -->
 <div
   id="modal-result-win"
@@ -932,7 +862,7 @@
     </div>
     <div class="modal__body text-center">
       <p class="fs-3xl" aria-hidden="true" style="margin-block:var(--sp-6);">🥇</p>
-      <p class="text-muted" id="win-body-text" data-i18n="result_win_body">لقد فزت!</p>
+      <p class="text-muted" data-i18n="result_win_body">لقد فزت!</p>
       <p class="fw-black fs-xl mt-4 text-gold" id="win-player-name">علي</p>
       <p class="fs-sm text-muted mt-6" data-i18n="result_win_player">الفائز</p>
     </div>
@@ -968,14 +898,16 @@
       <div id="disambig-list" class="disambiguation-list" role="listbox" aria-label="اختر اللاعب">
         <!-- Placeholder items — real items injected by JS -->
         <div class="disambiguation-item" role="option" id="disambig-opt-1" tabindex="0">
+          <img src="" alt="" width="48" height="48" loading="lazy" />
           <div class="disambiguation-item__info">
-            <span class="disambiguation-item__name">محمد صلاح</span>
+            <span class="disambiguation-item__name">محمد صلاح (مصر)</span>
             <span class="disambiguation-item__meta">ليفربول · البريمير ليغ</span>
           </div>
         </div>
         <div class="disambiguation-item" role="option" id="disambig-opt-2" tabindex="0">
+          <img src="" alt="" width="48" height="48" loading="lazy" />
           <div class="disambiguation-item__info">
-            <span class="disambiguation-item__name">صلاح محسن</span>
+            <span class="disambiguation-item__name">صلاح محسن (المغرب)</span>
             <span class="disambiguation-item__meta">أياكس · إيريديفيسي</span>
           </div>
         </div>

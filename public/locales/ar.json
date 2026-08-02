@@ -9,6 +9,7 @@
   "nav_unmute": "تشغيل الصوت",
 
   "btn_play": "العب الآن",
+  "btn_how_to_play": "افهم اللعبة",
   "btn_start_game": "ابدأ اللعبة",
   "btn_ready": "أنا جاهز",
   "btn_next_turn": "الدور التالي",
@@ -52,7 +53,6 @@
   "arena_burned_list_title": "اللاعبون المحروقون",
   "arena_burned_empty": "لا أحد بعد",
   "arena_suggest_loading": "جاري البحث...",
-  "arena_btn_manual_add": "➕ إضافة لاعب يدوياً",
 
   "arena_nav_leaderboard": "الترتيب",
   "arena_nav_arena": "الملعب",
@@ -62,6 +62,13 @@
   "modal_settings_mute": "كتم الصوت",
   "modal_settings_quit": "إنهاء اللعبة",
   "modal_settings_change_category": "تغيير التحدي",
+
+  "rules_modal_title": "إزاي تلعب",
+  "rules_paragraph_1": "بتتنافسوا مع صحابك على مين يوصل برصيده لصفر أول. كل لاعب بيبدأ برصيد خاص بيه لوحده (بتحددوا الرقم في الإعداد، زي 700 مثلاً)، وكل واحد بيلعب برصيده هو بس — رصيدك مالوش علاقة برصيد خصمك.",
+  "rules_paragraph_2": "في دورك، بتقول اسم لاعب كورة سجل أهداف مع النادي أو في البطولة اللي اخترتوها. عدد الأهداف اللي سجلها بيتخصم من رصيدك أنت. مثلاً لو رصيدك 700 وقلت لاعب سجل 400 هدف، هيبقى رصيدك 300.",
+  "rules_paragraph_3": "لازم توصل لصفر بالظبط عشان تكسب. لو قلت اسم لاعب سجل أهداف أكتر من رصيدك المتبقي (مثلاً فاضلك 10 وقلت لاعب سجل 11)، المحاولة بتتلغي ودورك بيضيع من غير ما رصيدك يتأثر.",
+  "rules_paragraph_4": "كل اسم لاعب بيتقال مرة واحدة بس في الجولة كلها — أول ما حد يقوله، بيدخل قائمة \"المحروقين\" ومحدش يقدر يقوله تاني، حتى لو كان دورك.",
+  "rules_paragraph_5": "أول واحد يوصل رصيده لصفر بالظبط، بيكسب فوراً.",
 
   "result_success_title": "أهلاً وسهلاً! 🎉",
   "result_success_goals": "الأهداف",
@@ -80,22 +87,9 @@
   "result_not_associated_title": "اللاعب غير موجود في قاعدة البيانات",
   "result_not_associated_body": "هذا اللاعب لم يلعب للنادي المختار في هذا الدوري.",
 
-  "result_unknown_title": "اللاعب غير مدرج في قاعدة البيانات",
-  "result_unknown_body": "هذا اللاعب غير موجود في قاعدة بياناتنا لهذا النادي. يمكنك إضافته يدوياً لهذه الجلسة.",
-  "result_unknown_session_note": "تنبيه: الإضافة اليدوية تسري على هذه الجلسة فقط ولن تُحفظ نهائياً.",
-  "result_unknown_player_label": "اسم اللاعب",
-  "result_unknown_player_placeholder": "أدخل اسم اللاعب...",
-  "result_unknown_goals_label": "عدد الأهداف",
-  "result_unknown_goals_placeholder": "أدخل عدد الأهداف...",
-  "result_unknown_error_name": "يرجى إدخال اسم اللاعب.",
-  "result_unknown_error_goals": "يرجى إدخال عدد صحيح غير سالب للأهداف.",
-  "btn_add_and_submit": "إضافة وتأكيد",
-  "btn_cancel_try_another": "إلغاء / جرب اسماً آخر",
-
   "result_win_title": "صفر بالمللي! 🏆",
-  "result_win_body": "فاز!",
+  "result_win_body": "لقد فزت!",
   "result_win_player": "الفائز",
-  "arena_standings_label": "أرصدة اللاعبين",
 
   "result_disambiguation_title": "قصدك مين؟",
   "result_disambiguation_body": "وجدنا أكثر من لاعب — اختر الصحيح:",
