@@ -395,6 +395,15 @@
       >بحث</button>
     </div>
 
+    <!-- Always-visible Manual Player Addition Shortcut -->
+    <div class="arena-manual-add-wrap">
+      <button
+        id="btn-arena-manual-add"
+        class="btn btn-ghost btn-sm"
+        data-i18n="arena_btn_manual_add"
+      >➕ إضافة لاعب يدوياً</button>
+    </div>
+
     <!-- Category switcher -->
     <div class="arena-category-grid" aria-label="تغيير نوع التحدي">
       <p class="setup-section__label" data-i18n="setup_category_label">نوع التحدي</p>
@@ -938,16 +947,14 @@
       <div id="disambig-list" class="disambiguation-list" role="listbox" aria-label="اختر اللاعب">
         <!-- Placeholder items — real items injected by JS -->
         <div class="disambiguation-item" role="option" id="disambig-opt-1" tabindex="0">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="48" height="48" loading="lazy" />
           <div class="disambiguation-item__info">
-            <span class="disambiguation-item__name">محمد صلاح (مصر)</span>
+            <span class="disambiguation-item__name">محمد صلاح</span>
             <span class="disambiguation-item__meta">ليفربول · البريمير ليغ</span>
           </div>
         </div>
         <div class="disambiguation-item" role="option" id="disambig-opt-2" tabindex="0">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" width="48" height="48" loading="lazy" />
           <div class="disambiguation-item__info">
-            <span class="disambiguation-item__name">صلاح محسن (المغرب)</span>
+            <span class="disambiguation-item__name">صلاح محسن</span>
             <span class="disambiguation-item__meta">أياكس · إيريديفيسي</span>
           </div>
         </div>

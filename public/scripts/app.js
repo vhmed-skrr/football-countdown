@@ -793,6 +793,30 @@ function setupArenaSearch() {
       }
     });
   }
+
+  // Always-visible "Add Player Manually" shortcut on Arena screen
+  const manualAddBtn = document.getElementById('btn-arena-manual-add');
+  if (manualAddBtn) {
+    manualAddBtn.addEventListener('click', () => {
+      stopTimer();
+      hideSuggestions();
+
+      const nameInput = document.getElementById('unknown-player-name');
+      if (nameInput) nameInput.value = '';
+
+      const goalsInput = document.getElementById('unknown-goals-input');
+      if (goalsInput) {
+        goalsInput.value = '';
+        goalsInput.style.borderColor = '';
+      }
+
+      const errMsg = document.getElementById('unknown-error-msg');
+      if (errMsg) errMsg.style.display = 'none';
+
+      openModal('modal-result-unknown');
+      if (nameInput) nameInput.focus();
+    });
+  }
 }
 
 function fetchAutoSuggestions(query) {
@@ -947,8 +971,13 @@ function handleTurnResult(response, querySubmitted) {
 
       const photoEl = document.getElementById('success-player-photo');
       if (photoEl) {
-        photoEl.src = (response.player && response.player.photoUrl) || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><text y="20" font-size="20">⚽</text></svg>';
-        photoEl.alt = response.player ? response.player.name : '';
+        if (response.player && response.player.photoUrl) {
+          photoEl.src = response.player.photoUrl;
+          photoEl.alt = response.player.name;
+          photoEl.style.display = 'block';
+        } else {
+          photoEl.style.display = 'none';
+        }
       }
 
       const nameEl = document.getElementById('success-player-name');
@@ -1080,19 +1109,32 @@ function renderDisambiguationList(candidates) {
     item.setAttribute('role', 'option');
     item.setAttribute('tabindex', '0');
 
-    const photoUrl = cand.photoUrl || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><text y="20" font-size="20">⚽</text></svg>';
+    const info = document.createElement('div');
+    info.className = 'disambiguation-item__info';
 
-    item.innerHTML = `
-      <img src="${photoUrl}" alt="${cand.name}" width="48" height="48" loading="lazy" />
-      <div class="disambiguation-item__info">
-        <span class="disambiguation-item__name">${cand.name}</span>
-        <span class="disambiguation-item__meta">${cand.meta || `${state.sessionState.club || ''} · ${state.sessionState.league || ''}`}</span>
-      </div>
-    `;
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'disambiguation-item__name';
+    nameSpan.textContent = cand.name || '';
 
-    item.addEventListener('click', () => {
+    const metaSpan = document.createElement('span');
+    metaSpan.className = 'disambiguation-item__meta';
+    metaSpan.textContent = cand.meta || `${(state.sessionState && state.sessionState.club) || ''} · ${(state.sessionState && state.sessionState.league) || ''}`;
+
+    info.appendChild(nameSpan);
+    info.appendChild(metaSpan);
+    item.appendChild(info);
+
+    const onSelect = () => {
       closeModal('modal-result-disambiguation');
       submitPlay(null, false, cand);
+    };
+
+    item.addEventListener('click', onSelect);
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onSelect();
+      }
     });
 
     listEl.appendChild(item);

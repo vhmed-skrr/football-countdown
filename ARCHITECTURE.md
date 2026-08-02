@@ -145,7 +145,7 @@ The first player to reach exactly 0 wins. Other players may still have balance r
 | 4 | **TIME_UP** | Timer reached 0 before submission | Turn lost; active player’s balance unchanged |
 | 5 | **WIN** | **Active player’s own** balance reaches exactly 0 | Game ends immediately; that specific player wins; other players may still have balance |
 | 6 | **NOT_ASSOCIATED** | Player is in dataset but has zero recorded appearances/goals for that club | Reject with clear message; does **not** count as a turn; does **not** affect balance. Distinct from `UNKNOWN_PLAYER` |
-| 7 | **NEEDS_DISAMBIGUATION** | Partial/ambiguous name → multiple candidates | Return candidate list (name + photo, no stats); wait for user selection; resubmit |
+| 7 | **NEEDS_DISAMBIGUATION** | Partial/ambiguous name → multiple candidates | Return candidate list (name only — no photo, no stats); wait for user selection; resubmit |
 | 8 | **UNKNOWN_PLAYER** | Searched name does not match any entry in static dataset for club | Prompt user to manually enter player & goals count for current session; distinct from `NOT_ASSOCIATED` (uncertainty vs certainty) |
 
 ### Balance Aggregation
@@ -301,21 +301,17 @@ Processes a player guess or timer expiration against the current session state.
 {
   "resultCase": "NEEDS_DISAMBIGUATION",
   "candidates": [
-    {
-      "name": "Mohamed Salah",
-      "goals_by_competition": { "Premier League": 186 },
-      "total_goals": 242
-    },
-    {
-      "name": "Mohamed Elneny",
-      "goals_by_competition": { "Premier League": 12 },
-      "total_goals": 12
-    }
+    { "name": "Mohamed Salah" },
+    { "name": "Mohamed Elneny" }
   ],
   "sessionState": { /* ... unchanged ... */ },
   "message": "Multiple player matches found. Please select one."
 }
 ```
+
+> **Note**: Candidates contain only `name`. No `photo_url` field is present — the project uses
+> static hand-curated datasets that contain no photo data. The disambiguation UI renders
+> text-only candidate cards.
 
 ##### Case: `ALREADY_BURNED`
 ```json

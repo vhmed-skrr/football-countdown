@@ -52,6 +52,7 @@
   "arena_burned_list_title": "Burned Players",
   "arena_burned_empty": "None yet",
   "arena_suggest_loading": "Searching...",
+  "arena_btn_manual_add": "➕ Add Player Manually",
 
   "arena_nav_leaderboard": "Leaderboard",
   "arena_nav_arena": "Arena",

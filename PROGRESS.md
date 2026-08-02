@@ -196,6 +196,20 @@ Player search returned false `NOT_ASSOCIATED` ("Player Not Found") because `goal
 - Updated `ARCHITECTURE.md` to reflect the new Core Game Rules and state structure.
 - Updated unit test suite `test-gameEngine.js` to verify per-player balance isolation, immediate WIN triggers, and 2-4 player support.
 
+---
+
+### Always-Visible "Add Player Manually" Button on Arena Screen (2026-08-02)
+
+**Status**: Complete ✅
+
+**Details**:
+- Added an always-visible, persistent "Add Player Manually" button (`#btn-arena-manual-add`) on Screen 4 Arena directly below the search bar container.
+- Reachable proactively at any time during an active turn without requiring a prior failed search.
+- Reuses the existing `#modal-result-unknown` modal, clearing the name input (`""`) when opened manually while preserving pre-filled search strings when opened automatically via an `UNKNOWN_PLAYER` search result.
+- Submits through the existing `submitManualPlayer` workflow (`manualEntry: true` via `/api/game/play`).
+- Added i18n locale keys (`arena_btn_manual_add`) in `public/locales/ar.json` and `public/locales/en.json`.
+- Added styling rules (`.btn-sm`, `.arena-manual-add-wrap`) in `public/styles/main.css`.
+
 
 
 
